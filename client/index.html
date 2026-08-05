@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="description" content="GeeksforGeeks Student Chapter — a student-led community where members master DSA, ship real projects, and lead innovation through sprints, hackathons and mentorship." />
+    <meta name="theme-color" content="#0e0f12" />
+    <title>GeeksforGeeks Student Chapter</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GeeksforGeeks Student Chapter" />
+    <meta property="og:title" content="GeeksforGeeks Student Chapter" />
+    <meta property="og:description" content="Master DSA, ship real projects, and lead innovation. Join a student-led community built around sprints, hackathons, mentorship, and open source." />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GeeksforGeeks Student Chapter" />
+    <meta name="twitter:description" content="Master DSA, ship real projects, and lead innovation. Join a student-led community built around sprints, hackathons, mentorship, and open source." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <script>
+      // Apply the saved/system theme before first paint to avoid a light/dark flash
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = stored || (prefersDark ? "dark" : "light");
+          if (theme === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+
+</html>

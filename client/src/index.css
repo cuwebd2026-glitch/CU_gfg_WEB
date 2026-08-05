@@ -1,0 +1,273 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* GFG Student Chapter - Design System */
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* GFG Color Palette (brand-consistent across both themes) */
+  --gfg-green: #2fa84f;
+  --gfg-green-bright: #3ecf5f;
+  --gfg-green-deep: #1b5e20;
+  --gfg-green-glow: rgba(47, 168, 79, 0.14);
+
+  /* Primary Colors */
+  --primary: #2fa84f;
+  --primary-foreground: #04150a;
+  --sidebar-primary: #2fa84f;
+  --sidebar-primary-foreground: #04150a;
+
+  /* Chart Colors */
+  --chart-1: #2fa84f;
+  --chart-2: #3ecf5f;
+  --chart-3: #1b5e20;
+  --chart-4: #0d4620;
+  --chart-5: #082d15;
+
+  /* Radius */
+  --radius: 0.65rem;
+
+  /* Light Theme (default :root) */
+  --background: oklch(0.99 0.003 95);
+  --foreground: oklch(0.22 0.01 285);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.01 285);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.01 285);
+  --secondary: oklch(0.96 0.004 285);
+  --secondary-foreground: oklch(0.3 0.01 285);
+  --muted: oklch(0.96 0.004 285);
+  --muted-foreground: oklch(0.48 0.012 285);
+  --accent: oklch(0.94 0.05 150);
+  --accent-foreground: #124423;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.9 0.006 285);
+  --input: oklch(0.9 0.006 285);
+  --ring: #2fa84f;
+  --sidebar: oklch(0.98 0.003 95);
+  --sidebar-foreground: oklch(0.22 0.01 285);
+  --sidebar-accent: #2fa84f;
+  --sidebar-accent-foreground: #04150a;
+  --sidebar-border: oklch(0.9 0.006 285);
+  --sidebar-ring: #2fa84f;
+
+  /* Elevation shadow tuned per-theme so cards read as "lifted" not just outlined */
+  --shadow-color: 220 20% 40%;
+  --shadow-elevation-low: 0 1px 2px hsl(var(--shadow-color) / 0.06);
+  --shadow-elevation-medium: 0 4px 16px hsl(var(--shadow-color) / 0.08);
+  --shadow-elevation-high: 0 16px 48px hsl(var(--shadow-color) / 0.12);
+}
+
+.dark {
+  /* Dark Theme */
+  --primary: #3ecf5f;
+  --sidebar-primary: #3ecf5f;
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.88 0.005 65);
+  --card: oklch(0.19 0.006 285.885);
+  --card-foreground: oklch(0.88 0.005 65);
+  --popover: oklch(0.19 0.006 285.885);
+  --popover-foreground: oklch(0.88 0.005 65);
+  --secondary: oklch(0.24 0.006 286.033);
+  --secondary-foreground: oklch(0.75 0.005 65);
+  --muted: oklch(0.24 0.006 286.033);
+  --muted-foreground: oklch(0.66 0.015 286.067);
+  --accent: rgba(62, 207, 95, 0.14);
+  --accent-foreground: #3ecf5f;
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: #3ecf5f;
+  --sidebar: oklch(0.19 0.006 285.885);
+  --sidebar-foreground: oklch(0.88 0.005 65);
+  --sidebar-accent: #3ecf5f;
+  --sidebar-accent-foreground: #04150a;
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: #3ecf5f;
+
+  --shadow-color: 0 0% 0%;
+  --shadow-elevation-low: 0 1px 2px hsl(var(--shadow-color) / 0.4);
+  --shadow-elevation-medium: 0 4px 20px hsl(var(--shadow-color) / 0.45);
+  --shadow-elevation-high: 0 20px 60px hsl(var(--shadow-color) / 0.55);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.35s ease, color 0.35s ease;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    letter-spacing: -0.01em;
+  }
+  code, pre, kbd, samp {
+    @apply font-mono;
+  }
+  /* Theme-change fade: applied briefly via ThemeContext to avoid jarring flips */
+  body,
+  header,
+  section,
+  footer,
+  .themed-surface {
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  }
+  ::selection {
+    background: var(--gfg-green-bright);
+    color: #04150a;
+  }
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gfg-green);
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Reusable "lifted card" surface used across sections for a consistent premium feel */
+  .surface-card {
+    @apply bg-card border border-border rounded-xl;
+    box-shadow: var(--shadow-elevation-low);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+  .surface-card:hover {
+    box-shadow: var(--shadow-elevation-medium);
+  }
+  .glow-ring {
+    box-shadow: 0 0 0 1px var(--gfg-green-glow), 0 0 32px 0 var(--gfg-green-glow);
+  }
+  .text-gradient-brand {
+    background: linear-gradient(90deg, var(--gfg-green), var(--gfg-green-bright));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
