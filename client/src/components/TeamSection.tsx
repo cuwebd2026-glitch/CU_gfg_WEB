@@ -31,7 +31,7 @@ export default function TeamSection() {
           </h2>
 
           <p className="text-muted-foreground max-w-2xl">
-            Meet the passionate students and mentors driving the GeeksforGeeks Student Chapter forward. Our team is dedicated to building a community where everyone can learn, grow, and lead.
+            Meet the passionate students and mentors driving the GFG CU Community forward. Our team is dedicated to building a community where everyone can learn, grow, and lead.
           </p>
         </motion.div>
 

@@ -32,26 +32,38 @@ export default function Header() {
           href="#top"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2.5"
+          className="flex items-center gap-3"
         >
-          <div className="w-9 h-9 rounded-lg overflow-hidden shadow-sm bg-white/90 flex items-center justify-center">
-            {!logoFailed ? (
+          <div className="flex items-center gap-2 rounded-2xl border border-border bg-card/80 px-2.5 py-2 shadow-[var(--shadow-elevation-low)] backdrop-blur-sm">
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-sm border border-border flex items-center justify-center shrink-0">
+              {!logoFailed ? (
+                <img
+                  src="https://images.seeklogo.com/logo-png/43/1/chandigarh-university-cu-logo-png_seeklogo-432515.png"
+                  alt="Chandigarh University logo"
+                  referrerPolicy="no-referrer"
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                  onError={() => setLogoFailed(true)}
+                />
+              ) : (
+                <span className="text-[#04150a] font-display font-bold text-lg">CU</span>
+              )}
+            </div>
+            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-sm border border-border flex items-center justify-center shrink-0 p-1">
               <img
-                src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjKYM-_45mBmWgs2JFiZmCSLsfvnjkr407f0Sp35KQWAMyyuE9MYIdB0&s=10"
                 alt="GeeksforGeeks logo"
                 referrerPolicy="no-referrer"
                 loading="eager"
                 decoding="async"
-                className="w-full h-full object-contain p-0.5"
-                onError={() => setLogoFailed(true)}
+                className="w-full h-full object-contain"
               />
-            ) : (
-              <span className="text-[#04150a] font-display font-bold text-lg">G</span>
-            )}
-          </div>
-          <div className="leading-tight">
-            <h1 className="font-display font-semibold text-foreground text-sm sm:text-base">GeeksforGeeks</h1>
-            <p className="text-xs text-muted-foreground">Student Chapter</p>
+            </div>
+            <div className="hidden sm:block leading-tight pr-1 border-l border-border pl-2">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Chandigarh University</p>
+              <p className="text-sm font-semibold text-foreground">GFG Community</p>
+            </div>
           </div>
         </motion.a>
 
@@ -72,6 +84,12 @@ export default function Header() {
 
         {/* Right Section */}
         <div className="flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 rounded-full border border-border bg-secondary/70 px-3 py-2 text-xs text-muted-foreground shadow-[var(--shadow-elevation-low)]">
+            <span className="inline-flex items-center gap-1 text-foreground font-medium">
+              <span className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
+              CU x GFG
+            </span>
+          </div>
           <AnimatedToggle
             checked={theme === 'dark'}
             onChange={toggleTheme}

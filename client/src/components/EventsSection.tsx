@@ -32,7 +32,7 @@ export default function EventsSection() {
               Chapter Events
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Verified events and competitions organized by GFG Student Chapter - CU.
+              Verified events and competitions organized by GFG CU Community.
             </p>
           </div>
 

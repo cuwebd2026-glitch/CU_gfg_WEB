@@ -12,16 +12,23 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--gfg-green)] to-[var(--gfg-green-bright)] flex items-center justify-center font-bold text-[#04150a]">
-                G
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm border border-border">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqi4ne4JX9xpaNSr95hu9Apn7etCL8P14E0A9dAHMWdYiR5Jqb-lON6Kf8f1MlJBpF&s=10&ec=121902058"
+                  alt="Chandigarh University logo"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
-                <div className="font-display font-bold text-foreground">GeeksforGeeks</div>
-                <div className="text-xs font-mono text-muted-foreground">Student Chapter</div>
+                <div className="font-display font-bold text-foreground">Chandigarh University x GFG</div>
+                <div className="text-xs font-mono text-muted-foreground">CU Community</div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 max-w-xs">
-              Geeks on Fleek. Code → Connect → Conquer. GeeksforGeeks Student Chapter, Chandigarh University.
+              Geeks on Fleek. Code → Connect → Conquer. Built by Chandigarh University students with the GFG spirit.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => {
@@ -67,7 +74,7 @@ export default function Footer() {
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} GeeksforGeeks Student Chapter - CU. All rights reserved.
+              © {currentYear} Chandigarh University x GFG. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors">

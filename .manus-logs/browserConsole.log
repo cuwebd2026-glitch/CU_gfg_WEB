@@ -289,3 +289,218 @@
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400383,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400388,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400463,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T06:24:36.810Z] {"timestamp":1785997474798,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T06:24:36.810Z] {"timestamp":1785997474803,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T06:24:36.810Z] {"timestamp":1785997474840,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T06:25:48.205Z] {"timestamp":1785997546200,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T06:25:48.205Z] {"timestamp":1785997546202,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T06:25:48.205Z] {"timestamp":1785997546256,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T06:27:37.053Z] {"timestamp":1785997657039,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-06T06:27:39.801Z] {"timestamp":1785997657309,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T06:27:39.801Z] {"timestamp":1785997657314,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T06:27:39.801Z] {"timestamp":1785997657502,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T06:27:50.928Z] {"timestamp":1785997668976,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-06T06:27:53.787Z] {"timestamp":1785997670970,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T06:27:53.787Z] {"timestamp":1785997670972,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T06:27:53.787Z] {"timestamp":1785997671015,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T16:36:48.227Z] {"timestamp":1786034206211,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T16:36:48.227Z] {"timestamp":1786034206230,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T16:36:48.227Z] {"timestamp":1786034207360,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728199,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728200,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728201,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728212,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:02:08.216Z] {"timestamp":1786035728212,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:02:10.215Z] {"timestamp":1786035728224,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:02:10.215Z] {"timestamp":1786035728224,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:02:10.215Z] {"timestamp":1786035728232,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:02:10.215Z] {"timestamp":1786035728233,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884688,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884688,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884746,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884747,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884784,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884784,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884794,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884795,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884844,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884844,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884844,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884844,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884845,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:04:46.220Z] {"timestamp":1786035884847,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911050,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911051,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911129,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911129,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911175,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911218,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911219,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911219,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911219,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911220,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911220,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911220,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911220,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911220,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911221,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911221,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911221,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911222,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911222,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911222,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911223,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911223,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911309,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-06T17:05:12.226Z] {"timestamp":1786035911310,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:32.241Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:05:32.241Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:05:32.241Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.241Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.241Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932048,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:05:32.242Z] {"timestamp":1786035932049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:06:24.218Z] {"timestamp":1786035982604,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:06:24.218Z] {"timestamp":1786035982605,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:08:04.224Z] {"timestamp":1786036082454,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:08:04.224Z] {"timestamp":1786036082455,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:08:04.224Z] {"timestamp":1786036082492,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:08:04.224Z] {"timestamp":1786036082492,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:09:46.219Z] {"timestamp":1786036184846,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:09:46.219Z] {"timestamp":1786036184846,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:09:46.219Z] {"timestamp":1786036184931,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:09:46.220Z] {"timestamp":1786036184931,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:16:22.796Z] {"timestamp":1786036582705,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:16:22.796Z] {"timestamp":1786036582705,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:16:22.796Z] {"timestamp":1786036582782,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:16:22.796Z] {"timestamp":1786036582782,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:17:04.225Z] {"timestamp":1786036622616,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:17:04.225Z] {"timestamp":1786036622617,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698601,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698601,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698602,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698603,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698604,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698604,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698617,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698618,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698754,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698754,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698818,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698819,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698896,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698960,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036698960,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036699041,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036699042,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036699134,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:18:20.217Z] {"timestamp":1786036699134,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782368,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782374,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782377,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782381,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782383,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782384,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782384,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782385,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782386,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782386,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782387,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782388,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782388,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782389,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782389,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782390,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782390,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782457,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037782458,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808173,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808174,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808174,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808175,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808176,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808177,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:36:51.741Z] {"timestamp":1786037808177,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834877,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834878,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834879,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834880,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834985,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-06T17:37:16.214Z] {"timestamp":1786037834985,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-06T17:38:20.729Z] {"timestamp":1786037898714,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T17:38:20.729Z] {"timestamp":1786037898720,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T17:38:20.729Z] {"timestamp":1786037899080,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-06T17:38:23.795Z] {"timestamp":1786037901785,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-06T17:38:23.795Z] {"timestamp":1786037901794,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-06T17:38:23.795Z] {"timestamp":1786037901830,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}

@@ -17,7 +17,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'motion/react';
 
 /**
- * Home Page - GeeksforGeeks Student Chapter
+ * Home Page - GFG CU Community
  *
  * Section order: Navbar -> Hero -> Statistics -> About -> Features -> Events
  * -> Achievements -> Sponsors -> Partners -> Gallery -> Testimonials -> Team
