@@ -91,7 +91,7 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <motion.a
-                href="#contact"
+                href="/join"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-colors flex items-center justify-center gap-2 group shadow-[var(--shadow-elevation-medium)]"

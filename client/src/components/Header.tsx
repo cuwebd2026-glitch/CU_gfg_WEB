@@ -86,7 +86,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <motion.a
-            href="#contact"
+            href="/join"
             className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] text-sm font-semibold rounded-lg transition-colors"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
@@ -131,7 +131,7 @@ export default function Header() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href="/join"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2 w-full text-center px-4 py-2.5 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] font-semibold rounded-lg transition-colors"
                 whileTap={{ scale: 0.98 }}
