@@ -8,6 +8,7 @@ import { navItems } from '@/data/content';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoFailed, setLogoFailed] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -33,8 +34,20 @@ export default function Header() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2.5"
         >
-          <div className="w-9 h-9 bg-gradient-to-br from-[var(--gfg-green)] to-[var(--gfg-green-bright)] rounded-lg flex items-center justify-center shadow-sm">
-            <span className="text-[#04150a] font-display font-bold text-lg">G</span>
+          <div className="w-9 h-9 rounded-lg overflow-hidden shadow-sm bg-white/90 flex items-center justify-center">
+            {!logoFailed ? (
+              <img
+                src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000"
+                alt="GeeksforGeeks logo"
+                referrerPolicy="no-referrer"
+                loading="eager"
+                decoding="async"
+                className="w-full h-full object-contain p-0.5"
+                onError={() => setLogoFailed(true)}
+              />
+            ) : (
+              <span className="text-[#04150a] font-display font-bold text-lg">G</span>
+            )}
           </div>
           <div className="leading-tight">
             <h1 className="font-display font-semibold text-foreground text-sm sm:text-base">GeeksforGeeks</h1>
