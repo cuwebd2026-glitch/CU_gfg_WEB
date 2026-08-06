@@ -39,11 +39,17 @@ export interface EventItem {
   id: string;
   title: string;
   date: string;
+  sortDate?: string;
   status: 'upcoming' | 'past';
   category: string;
   description: string;
   image: string;
   location: string;
+  speaker?: string;
+  organizedBy?: string;
+  time?: string;
+  teamSize?: string;
+  designation?: string;
 }
 
 export interface AchievementItem {
@@ -227,14 +233,113 @@ export const featureTabs: FeatureTabContent[] = [
 
 export const events: EventItem[] = [
   {
-    id: 'ev-coding-minds-symposium-2024',
-    title: 'Coding Minds Symposium',
-    date: 'Jan 23, 2024',
+    id: 'ev-engineers-got-talent',
+    title: "Engineer's Got Talent",
+    date: '8 September (year not specified)',
     status: 'past',
-    category: 'Community Competition',
-    description: "A joint event with Alexa Developer's Community CU built to test coding instincts under pressure — rapid-fire coding questions, logical challenges, and on-the-spot problem-solving, with GeeksforGeeks swag on the line for top performers.",
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-    location: 'B4 Seminar Hall, Chandigarh University',
+    category: 'Cultural Event',
+    description: "A campus talent showcase celebrating the creativity and performances of Chandigarh University's engineering students.",
+    image: '/engineers-got-talent.jpeg',
+    location: 'A1 Auditorium, Chandigarh University',
+    organizedBy: 'University Institute of Engineering',
+  },
+  {
+    id: 'ev-nextgen-bootcamp-2-2026',
+    title: 'NextGen Bootcamp 2.0',
+    date: '13–17 April 2026',
+    sortDate: '13 April 2026',
+    status: 'past',
+    category: 'Technical Bootcamp',
+    description: 'A five-day bootcamp where technology meets insight, featuring expert sessions and practical learning opportunities.',
+    image: '/nextgen-bootcamp-2.jpeg',
+    location: 'C1 Seminar Hall, Chandigarh University',
+    organizedBy: 'Department of Computer Science & Engineering, Final Year',
+    time: '9:30 AM – 4:30 PM',
+  },
+  {
+    id: 'ev-research-workshop-2025',
+    title: 'Research Workshop',
+    date: '22 August 2025',
+    status: 'past',
+    category: 'Research Workshop',
+    description: 'A research-focused workshop designed to help students turn curiosity into breakthroughs and master the art of research.',
+    image: '/research-workshop.jpeg',
+    location: 'C3 Seminar Hall, Chandigarh University',
+    speaker: 'Dr. Abhishek Kumar',
+    designation: 'Assistant Director, Chandigarh University; Senior Researcher, Universidad de Castilla-La Mancha',
+    time: '9:30 AM – 4:20 PM',
+  },
+  {
+    id: 'ev-yashoda-ai-squad',
+    title: 'Yashoda AI Squad',
+    date: 'Date not specified',
+    status: 'past',
+    category: 'AI Quiz',
+    description: 'An AI-focused initiative building the next generation of AI leaders under the Yashoda AI programme.',
+    image: '/yashoda-ai-squad.jpeg',
+    location: 'Chandigarh University',
+  },
+  {
+    id: 'ev-code-escape-2025',
+    title: 'Code Escape',
+    date: '6 August 2025',
+    status: 'past',
+    category: 'Coding Competition',
+    description: 'A timed coding escape challenge where participants raced the clock to solve problems through code.',
+    image: '/code-escape.jpeg',
+    location: 'Chandigarh University',
+  },
+  {
+    id: 'ev-ai-playground-roboverse-2026',
+    title: 'AI Playground – RoboVerse',
+    date: '26 February 2026',
+    status: 'past',
+    category: 'Technical Workshop',
+    description: 'A workshop on robotics and futuristic technology focused on building, coding, and innovating. Dive into the world of robotics and innovation with hands-on learning and real-world exploration.',
+    image: '/ai-playground-roboverse.jpeg',
+    location: 'B5 Seminar Hall, Chandigarh University',
+    organizedBy: 'Computer Science & Engineering (Final Year)',
+    time: '9:30 AM – 3:30 PM',
+  },
+  {
+    id: 'ev-tech-edge-bootcamp-2026',
+    title: 'Tech Edge Bootcamp',
+    date: '6 August 2026',
+    status: 'past',
+    category: 'Technical Workshop',
+    description: 'Tech Edge Bootcamp is an industry-focused technical workshop featuring Abhisekh Dudeja, Founder & CEO of Orvo. The session provides practical insights into modern software development, AI infrastructure, and real-world engineering practices.',
+    image: '/tech-edge-bootcamp.png',
+    location: 'B1 Seminar Hall, Chandigarh University',
+    speaker: 'Abhisekh Dudeja',
+    organizedBy: 'CSE Takshashila',
+    time: '9:30 AM – 4:30 PM',
+  },
+  {
+    id: 'ev-cyber-security-masterclass-2026',
+    title: 'Cyber Security Masterclass',
+    date: '7 August 2026',
+    status: 'upcoming',
+    category: 'Technical Workshop',
+    description: 'Join us for an industry-focused cybersecurity workshop featuring Harkamal S. Learn about AI security, cloud security, cyber assurance, and real-world cybersecurity practices from an experienced industry leader.',
+    image: '/cyber-security-masterclass.png',
+    location: 'C1 Seminar Hall, Chandigarh University',
+    speaker: 'Harkamal S.',
+    designation: 'Head Cyber Assurance, C2CAS | AI Security & Cloud Security',
+    organizedBy: 'CSE Takshashila',
+    time: '9:30 AM – 4:30 PM',
+  },
+  {
+    id: 'ev-bharat-buildathon-ideathon-2026',
+    title: 'Bharat Buildathon – Ideathon',
+    date: '12 August 2026',
+    status: 'upcoming',
+    category: 'Ideathon',
+    description: 'An innovation-driven ideathon designed to inspire students to solve real-world challenges through creativity, collaboration, and technology. Build impactful ideas that contribute towards the vision of Viksit Bharat while working in teams and presenting innovative solutions.',
+    image: '/bharat-buildathon-ideathon.jpeg',
+    location: 'C1 & C3 Seminar Hall, Chandigarh University',
+    organizedBy: 'CSE Takshashila',
+    time: '9:30 AM – 4:25 PM',
+    teamSize: '3–4 Members',
   },
 ];
 
