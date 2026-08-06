@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import AnimatedProgressBar from './AnimatedProgressBar';
 import TypingText from './TypingText';
-import { ArrowRight, Zap } from 'lucide-react';
+import { ArrowRight, Building2, Sparkles, Zap } from 'lucide-react';
 import { heroContent } from '@/data/content';
 
 export default function HeroSection() {
@@ -67,6 +67,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-[var(--gfg-green)]/30 bg-[var(--gfg-green)]/10 text-sm shadow-[var(--shadow-elevation-low)]">
+              <Building2 size={16} className="text-[var(--gfg-green)]" />
+              <span className="font-medium text-foreground">{heroContent.affiliation}</span>
+            </div>
+
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)] shadow-lg shadow-[var(--gfg-green)]/50" />
@@ -87,6 +92,18 @@ export default function HeroSection() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               {heroContent.description}
             </p>
+
+            <div className="max-w-2xl mb-8 surface-card p-4 sm:p-5 flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[var(--gfg-green)]/15 text-[var(--gfg-green)] flex items-center justify-center shrink-0">
+                <Sparkles size={18} />
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">{heroContent.universityTagline}</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  A campus-first community feel with enough motion, contrast, and detail to make the page feel alive.
+                </p>
+              </div>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

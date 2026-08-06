@@ -1,5 +1,5 @@
 /**
- * Central content source for the GFG Student Chapter site.
+ * Central content source for the GFG CU community site.
  *
  * Per project rule "never hardcode content, drive from JSON/data":
  * every section component imports its copy/data from here instead of
@@ -63,6 +63,8 @@ export interface AchievementItem {
 export interface LogoItem {
   id: string;
   name: string;
+  src?: string;
+  alt?: string;
   tier?: 'platinum' | 'gold' | 'silver';
 }
 
@@ -123,6 +125,7 @@ export const navItems: NavItem[] = [
 
 export const heroContent = {
   eyebrow: 'Code. Connect. Conquer.',
+  affiliation: 'GFG at Chandigarh University',
   typingPhrases: [
     'Code. Connect. Conquer.',
     'Master DSA, One Problem at a Time',
@@ -130,7 +133,8 @@ export const heroContent = {
     'From First Commit to First Offer',
   ],
   description:
-    `We're the GeeksforGeeks Student Chapter at Chandigarh University — a community of geeks who'd rather debug together than debug alone. Whether you're writing your first "Hello World" or grinding LeetCode before placements, this is where you show up, code, and grow with people on the same path.`,
+    `We're the GFG community at Chandigarh University — a group of students who'd rather debug together than debug alone. Whether you're writing your first "Hello World" or grinding LeetCode before placements, this is where you show up, code, and grow with people on the same path.`,
+  universityTagline: 'Powered by Chandigarh University students who build, compete, and ship together.',
   stats: [
     ['1', 'Confirmed Event'],
     ['1', 'Campus Community'],
@@ -143,7 +147,6 @@ export const heroContent = {
     { icon: '🌱', title: 'Contribute', desc: 'Learn and give back' },
   ],
 };
-
 // ---------- Statistics ----------
 
 export const statistics: StatItem[] = [
@@ -159,7 +162,7 @@ export const aboutContent = {
   eyebrow: 'Who We Are',
   title: 'A Chapter Built on Code, Connection, and Conquering Goals',
   description:
-    "GFG Student Chapter - CU exists for one reason: to make Chandigarh University a place where learning to code doesn't feel like a solo grind. We bring together students who want to get better at problem-solving, build things that work, and support each other while doing it — whether that's untangling a recursion bug at 1am or prepping for a placement interview together.",
+    "GFG CU Community exists for one reason: to make Chandigarh University a place where learning to code doesn't feel like a solo grind. We bring together students who want to get better at problem-solving, build things that work, and support each other while doing it — whether that's untangling a recursion bug at 1am or prepping for a placement interview together.",
   pillars: [
     {
       id: 'code',
@@ -349,8 +352,8 @@ export const achievements: AchievementItem[] = [
   {
     id: 'ach-1',
     year: '2026',
-    title: 'Top Student Chapter — Regional Recognition',
-    description: 'Recognized among the top-performing GFG Student Chapters for community engagement.',
+    title: 'Top CU Community — Regional Recognition',
+    description: 'Recognized among the top-performing GFG CU communities for community engagement.',
     metric: '#1 Regional',
   },
   {
@@ -379,12 +382,27 @@ export const achievements: AchievementItem[] = [
 // ---------- Sponsors & Partners ----------
 
 export const sponsors: LogoItem[] = [
-  { id: 's1', name: 'GeeksforGeeks', tier: 'platinum' },
-  { id: 's2', name: 'DevSprint', tier: 'gold' },
-  { id: 's3', name: 'CodeForge', tier: 'gold' },
-  { id: 's4', name: 'CloudNine Labs', tier: 'silver' },
-  { id: 's5', name: 'ByteWorks', tier: 'silver' },
-  { id: 's6', name: 'StackHouse', tier: 'silver' },
+  {
+    id: 's1',
+    name: 'Eventeye',
+    src: '/sponsors-drive/Asset%2010%20horizontal%20logo-white.png',
+    alt: 'Eventeye logo',
+    tier: 'platinum',
+  },
+  {
+    id: 's2',
+    name: 'Unclefab',
+    src: '/sponsors-drive/2.png',
+    alt: 'Unclefab logo',
+    tier: 'gold',
+  },
+  {
+    id: 's3',
+    name: 'Tamboo Baba',
+    src: '/sponsors-drive/Copy%20of%20TAMBOOBABA-LOGOS.png',
+    alt: 'Tamboo Baba logo',
+    tier: 'gold',
+  },
 ];
 
 export const partners: LogoItem[] = [
@@ -412,7 +430,7 @@ export const galleryImages: GalleryImage[] = [
 export const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Leading the GFG Student Chapter has been an incredible journey. The community's passion for learning and growth is truly inspiring. Together, we're building the next generation of tech leaders.",
+      "Leading the GFG CU Community has been an incredible journey. The community's passion for learning and growth is truly inspiring. Together, we're building the next generation of tech leaders.",
     name: 'Shobhit Tomar',
     designation: 'Community Lead & Founder',
     src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
@@ -460,7 +478,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Ayush Singh',
     role: 'Core Team Member',
     image: '/team/ayush-singh.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -468,7 +486,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Brahamjeet Singh',
     role: 'Core Team Member',
     image: '/team/brahamjeet-singh.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -476,7 +494,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Dhrita',
     role: 'Core Team Member',
     image: '/team/dhrita.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -484,7 +502,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Gagandeep Kaur',
     role: 'Core Team Member',
     image: '/team/gagandeep-kaur.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -492,7 +510,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Husanpreet Kaur',
     role: 'Core Team Member',
     image: '/team/husanpreet-kaur.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -500,7 +518,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Kartik Karnwal',
     role: 'Core Team Member',
     image: '/team/kartik-karnwal.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -508,7 +526,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Khushi Raheja',
     role: 'Core Team Member',
     image: '/team/khushi-raheja.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -516,7 +534,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Manthan Garg',
     role: 'Core Team Member',
     image: '/team/manthan-garg.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -524,7 +542,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Pratham Pathak',
     role: 'Core Team Member',
     image: '/team/pratham-pathak.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -532,7 +550,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Ritik Sharma',
     role: 'Core Team Member',
     image: '/team/ritik-sharma.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -540,7 +558,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Rohan Dhami',
     role: 'Core Team Member',
     image: '/team/rohan-dhami.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -548,7 +566,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Saloni Kathpal',
     role: 'Core Team Member',
     image: '/team/saloni-kathpal.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -556,7 +574,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Sukhwinder Singh',
     role: 'Core Team Member',
     image: '/team/sukhwinder-singh.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
   {
@@ -564,14 +582,14 @@ export const teamMembers: TeamMember[] = [
     name: 'Vaibhav Sharma',
     role: 'Core Team Member',
     image: '/team/vaibhav-sharma.jpg',
-    bio: 'Active contributor in the GFG Student Chapter community.',
+    bio: 'Active contributor in the GFG CU Community.',
     socials: {},
   },
 ];
 
 export const facultyCoordinator = {
   name: 'Dr. Anjali Mehra',
-  role: 'Faculty Coordinator, GFG Student Chapter',
+  role: 'Faculty Coordinator, GFG CU Community',
   image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop',
   bio: "Dr. Mehra has guided the chapter since its founding, championing student-led initiatives and bridging the gap between classroom theory and industry-ready skills. Her mentorship has shaped the chapter's culture of curiosity and collaboration.",
   department: 'Department of Computer Science & Engineering',
@@ -582,7 +600,7 @@ export const facultyCoordinator = {
 export const faqs: FAQItem[] = [
   {
     id: 'faq-1',
-    question: 'Who can join the GFG Student Chapter at CU?',
+    question: 'Who can join the GFG CU Community at CU?',
     answer: "Any student at Chandigarh University — no matter your year, branch, or how much coding experience you already have. If you're curious about code, you're in the right place.",
   },
   {
@@ -612,7 +630,7 @@ export const faqs: FAQItem[] = [
 export const contactInfoCards: ContactInfoCard[] = [
   { id: 'c1', icon: 'Mail', title: 'Email', detail: 'gfg.cu@cumail.in' },
   { id: 'c2', icon: 'Instagram', title: 'Instagram', detail: '@gfg.cu' },
-  { id: 'c3', icon: 'Linkedin', title: 'LinkedIn', detail: 'GeeksforGeeks Student Chapter - CU' },
+  { id: 'c3', icon: 'Linkedin', title: 'LinkedIn', detail: 'GFG CU Community - Chandigarh University' },
 ];
 
 // ---------- Footer ----------

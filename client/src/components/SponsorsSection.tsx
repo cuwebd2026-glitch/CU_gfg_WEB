@@ -2,9 +2,9 @@ import { motion } from 'motion/react';
 import { sponsors } from '@/data/content';
 
 const tierStyles: Record<string, string> = {
-  platinum: 'text-lg md:text-xl font-bold',
-  gold: 'text-base md:text-lg font-semibold',
-  silver: 'text-sm md:text-base font-medium',
+  platinum: 'md:col-span-2',
+  gold: '',
+  silver: '',
 };
 
 export default function SponsorsSection() {
@@ -34,14 +34,27 @@ export default function SponsorsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-wrap items-center justify-center gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch"
         >
           {sponsors.map((sponsor) => (
             <div
               key={sponsor.id}
-              className={`surface-card px-6 py-4 text-muted-foreground hover:text-[var(--gfg-green)] hover:border-[var(--gfg-green)]/50 transition-colors ${tierStyles[sponsor.tier ?? 'silver']}`}
+              className={`surface-card ${tierStyles[sponsor.tier ?? 'silver']} p-6 hover:border-[var(--gfg-green)]/50 transition-colors flex flex-col items-center justify-center gap-4 min-h-[180px]`}
             >
-              {sponsor.name}
+              <div className="w-full h-24 flex items-center justify-center">
+                {sponsor.src ? (
+                  <img
+                    src={sponsor.src}
+                    alt={sponsor.alt ?? sponsor.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-24 w-full object-contain"
+                  />
+                ) : (
+                  <span className="text-muted-foreground">{sponsor.name}</span>
+                )}
+              </div>
+              <div className="text-sm font-semibold text-foreground">{sponsor.name}</div>
             </div>
           ))}
         </motion.div>

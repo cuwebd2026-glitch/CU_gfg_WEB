@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
             Hear from Our Leaders
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Meet the passionate individuals driving the GeeksforGeeks Student Chapter forward. Their insights and experiences showcase the impact of our community.
+            Meet the passionate individuals driving the GFG CU Community forward. Their insights and experiences showcase the impact of our community.
           </p>
         </motion.div>
 
