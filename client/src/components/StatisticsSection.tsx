@@ -25,12 +25,17 @@ function Counter({ stat }: { stat: StatItem }) {
   }, [springValue]);
 
   return (
-    <div ref={ref} className="text-center">
+    <div
+      ref={ref}
+      className="flex-1 min-w-[140px] max-w-[220px] text-center"
+    >
       <div className="text-4xl md:text-5xl font-display font-bold text-[var(--gfg-green)]">
         {displayValue}
         {stat.suffix}
       </div>
-      <div className="text-sm md:text-base text-muted-foreground mt-2">{stat.label}</div>
+      <div className="text-sm md:text-base text-muted-foreground mt-2 font-medium">
+        {stat.label}
+      </div>
     </div>
   );
 }
@@ -44,7 +49,7 @@ export default function StatisticsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
         >
           {statistics.map((stat) => (
             <Counter key={stat.id} stat={stat} />

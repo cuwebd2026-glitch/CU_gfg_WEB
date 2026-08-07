@@ -1,40 +1,65 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CalendarDays } from 'lucide-react';
 import EventCard from '@/components/EventCard';
 import { events } from '@/data/content';
 import { getHomepageEvents } from '@/lib/events';
 
 export default function EventsSection() {
   const previewEvents = getHomepageEvents(events);
+  const hasUpcoming = previewEvents.some((e) => e.status?.toLowerCase() === 'upcoming');
 
   return (
     <section id="events" className="py-20 md:py-32">
-      <div className="container">
+      <div className="container px-4 mx-auto max-w-7xl">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }} viewport={{ once: true }} className="mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-12"
         >
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
-            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider">Events</span>
+            <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
+            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider font-semibold">
+              Events & Competitions
+            </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Chapter Events</h2>
-          <p className="text-muted-foreground max-w-2xl">Verified events and competitions organized by GFG Student Chapter - CU.</p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-3">
+            {hasUpcoming ? 'Upcoming Events' : 'Recent Chapter Events'}
+          </h2>
+          <p className="text-muted-foreground max-w-2xl text-base">
+            {hasUpcoming
+              ? 'Join our upcoming workshops, hackathons, and sessions.'
+              : 'Explore verified events and competitions organized by GFG Student Chapter - CU.'}
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <AnimatePresence mode="popLayout">
-            {previewEvents.map((event, index) => <EventCard key={event.id} event={event} index={index} />)}
-          </AnimatePresence>
-        </div>
+        {/* Cards Grid (Strictly max 2 cards) */}
+        {previewEvents.length > 0 ? (
+          <div className="grid md:grid-cols-2 gap-6">
+            <AnimatePresence mode="popLayout">
+              {previewEvents.map((event, index) => (
+                <EventCard key={event.id} event={event} index={index} />
+              ))}
+            </AnimatePresence>
+          </div>
+        ) : (
+          <div className="text-center py-12 surface-card rounded-2xl border border-border">
+            <CalendarDays className="mx-auto h-12 w-12 text-muted-foreground mb-3" />
+            <p className="text-foreground font-semibold">No events scheduled right now.</p>
+            <p className="text-sm text-muted-foreground mt-1">Check back soon or explore past events!</p>
+          </div>
+        )}
 
-        <div className="flex justify-center mt-10">
+        {/* Explore All Button */}
+        <div className="flex justify-center mt-12">
           <a
             href="/events"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-[var(--gfg-green)] underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-sm"
+            className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all transform hover:scale-105 inline-flex items-center gap-2 group shadow-lg"
           >
             Explore All Events
-            <ArrowRight size={16} aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>

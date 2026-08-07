@@ -8,7 +8,7 @@ import { navItems } from '@/data/content';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoFailed, setLogoFailed] = useState(false);
+  const [cuLogoFailed, setCuLogoFailed] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -20,50 +20,57 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-md transition-colors duration-300 ${
+      className={`sticky top-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/90 border-border shadow-[var(--shadow-elevation-low)]'
-          : 'bg-background/60 border-transparent'
+          ? 'bg-background/90 border-border shadow-[var(--shadow-elevation-low)] py-2'
+          : 'bg-background/60 border-transparent py-3'
       }`}
     >
-      <div className="container flex items-center justify-between h-16">
-        {/* Logo */}
+      <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-6">
+        {/* Left Side Branding */}
         <motion.a
           href="#top"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-3"
+          className="flex items-center group -ml-1 md:-ml-2"
         >
-          <div className="flex items-center gap-2 rounded-2xl border border-border bg-card/80 px-2.5 py-2 shadow-[var(--shadow-elevation-low)] backdrop-blur-sm">
-            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-sm border border-border flex items-center justify-center shrink-0">
-              {!logoFailed ? (
-                <img
-                  src="https://images.seeklogo.com/logo-png/43/1/chandigarh-university-cu-logo-png_seeklogo-432515.png"
-                  alt="Chandigarh University logo"
-                  referrerPolicy="no-referrer"
-                  loading="eager"
-                  decoding="async"
-                  className="w-full h-full object-cover"
-                  onError={() => setLogoFailed(true)}
-                />
-              ) : (
-                <span className="text-[#04150a] font-display font-bold text-lg">CU</span>
-              )}
+          {/* 1. GFG Logo & Brand */}
+          <div className="flex items-center gap-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjKYM-_45mBmWgs2JFiZmCSLsfvnjkr407f0Sp35KQWAMyyuE9MYIdB0&s=10"
+              alt="GeeksforGeeks logo"
+              referrerPolicy="no-referrer"
+              loading="eager"
+              decoding="async"
+              className="w-8 h-8 md:w-9 md:h-9 object-contain shrink-0 transition-transform group-hover:scale-105"
+            />
+            <div className="leading-none">
+              <span className="font-display font-bold text-base md:text-lg text-foreground tracking-tight block">
+                GeeksforGeeks
+              </span>
+              <span className="text-[10px] uppercase font-mono tracking-wider text-[var(--gfg-green)] font-semibold block mt-0.5">
+                Student Chapter
+              </span>
             </div>
-            <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-sm border border-border flex items-center justify-center shrink-0 p-1">
+          </div>
+
+          {/* Thin Vertical Divider */}
+          <div className="h-7 w-px bg-border/60 mx-3 md:mx-4 shrink-0" aria-hidden="true" />
+
+          {/* 2. Clean Cropped Local CU Logo */}
+          <div className="flex items-center shrink-0">
+            {!cuLogoFailed ? (
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjKYM-_45mBmWgs2JFiZmCSLsfvnjkr407f0Sp35KQWAMyyuE9MYIdB0&s=10"
-                alt="GeeksforGeeks logo"
-                referrerPolicy="no-referrer"
+                src="/cu_logo.png"
+                alt="Chandigarh University logo"
                 loading="eager"
                 decoding="async"
-                className="w-full h-full object-contain"
+                className="h-7 md:h-8 w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+                onError={() => setCuLogoFailed(true)}
               />
-            </div>
-            <div className="hidden sm:block leading-tight pr-1 border-l border-border pl-2">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Chandigarh University</p>
-              <p className="text-sm font-semibold text-foreground">GFG Community</p>
-            </div>
+            ) : (
+              <span className="text-foreground font-display font-bold text-base">CU</span>
+            )}
           </div>
         </motion.a>
 
@@ -84,12 +91,13 @@ export default function Header() {
 
         {/* Right Section */}
         <div className="flex items-center gap-3">
-          <div className="hidden lg:flex items-center gap-2 rounded-full border border-border bg-secondary/70 px-3 py-2 text-xs text-muted-foreground shadow-[var(--shadow-elevation-low)]">
-            <span className="inline-flex items-center gap-1 text-foreground font-medium">
-              <span className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
-              CU x GFG
+          <div className="hidden lg:flex items-center gap-2 rounded-full border border-border bg-secondary/70 px-3 py-1.5 text-xs text-muted-foreground shadow-[var(--shadow-elevation-low)]">
+            <span className="inline-flex items-center gap-1.5 text-foreground font-medium">
+              <span className="w-2 h-2 rounded-full bg-[var(--gfg-green)] animate-pulse" />
+              GFG x CU
             </span>
           </div>
+
           <AnimatedToggle
             checked={theme === 'dark'}
             onChange={toggleTheme}
@@ -105,7 +113,7 @@ export default function Header() {
           {/* CTA Button */}
           <motion.a
             href="/join"
-            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] text-sm font-semibold rounded-lg transition-colors"
+            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] text-sm font-semibold rounded-lg transition-colors shadow-sm"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
           >

@@ -289,3 +289,629 @@
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400383,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400388,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-08-06T06:23:22.397Z] {"timestamp":1785997400463,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:03:39.629Z] {"timestamp":1786125817623,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:03:39.629Z] {"timestamp":1786125817638,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:03:39.629Z] {"timestamp":1786125817747,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:03:46.508Z] {"timestamp":1786125824496,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:03:46.508Z] {"timestamp":1786125824499,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:03:46.508Z] {"timestamp":1786125824662,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:03:48.966Z] {"timestamp":1786124289180,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:03:48.966Z] {"timestamp":1786124289191,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T18:03:48.966Z] {"timestamp":1786124289192,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289192,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289193,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289194,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289194,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289194,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289196,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289196,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289197,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289197,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289198,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289199,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289199,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124289199,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124290102,"level":"ERROR","args":["Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.","team-25"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4925:25\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:997:72)\n    at warnOnInvalidKey (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4924:15)\n    at reconcileChildrenArray (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4949:25)\n    at reconcileChildFibersImpl (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:5171:88)\n    at http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:5237:35\n    at reconcileChildren (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:7182:123)\n    at beginWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:8701:104)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:997:72)"}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124290143,"level":"ERROR","args":["Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.","team-34"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4925:25\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:997:72)\n    at warnOnInvalidKey (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4924:15)\n    at reconcileChildrenArray (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:4949:25)\n    at reconcileChildFibersImpl (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:5171:88)\n    at http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:5237:35\n    at reconcileChildren (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:7182:123)\n    at beginWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:8701:104)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/GFGWebsite/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=442ec153:997:72)"}
+[2026-08-07T18:03:48.967Z] {"timestamp":1786124307640,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-07T18:04:51.735Z] {"timestamp":1786125889723,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:04:51.735Z] {"timestamp":1786125889736,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:04:51.735Z] {"timestamp":1786125889788,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:05:04.702Z] {"timestamp":1786125902696,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:05:04.702Z] {"timestamp":1786125902704,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:05:04.702Z] {"timestamp":1786125902752,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617893,"level":"ERROR","args":["[vite]",{"type":"Error","message":"The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'","stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:180:78)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 8)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617919,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FeaturesSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 8)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617920,"level":"ERROR","args":["[vite]",{"type":"Error","message":"The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'facultyCoordinator'","stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'facultyCoordinator'"}],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:180:78)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 16)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617920,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FacultyCoordinatorSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 16)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617920,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617921,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617921,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617921,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617921,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617921,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617922,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617922,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617923,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617924,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617924,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617924,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126617924,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126635182,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/Home.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 0)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126635183,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:17:48.862Z] {"timestamp":1786126635183,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617894,"level":"ERROR","args":["[vite]",{"type":"Error","message":"The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'facultyCoordinator'","stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'facultyCoordinator'"}],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:180:78)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 16)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617939,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FacultyCoordinatorSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 16)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617940,"level":"ERROR","args":["[vite]",{"type":"Error","message":"The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'","stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:180:78)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 8)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617940,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FeaturesSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 8)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617941,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617941,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617941,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617942,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617943,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617943,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617943,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617943,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126617943,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126635182,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/Home.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 0)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126635183,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:17:48.867Z] {"timestamp":1786126635183,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:20:48.856Z] {"timestamp":1786126791570,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:20:48.856Z] {"timestamp":1786126791576,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:20:48.861Z] {"timestamp":1786126791571,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:20:48.861Z] {"timestamp":1786126791571,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:21:48.850Z] {"timestamp":1786126898441,"level":"ERROR","args":["[vite]","Failed to reload /src/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 0)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:21:48.851Z] {"timestamp":1786126898446,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-08-07T18:21:48.851Z] {"timestamp":1786126898446,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:21:48.853Z] {"timestamp":1786126898442,"level":"ERROR","args":["[vite]","Failed to reload /src/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 0)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:21:48.853Z] {"timestamp":1786126898445,"level":"DEBUG","args":["[vite]","hot updated: /src/App.tsx"],"stack":null}
+[2026-08-07T18:21:48.853Z] {"timestamp":1786126898445,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:22:48.858Z] {"timestamp":1786126963701,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FacultyCoordinatorSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:22:48.858Z] {"timestamp":1786126963738,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:22:48.858Z] {"timestamp":1786126963738,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-07T18:22:48.865Z] {"timestamp":1786126963706,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FacultyCoordinatorSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:22:48.865Z] {"timestamp":1786126963736,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:22:48.865Z] {"timestamp":1786126963736,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultyCoordinatorSection.tsx"],"stack":null}
+[2026-08-07T18:23:23.683Z] {"timestamp":1786127001671,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:23:23.683Z] {"timestamp":1786127001682,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:25:09.498Z] {"timestamp":1786127107485,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:25:09.498Z] {"timestamp":1786127107498,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:26:20.860Z] {"timestamp":1786127178278,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:26:20.860Z] {"timestamp":1786127178402,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:26:20.860Z] {"timestamp":1786127178667,"level":"ERROR","args":[{"type":"UncaughtError","message":"Uncaught SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'","filename":"http://localhost:3000/src/components/FacultySection.tsx","lineno":6,"colno":10,"stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}],"stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}
+[2026-08-07T18:26:20.863Z] {"timestamp":1786127178413,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:26:20.863Z] {"timestamp":1786127178457,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:26:20.863Z] {"timestamp":1786127178724,"level":"ERROR","args":[{"type":"UncaughtError","message":"Uncaught SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'","filename":"http://localhost:3000/src/components/FacultySection.tsx","lineno":6,"colno":10,"stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}],"stack":"SyntaxError: The requested module '/src/data/content.ts?t=1786126617634' does not provide an export named 'featureTabs'"}
+[2026-08-07T18:26:26.358Z] {"timestamp":1786127184347,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:26:26.358Z] {"timestamp":1786127184354,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:26:26.358Z] {"timestamp":1786127184398,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:26:49.279Z] {"timestamp":1786127177920,"level":"ERROR","args":["[vite]","Failed to reload /src/components/FeaturesSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-08-07T18:26:49.279Z] {"timestamp":1786127178025,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:26:49.279Z] {"timestamp":1786127178025,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FeaturesSection.tsx"],"stack":null}
+[2026-08-07T18:26:49.279Z] {"timestamp":1786127180024,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:27:13.710Z] {"timestamp":1786127231696,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:27:13.710Z] {"timestamp":1786127231713,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:27:13.710Z] {"timestamp":1786127231790,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:27:17.318Z] {"timestamp":1786127235312,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:27:17.318Z] {"timestamp":1786127235323,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:27:17.318Z] {"timestamp":1786127235369,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:29:23.917Z] {"timestamp":1786127361908,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:29:23.917Z] {"timestamp":1786127361930,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:29:23.917Z] {"timestamp":1786127361966,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:30:59.475Z] {"timestamp":1786127457470,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:30:59.476Z] {"timestamp":1786127457481,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:30:59.476Z] {"timestamp":1786127457537,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:38:29.887Z] {"timestamp":1786127909221,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:38:29.887Z] {"timestamp":1786127909222,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:38:29.887Z] {"timestamp":1786127909873,"level":"ERROR","args":["%o\n\n%s\n\n%s\n",{"type":"Error","message":"TestimonialsSection is not defined","stack":"ReferenceError: TestimonialsSection is not defined\n    at Home (http://localhost:3000/src/pages/Home.tsx?t=1786127909095:65:30)\n    at Object.react_stack_bottom_frame (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:18509:20)\n    at renderWithHooks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5654:24)\n    at updateFunctionComponent (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7475:21)\n    at beginWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:8525:20)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at performUnitOfWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12561:98)\n    at workLoopSync (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12424:43)\n    at renderRootSync (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12408:13)\n    at performWorkOnRoot (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:11827:37)"},"The above error occurred in the <Home> component.","React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary."],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at defaultOnCaughtError (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7001:19)\n    at logCaughtError (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7033:11)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at update.callback (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7066:13)\n    at callCallback (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5491:18)\n    at commitCallbacks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5503:13)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at commitClassCallbacks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:9490:13)\n    at commitLayoutEffectOnFiber (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:9958:27)"}
+[2026-08-07T18:38:47.843Z] {"timestamp":1786127926752,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:38:47.843Z] {"timestamp":1786127926753,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:38:48.842Z] {"timestamp":1786127909252,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:38:48.842Z] {"timestamp":1786127909259,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:38:48.842Z] {"timestamp":1786127910117,"level":"ERROR","args":["%o\n\n%s\n\n%s\n",{"type":"Error","message":"TestimonialsSection is not defined","stack":"ReferenceError: TestimonialsSection is not defined\n    at Home (http://localhost:3000/src/pages/Home.tsx?t=1786127909095:65:30)\n    at Object.react_stack_bottom_frame (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:18509:20)\n    at renderWithHooks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5654:24)\n    at updateFunctionComponent (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7475:21)\n    at beginWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:8525:20)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at performUnitOfWork (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12561:98)\n    at workLoopSync (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12424:43)\n    at renderRootSync (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:12408:13)\n    at performWorkOnRoot (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:11827:37)"},"The above error occurred in the <Home> component.","React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary."],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at defaultOnCaughtError (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7001:19)\n    at logCaughtError (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7033:11)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at update.callback (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:7066:13)\n    at callCallback (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5491:18)\n    at commitCallbacks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:5503:13)\n    at runWithFiberInDEV (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:997:72)\n    at commitClassCallbacks (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:9490:13)\n    at commitLayoutEffectOnFiber (http://localhost:3000/@fs/Users/bhaskarjoshi/Downloads/cu_gfg/gfg_cu/node_modules/.vite/deps/react-dom_client.js?v=b51c5aa1:9958:27)"}
+[2026-08-07T18:38:48.842Z] {"timestamp":1786127926755,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:38:48.842Z] {"timestamp":1786127926756,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:41:23.394Z] {"timestamp":1786128070612,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:41:23.399Z] {"timestamp":1786128070612,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:41:45.747Z] {"timestamp":1786128103736,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:41:45.747Z] {"timestamp":1786128103759,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:41:45.747Z] {"timestamp":1786128103800,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:41:49.076Z] {"timestamp":1786128070612,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T18:41:49.076Z] {"timestamp":1786128070612,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:41:49.830Z] {"timestamp":1786128107811,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:41:49.830Z] {"timestamp":1786128107845,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:41:49.830Z] {"timestamp":1786128107865,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:44:47.110Z] {"timestamp":1786128284210,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:44:47.110Z] {"timestamp":1786128284210,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:44:48.878Z] {"timestamp":1786128284210,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T18:44:48.878Z] {"timestamp":1786128284216,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T18:44:53.997Z] {"timestamp":1786128291984,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:44:53.997Z] {"timestamp":1786128292012,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:44:53.997Z] {"timestamp":1786128292083,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T18:55:35.404Z] {"timestamp":1786128933393,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T18:55:35.404Z] {"timestamp":1786128933405,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T18:55:35.404Z] {"timestamp":1786128933481,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:06:29.503Z] {"timestamp":1786129553712,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:06:29.503Z] {"timestamp":1786129553714,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:06:29.503Z] {"timestamp":1786129553714,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:06:29.503Z] {"timestamp":1786129585724,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:06:29.503Z] {"timestamp":1786129585725,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:06:33.798Z] {"timestamp":1786129591777,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:06:33.799Z] {"timestamp":1786129591784,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:06:33.799Z] {"timestamp":1786129591826,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:06:46.422Z] {"timestamp":1786129604412,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:06:46.422Z] {"timestamp":1786129604418,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:06:46.422Z] {"timestamp":1786129604455,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:06:48.849Z] {"timestamp":1786129553710,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:06:48.849Z] {"timestamp":1786129553716,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:06:48.849Z] {"timestamp":1786129553717,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:06:48.849Z] {"timestamp":1786129585718,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:06:48.849Z] {"timestamp":1786129585718,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:07:04.541Z] {"timestamp":1786129622532,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:07:04.541Z] {"timestamp":1786129622555,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:07:04.541Z] {"timestamp":1786129622614,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859866,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859867,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129859868,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860896,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:11:04.150Z] {"timestamp":1786129860897,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:11:12.414Z] {"timestamp":1786129870403,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:11:12.414Z] {"timestamp":1786129870417,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:11:12.414Z] {"timestamp":1786129870453,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:11:48.858Z] {"timestamp":1786129859863,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859870,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859871,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859871,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859871,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859872,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859872,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859872,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859872,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859872,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859873,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859873,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859873,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859873,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859874,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859874,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129859874,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861009,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861010,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:11:48.859Z] {"timestamp":1786129861010,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060363,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060364,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060364,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060364,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060364,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060364,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:14:23.202Z] {"timestamp":1786130060365,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:14:45.942Z] {"timestamp":1786130083934,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:14:45.942Z] {"timestamp":1786130083945,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:14:45.942Z] {"timestamp":1786130083998,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060367,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:14:48.842Z] {"timestamp":1786130060375,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266397,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266404,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:17:48.862Z] {"timestamp":1786130266405,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266402,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266403,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:17:48.868Z] {"timestamp":1786130266403,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130329812,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130329812,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130329812,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130348493,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130348496,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventCard.tsx"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130360176,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:19:22.659Z] {"timestamp":1786130360176,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:38.224Z] {"timestamp":1786130376206,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:19:38.227Z] {"timestamp":1786130376222,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:19:38.227Z] {"timestamp":1786130376273,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130329811,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130329816,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130329816,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130348493,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130348496,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventCard.tsx"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130360183,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:19:48.854Z] {"timestamp":1786130360184,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:19:59.120Z] {"timestamp":1786130397116,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:19:59.120Z] {"timestamp":1786130397135,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:19:59.120Z] {"timestamp":1786130397185,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:20:17.838Z] {"timestamp":1786130414990,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:20:17.838Z] {"timestamp":1786130415009,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:20:17.838Z] {"timestamp":1786130415085,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:21:46.540Z] {"timestamp":1786130501967,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:21:46.540Z] {"timestamp":1786130501968,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:21:46.540Z] {"timestamp":1786130501968,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:21:48.838Z] {"timestamp":1786130501967,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:21:48.838Z] {"timestamp":1786130501976,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:21:48.838Z] {"timestamp":1786130501976,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:28:19.499Z] {"timestamp":1786130883427,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:28:19.499Z] {"timestamp":1786130883428,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:28:19.499Z] {"timestamp":1786130892621,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:28:19.499Z] {"timestamp":1786130892622,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TypingText.tsx"],"stack":null}
+[2026-08-07T19:28:48.867Z] {"timestamp":1786130883432,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:28:48.867Z] {"timestamp":1786130883441,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:28:48.867Z] {"timestamp":1786130892621,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:28:48.867Z] {"timestamp":1786130892621,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TypingText.tsx"],"stack":null}
+[2026-08-07T19:32:00.319Z] {"timestamp":1786131118309,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:32:00.319Z] {"timestamp":1786131118320,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:32:00.319Z] {"timestamp":1786131118381,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:32:08.961Z] {"timestamp":1786131126954,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:32:08.961Z] {"timestamp":1786131126958,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:32:08.961Z] {"timestamp":1786131126966,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:32:23.898Z] {"timestamp":1786131141885,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:32:23.898Z] {"timestamp":1786131141898,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:32:23.898Z] {"timestamp":1786131141922,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131349360,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131383266,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:36:25.502Z] {"timestamp":1786131383266,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventCard.tsx"],"stack":null}
+[2026-08-07T19:36:48.901Z] {"timestamp":1786131349364,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349369,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349369,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349370,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349371,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349371,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349371,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131349371,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131383265,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:36:48.902Z] {"timestamp":1786131383270,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventCard.tsx"],"stack":null}
+[2026-08-07T19:44:59.945Z] {"timestamp":1786131898180,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:44:59.945Z] {"timestamp":1786131898196,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:44:59.945Z] {"timestamp":1786131898249,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:45:01.979Z] {"timestamp":1786131899976,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T19:45:01.979Z] {"timestamp":1786131899979,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T19:45:01.979Z] {"timestamp":1786131899991,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229592,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:50:48.849Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229589,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229593,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T19:50:48.850Z] {"timestamp":1786132229594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T19:50:52.808Z] {"timestamp":1786132251050,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:50:52.808Z] {"timestamp":1786132251050,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:51:48.837Z] {"timestamp":1786132251048,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:51:48.837Z] {"timestamp":1786132251049,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:52:28.839Z] {"timestamp":1786132347434,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:52:28.839Z] {"timestamp":1786132347434,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:52:48.837Z] {"timestamp":1786132347434,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:52:48.837Z] {"timestamp":1786132347435,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:55:07.694Z] {"timestamp":1786132506185,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:55:07.694Z] {"timestamp":1786132506186,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:55:48.843Z] {"timestamp":1786132506185,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:55:48.843Z] {"timestamp":1786132506191,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:56:48.931Z] {"timestamp":1786132608128,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:56:48.932Z] {"timestamp":1786132608128,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:56:48.938Z] {"timestamp":1786132608133,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:56:48.938Z] {"timestamp":1786132608133,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:56:58.382Z] {"timestamp":1786132618105,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:56:58.382Z] {"timestamp":1786132618105,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:57:22.829Z] {"timestamp":1786132641568,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:57:22.829Z] {"timestamp":1786132641569,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:57:48.838Z] {"timestamp":1786132618104,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:57:48.838Z] {"timestamp":1786132618105,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T19:57:48.838Z] {"timestamp":1786132641568,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T19:57:48.838Z] {"timestamp":1786132641568,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:01:46.483Z] {"timestamp":1786132905359,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:01:46.483Z] {"timestamp":1786132905359,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:01:48.837Z] {"timestamp":1786132905363,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:01:48.837Z] {"timestamp":1786132905364,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:04:14.844Z] {"timestamp":1786133053593,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:04:14.844Z] {"timestamp":1786133053594,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:04:48.838Z] {"timestamp":1786133053589,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:04:48.838Z] {"timestamp":1786133053589,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:06:41.392Z] {"timestamp":1786133200354,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:06:41.393Z] {"timestamp":1786133200354,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:06:48.831Z] {"timestamp":1786133200354,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:06:48.831Z] {"timestamp":1786133200362,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:07:42.847Z] {"timestamp":1786133261951,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:07:42.847Z] {"timestamp":1786133261951,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:07:48.845Z] {"timestamp":1786133261950,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:07:48.845Z] {"timestamp":1786133261950,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:08:24.902Z] {"timestamp":1786133304236,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:08:24.902Z] {"timestamp":1786133304237,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:08:48.841Z] {"timestamp":1786133304238,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:08:48.841Z] {"timestamp":1786133304239,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:10:32.605Z] {"timestamp":1786133431904,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T20:10:32.605Z] {"timestamp":1786133431904,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:10:48.832Z] {"timestamp":1786133431901,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-08-07T20:10:48.832Z] {"timestamp":1786133431901,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844850,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844850,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844850,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844850,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844851,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844852,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844853,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844853,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133844853,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133861815,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:17:43.220Z] {"timestamp":1786133861815,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844852,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133844861,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133861815,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:17:48.856Z] {"timestamp":1786133861815,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:20:43.476Z] {"timestamp":1786134042240,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:20:43.476Z] {"timestamp":1786134042258,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:20:43.476Z] {"timestamp":1786134042301,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:20:45.400Z] {"timestamp":1786134043539,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:20:45.400Z] {"timestamp":1786134043551,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:20:45.400Z] {"timestamp":1786134043588,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:20:47.448Z] {"timestamp":1786134045444,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:20:47.448Z] {"timestamp":1786134045454,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:20:47.448Z] {"timestamp":1786134045472,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:21:08.563Z] {"timestamp":1786134067047,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:21:08.563Z] {"timestamp":1786134067068,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:21:08.563Z] {"timestamp":1786134067079,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:21:10.620Z] {"timestamp":1786134068614,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:21:10.620Z] {"timestamp":1786134068619,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:21:10.620Z] {"timestamp":1786134068638,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:21:43.987Z] {"timestamp":1786134101984,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:21:43.987Z] {"timestamp":1786134101992,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:21:43.987Z] {"timestamp":1786134102037,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:21:46.202Z] {"timestamp":1786134104197,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:21:46.202Z] {"timestamp":1786134104202,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:21:46.202Z] {"timestamp":1786134104220,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:26:18.100Z] {"timestamp":1786134376907,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:26:18.100Z] {"timestamp":1786134376909,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:26:48.864Z] {"timestamp":1786134376907,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:26:48.865Z] {"timestamp":1786134376915,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:27:24.924Z] {"timestamp":1786134444178,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:27:24.924Z] {"timestamp":1786134444179,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:27:48.877Z] {"timestamp":1786134444177,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:27:48.879Z] {"timestamp":1786134444178,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:28:42.374Z] {"timestamp":1786134521298,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:28:42.374Z] {"timestamp":1786134521298,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:28:48.856Z] {"timestamp":1786134521301,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:28:48.856Z] {"timestamp":1786134521307,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:32:37.305Z] {"timestamp":1786134756020,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:32:37.305Z] {"timestamp":1786134756021,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:32:48.850Z] {"timestamp":1786134756022,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:32:48.850Z] {"timestamp":1786134756032,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:36:13.184Z] {"timestamp":1786134971544,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:36:13.184Z] {"timestamp":1786134971545,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:36:48.857Z] {"timestamp":1786134971546,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:36:48.857Z] {"timestamp":1786134971550,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:36:54.200Z] {"timestamp":1786135012966,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:36:54.200Z] {"timestamp":1786135012967,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:37:48.877Z] {"timestamp":1786135012970,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:37:48.881Z] {"timestamp":1786135012970,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:39:23.774Z] {"timestamp":1786135161769,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:39:23.774Z] {"timestamp":1786135161784,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:39:23.774Z] {"timestamp":1786135161828,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:40:39.793Z] {"timestamp":1786135238522,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:40:39.796Z] {"timestamp":1786135238522,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:40:48.853Z] {"timestamp":1786135238521,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:40:48.853Z] {"timestamp":1786135238527,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:42:03.982Z] {"timestamp":1786135321978,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:42:03.982Z] {"timestamp":1786135322030,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:42:03.982Z] {"timestamp":1786135322053,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:42:15.725Z] {"timestamp":1786135333715,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:42:15.725Z] {"timestamp":1786135333725,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:42:15.725Z] {"timestamp":1786135333779,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:42:57.386Z] {"timestamp":1786135375377,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:42:57.386Z] {"timestamp":1786135375386,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:42:57.387Z] {"timestamp":1786135375424,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:43:28.951Z] {"timestamp":1786135406946,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:43:28.951Z] {"timestamp":1786135406990,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:43:28.951Z] {"timestamp":1786135407011,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:43:31.144Z] {"timestamp":1786135409140,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-07T20:43:31.144Z] {"timestamp":1786135409147,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-07T20:43:31.144Z] {"timestamp":1786135409170,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771141,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.455Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T20:49:32.456Z] {"timestamp":1786135771142,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016693,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016694,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/EventsPage.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016694,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Header.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016694,"level":"DEBUG","args":["[vite]","hot updated: /src/components/HeroSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016694,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AchievementsSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/SponsorsSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/AboutSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/EventsSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/PartnersSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/GallerySection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TestimonialsSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FAQSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/ContactSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TeamSection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/Footer.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136016695,"level":"DEBUG","args":["[vite]","hot updated: /src/components/FacultySection.tsx"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136026957,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T20:53:48.804Z] {"timestamp":1786136026957,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}
+[2026-08-07T21:18:48.821Z] {"timestamp":1786137507887,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-08-07T21:18:48.821Z] {"timestamp":1786137507887,"level":"DEBUG","args":["[vite]","hot updated: /src/components/StatisticsSection.tsx"],"stack":null}

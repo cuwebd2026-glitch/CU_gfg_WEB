@@ -2,7 +2,6 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import StatisticsSection from '@/components/StatisticsSection';
 import AboutSection from '@/components/AboutSection';
-import FeaturesSection from '@/components/FeaturesSection';
 import EventsSection from '@/components/EventsSection';
 import AchievementsSection from '@/components/AchievementsSection';
 import SponsorsSection from '@/components/SponsorsSection';
@@ -10,7 +9,7 @@ import PartnersSection from '@/components/PartnersSection';
 import GallerySection from '@/components/GallerySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import TeamSection from '@/components/TeamSection';
-import FacultyCoordinatorSection from '@/components/FacultyCoordinatorSection';
+import FacultySection from '@/components/FacultySection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -19,9 +18,9 @@ import { motion } from 'motion/react';
 /**
  * Home Page - GFG CU Community
  *
- * Section order: Navbar -> Hero -> Statistics -> About -> Features -> Events
- * -> Achievements -> Sponsors -> Partners -> Gallery -> Testimonials -> Team
- * -> Faculty Coordinator -> FAQ -> Contact -> Footer
+ * Section order: Navbar -> Hero -> Statistics -> About -> Events
+ * -> Achievements -> Sponsors -> Partners -> Gallery -> Team
+ * -> Faculty -> FAQ -> Contact -> Footer
  *
  * All section content is data-driven from `@/data/content.ts`.
  */
@@ -35,15 +34,14 @@ export default function Home() {
         <HeroSection />
         <StatisticsSection />
         <AboutSection />
-        <FeaturesSection />
         <EventsSection />
         <AchievementsSection />
         <SponsorsSection />
         <PartnersSection />
         <GallerySection />
-        <TestimonialsSection />
+        <TestimonialsSection />  {/* TEMPORARILY HIDDEN */}
         <TeamSection />
-        <FacultyCoordinatorSection />
+        <FacultySection />
         <FAQSection />
         <ContactSection />
       </main>

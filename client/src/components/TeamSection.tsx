@@ -2,174 +2,291 @@ import { motion } from 'motion/react';
 import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { useState } from 'react';
-import { teamMembers } from '@/data/content';
+import { useLocation } from 'wouter';
+import { teamMembers, TeamMember } from '@/data/content';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
+function formatImageUrl(url: string): string {
+  if (!url) return '/team/placeholder.jpg';
+  if (url.includes('drive.google.com')) {
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    if (match && match[1]) {
+      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+    }
+  }
+  return url;
+}
+
 export default function TeamSection() {
-  const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[number] | null>(null);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [, setLocation] = useLocation();
+
+  const executives = teamMembers.filter((m) => m.level === 'executive');
+  const managers = teamMembers.filter((m) => m.level === 'manager');
+  const leads = teamMembers.filter((m) => m.level === 'lead');
+  const coreMembers = teamMembers.filter((m) => m.level === 'core');
+
+  const president = executives[0];
+  const executiveOfficers = executives.slice(1);
 
   return (
     <section id="team" className="py-20 md:py-32 bg-secondary/40">
-      <div className="container">
+      <div className="container px-4 mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-20 text-center md:text-left"
         >
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
-            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider">
-              Our Team
+          <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+            <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
+            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest">
+              Leadership & Structure
             </span>
           </div>
-
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
             Meet Our Team
           </h2>
-
-          <p className="text-muted-foreground max-w-2xl">
-            Meet the passionate students and mentors driving the GFG CU Community forward. Our team is dedicated to building a community where everyone can learn, grow, and lead.
+          <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+            The driving force behind GeeksforGeeks Student Chapter — Chandigarh University.
           </p>
         </motion.div>
 
-        {/* Team Grid with 3D Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="w-full"
-            >
-              <CardContainer className="inter-var w-full">
-                <CardBody className="bg-card hover:shadow-2xl hover:shadow-[var(--gfg-green)]/[0.08] border-border w-full sm:w-full max-w-full h-auto rounded-xl p-6 border overflow-hidden">
-                  {/* Member Image */}
-                  <CardItem
-                    translateZ={0}
-                    className="w-full mb-4"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setSelectedMember(member)}
-                      className="w-full text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gfg-green)] cursor-zoom-in"
-                      aria-label={`View full image of ${member.name}`}
-                    >
-                      <div className="h-52 w-full rounded-lg overflow-hidden bg-secondary/50">
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          loading="lazy"
-                          className="h-full w-full object-contain object-center group-hover/card:shadow-xl transition-shadow"
-                        />
-                      </div>
-                    </button>
-                  </CardItem>
+        <div className="space-y-28">
+          {/* LEVEL 1: EXECUTIVE BOARD */}
+          {executives.length > 0 && (
+            <div className="space-y-12">
+              <div className="border-b border-border/80 pb-4 text-center">
+                <h3 className="text-3xl font-display font-bold text-foreground">
+                  Chapter Leadership
+                </h3>
+              </div>
 
-                  {/* Member Name */}
-                  <CardItem
-                    translateZ={50}
-                    className="text-lg font-bold text-foreground"
-                  >
-                    {member.name}
-                  </CardItem>
+              {/* President Spotlight Card */}
+              {president && (
+                <div className="flex justify-center mb-8">
+                  <div className="w-full max-w-md">
+                    <CardContainer className="w-full">
+                      <CardBody className="bg-card border-2 border-[var(--gfg-green)]/40 hover:border-[var(--gfg-green)] shadow-xl hover:shadow-2xl hover:shadow-[var(--gfg-green)]/20 rounded-2xl p-6">
+                        <CardItem translateZ={0} className="w-full mb-4">
+                          <button
+                            type="button"
+                            onClick={() => setSelectedMember(president)}
+                            className="w-full cursor-zoom-in"
+                          >
+                            <div className="h-72 md:h-80 w-full rounded-xl overflow-hidden bg-secondary/50 border border-border">
+                              <img
+                                src={formatImageUrl(president.image)}
+                                alt={president.name}
+                                className="h-full w-full object-contain object-center"
+                              />
+                            </div>
+                          </button>
+                        </CardItem>
+                        <CardItem translateZ={30} className="text-2xl font-bold text-foreground">
+                          {president.name}
+                        </CardItem>
+                        <CardItem translateZ={20} className="text-sm font-bold text-[var(--gfg-green)] mb-2">
+                          {president.role}
+                        </CardItem>
+                        {president.bio && (
+                          <CardItem translateZ={10} className="text-muted-foreground text-xs mb-4">
+                            {president.bio}
+                          </CardItem>
+                        )}
+                        <SocialsRow socials={president.socials} name={president.name} />
+                      </CardBody>
+                    </CardContainer>
+                  </div>
+                </div>
+              )}
 
-                  {/* Member Role */}
-                  <CardItem
-                    translateZ={40}
-                    className="text-sm font-semibold text-[var(--gfg-green)] mb-2"
-                  >
-                    {member.role}
-                  </CardItem>
+              {/* Other Officers Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {executiveOfficers.map((member) => (
+                  <CardContainer key={member.id} className="w-full">
+                    <CardBody className="bg-card border-border hover:border-[var(--gfg-green)]/60 rounded-xl p-5 w-full">
+                      <CardItem translateZ={0} className="w-full mb-4">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMember(member)}
+                          className="w-full cursor-zoom-in"
+                        >
+                          <div className="h-64 md:h-72 w-full rounded-lg overflow-hidden bg-secondary/50">
+                            <img
+                              src={formatImageUrl(member.image)}
+                              alt={member.name}
+                              className="h-full w-full object-contain object-center"
+                            />
+                          </div>
+                        </button>
+                      </CardItem>
+                      <CardItem translateZ={30} className="text-lg font-bold text-foreground">
+                        {member.name}
+                      </CardItem>
+                      <CardItem translateZ={20} className="text-xs font-semibold text-[var(--gfg-green)] mb-2">
+                        {member.role}
+                      </CardItem>
+                      <SocialsRow socials={member.socials} name={member.name} />
+                    </CardBody>
+                  </CardContainer>
+                ))}
+              </div>
+            </div>
+          )}
 
-                  {/* Member Bio */}
-                  <CardItem
-                    as="p"
-                    translateZ={30}
-                    className="text-muted-foreground text-xs max-w-sm mb-4"
-                  >
-                    {member.bio}
-                  </CardItem>
+          {/* LEVEL 2: MANAGERS */}
+          {managers.length > 0 && (
+            <div className="space-y-8">
+              <div className="border-b border-border/60 pb-4">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Leads
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {managers.map((member) => (
+                  <CardContainer key={member.id} className="w-full">
+                    <CardBody className="bg-card border-border rounded-xl p-4 w-full">
+                      <CardItem translateZ={0} className="w-full mb-3">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMember(member)}
+                          className="w-full cursor-zoom-in"
+                        >
+                          <div className="h-56 w-full rounded-lg overflow-hidden bg-secondary/50">
+                            <img
+                              src={formatImageUrl(member.image)}
+                              alt={member.name}
+                              className="h-full w-full object-contain object-center"
+                            />
+                          </div>
+                        </button>
+                      </CardItem>
+                      <CardItem translateZ={20} className="text-base font-bold text-foreground">
+                        {member.name}
+                      </CardItem>
+                      <CardItem translateZ={10} className="text-xs font-medium text-[var(--gfg-green)] mb-2">
+                        {member.role}
+                      </CardItem>
+                      <SocialsRow socials={member.socials} name={member.name} />
+                    </CardBody>
+                  </CardContainer>
+                ))}
+              </div>
+            </div>
+          )}
 
-                  {/* Social Links */}
-                  <CardItem
-                    translateZ={20}
-                    className="flex gap-3 mt-4"
+          {/* LEVEL 3: WEB DEVELOPERS */}
+          {leads.length > 0 && (
+            <div className="space-y-8">
+              <div className="border-b border-border/60 pb-4">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Web Developers
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {leads.map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-card border border-border/80 hover:border-[var(--gfg-green)]/60 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition-all group"
                   >
-                    {member.socials.github && (
-                      <a
-                        href={member.socials.github}
-                        className="w-8 h-8 bg-secondary hover:bg-[var(--gfg-green)] rounded-full flex items-center justify-center transition-colors"
-                        aria-label={`${member.name} on GitHub`}
+                    <div>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedMember(member)}
+                        className="w-full cursor-zoom-in mb-3"
                       >
-                        <Github size={16} className="text-muted-foreground" />
-                      </a>
-                    )}
-                    {member.socials.linkedin && (
-                      <a
-                        href={member.socials.linkedin}
-                        className="w-8 h-8 bg-secondary hover:bg-[var(--gfg-green)] rounded-full flex items-center justify-center transition-colors"
-                        aria-label={`${member.name} on LinkedIn`}
+                        <div className="h-48 w-full rounded-lg overflow-hidden bg-secondary/50 border border-border">
+                          <img
+                            src={formatImageUrl(member.image)}
+                            alt={member.name}
+                            className="h-full w-full object-contain object-center group-hover:scale-105 transition-transform"
+                          />
+                        </div>
+                      </button>
+                      <h4 className="text-base font-bold text-foreground truncate">{member.name}</h4>
+                    </div>
+                    <div className="mt-3">
+                      <SocialsRow socials={member.socials} name={member.name} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* LEVEL 4: CORE MEMBERS */}
+          {coreMembers.length > 0 && (
+            <div className="space-y-8">
+              <div className="border-b border-border/60 pb-4">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Core Team Members
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {coreMembers.map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-card border border-border/60 hover:border-[var(--gfg-green)]/50 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-all group"
+                  >
+                    <div>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedMember(member)}
+                        className="w-full cursor-zoom-in mb-2"
                       >
-                        <Linkedin size={16} className="text-muted-foreground" />
-                      </a>
-                    )}
-                    {member.socials.twitter && (
-                      <a
-                        href={member.socials.twitter}
-                        className="w-8 h-8 bg-secondary hover:bg-[var(--gfg-green)] rounded-full flex items-center justify-center transition-colors"
-                        aria-label={`${member.name} on Twitter`}
-                      >
-                        <Twitter size={16} className="text-muted-foreground" />
-                      </a>
-                    )}
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            </motion.div>
-          ))}
+                        <div className="h-36 w-full rounded-lg overflow-hidden bg-secondary/50 border border-border/40">
+                          <img
+                            src={formatImageUrl(member.image)}
+                            alt={member.name}
+                            className="h-full w-full object-contain object-center group-hover:scale-105 transition-transform"
+                          />
+                        </div>
+                      </button>
+                      <p className="text-xs font-bold text-foreground truncate">{member.name}</p>
+                      {member.role && (
+                        <p className="text-[10px] font-medium text-[var(--gfg-green)] truncate">{member.role}</p>
+                      )}
+                    </div>
+                    <div className="mt-2">
+                      <SocialsRow socials={member.socials} name={member.name} compact />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
+        {/* CTA Section */}
+        <div className="mt-20 text-center">
           <p className="text-muted-foreground mb-6">Want to join our leadership team?</p>
-          <button className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all transform hover:scale-105">
+          <button
+            onClick={() => setLocation('/join')}
+            className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all transform hover:scale-105 cursor-pointer"
+          >
             Apply Now
           </button>
-        </motion.div>
+        </div>
 
-        <Dialog
-          open={selectedMember !== null}
-          onOpenChange={(isOpen) => {
-            if (!isOpen) {
-              setSelectedMember(null);
-            }
-          }}
-        >
+        {/* Preview Modal */}
+        <Dialog open={selectedMember !== null} onOpenChange={(open) => !open && setSelectedMember(null)}>
           <DialogHeader className="sr-only">
-            <DialogTitle>{selectedMember ? `${selectedMember.name} photo` : 'Team member photo'}</DialogTitle>
-            <DialogDescription>Full image preview for selected team member.</DialogDescription>
+            <DialogTitle>{selectedMember?.name || 'Member'}</DialogTitle>
+            <DialogDescription>Full image preview</DialogDescription>
           </DialogHeader>
           <DialogContent className="max-w-4xl p-2 bg-card" showCloseButton={true}>
             {selectedMember && (
               <figure className="w-full">
                 <img
-                  src={selectedMember.image}
+                  src={formatImageUrl(selectedMember.image)}
                   alt={selectedMember.name}
                   className="w-full max-h-[80vh] object-contain rounded-md"
                 />
                 <figcaption className="text-center text-sm text-muted-foreground py-2">
-                  {selectedMember.name}
+                  {selectedMember.name} {selectedMember.level !== 'lead' && selectedMember.role ? `— ${selectedMember.role}` : ''}
                 </figcaption>
               </figure>
             )}
@@ -177,5 +294,49 @@ export default function TeamSection() {
         </Dialog>
       </div>
     </section>
+  );
+}
+
+function SocialsRow({ socials, name, compact = false }: { socials: TeamMember['socials']; name: string; compact?: boolean }) {
+  if (!socials.github && !socials.linkedin && !socials.twitter) return null;
+  const iconSize = compact ? 12 : 14;
+  const btnSize = compact ? "w-6 h-6" : "w-7 h-7";
+
+  return (
+    <div className="flex gap-2 pt-2 border-t border-border/40">
+      {socials.github && (
+        <a
+          href={socials.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${btnSize} bg-secondary hover:bg-[var(--gfg-green)] hover:text-[#04150a] rounded-full flex items-center justify-center transition-colors text-muted-foreground`}
+          aria-label={`${name} on GitHub`}
+        >
+          <Github size={iconSize} />
+        </a>
+      )}
+      {socials.linkedin && (
+        <a
+          href={socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${btnSize} bg-secondary hover:bg-[var(--gfg-green)] hover:text-[#04150a] rounded-full flex items-center justify-center transition-colors text-muted-foreground`}
+          aria-label={`${name} on LinkedIn`}
+        >
+          <Linkedin size={iconSize} />
+        </a>
+      )}
+      {socials.twitter && (
+        <a
+          href={socials.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${btnSize} bg-secondary hover:bg-[var(--gfg-green)] hover:text-[#04150a] rounded-full flex items-center justify-center transition-colors text-muted-foreground`}
+          aria-label={`${name} on Twitter`}
+        >
+          <Twitter size={iconSize} />
+        </a>
+      )}
+    </div>
   );
 }

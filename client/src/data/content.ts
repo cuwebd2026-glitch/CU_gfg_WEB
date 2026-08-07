@@ -1,5 +1,5 @@
 /**
- * Central content source for the GFG CU community site.
+ * Central content source for the GFG CU Community site.
  *
  * Per project rule "never hardcode content, drive from JSON/data":
  * every section component imports its copy/data from here instead of
@@ -39,8 +39,8 @@ export interface EventItem {
   id: string;
   title: string;
   date: string;
-  sortDate?: string;
-  status: 'upcoming' | 'past';
+  sortDate?: string; // Format: YYYY-MM-DD (e.g., '2026-08-08')
+  status?: 'upcoming' | 'ongoing' | 'past';
   category: string;
   description: string;
   image: string;
@@ -50,6 +50,7 @@ export interface EventItem {
   time?: string;
   teamSize?: string;
   designation?: string;
+  registrationLink?: string;
 }
 
 export interface AchievementItem {
@@ -89,11 +90,22 @@ export interface TeamMember {
   role: string;
   image: string;
   bio: string;
+  level: 'executive' | 'manager' | 'lead' | 'core';
   socials: {
     github?: string;
     linkedin?: string;
     twitter?: string;
   };
+}
+
+export interface FacultyMember {
+  id: string;
+  name: string;
+  role: string;
+  designation: string;
+  department: string;
+  image: string;
+  bio: string;
 }
 
 export interface FAQItem {
@@ -113,10 +125,10 @@ export interface ContactInfoCard {
 
 export const navItems: NavItem[] = [
   { label: 'About', href: '#about' },
-  { label: 'Features', href: '#features' },
   { label: 'Events', href: '#events' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Team', href: '#team' },
+  { label: 'Faculty', href: '#faculty' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -124,38 +136,58 @@ export const navItems: NavItem[] = [
 // ---------- Hero ----------
 
 export const heroContent = {
-  eyebrow: 'Code. Connect. Conquer.',
+  eyebrow: 'Innovate. Engage. Empower.',
   affiliation: 'GFG at Chandigarh University',
   typingPhrases: [
-    'Code. Connect. Conquer.',
-    'Master DSA, One Problem at a Time',
-    'Build With Geeks Who Get It',
-    'From First Commit to First Offer',
+    'Innovate. Engage. Empower.',
+    'Workshops • Hackathons • Masterclasses',
+    'Build DSA & Modern Tech Instincts',
+    'Connecting CU Geeks with Industry Leaders',
   ],
   description:
-    `We're the GFG community at Chandigarh University — a group of students who'd rather debug together than debug alone. Whether you're writing your first "Hello World" or grinding LeetCode before placements, this is where you show up, code, and grow with people on the same path.`,
-  universityTagline: 'Powered by Chandigarh University students who build, compete, and ship together.',
+    `We're the GFG community at Chandigarh University — a group of students who'd rather debug together than debug alone. From hands-on AI bootcamps and cybersecurity masterclasses to competitive ideathons and expert speaker sessions, this is where campus builders sharpen their skills and connect with industry leaders.`,
+  universityTagline: 'Powered by Chandigarh University students who innovate, build, and lead together.',
   stats: [
-    ['1', 'Confirmed Event'],
-    ['1', 'Campus Community'],
-    ['3', 'Official Contact Channels'],
+    ['10+', 'Events & Workshops'],
+    ['500+', 'Active Members'],
+    ['1', 'United Community'],
   ] as [string, string][],
   badges: [
-    { icon: '💻', title: 'Code', desc: 'Practice-first learning' },
-    { icon: '🤝', title: 'Connect', desc: 'Community over crowd' },
-    { icon: '🏆', title: 'Conquer', desc: 'Compete and grow' },
-    { icon: '🌱', title: 'Contribute', desc: 'Learn and give back' },
+    { icon: '💡', title: 'Innovate', desc: 'Hackathons & ideathons' },
+    { icon: '🤝', title: 'Engage', desc: 'Expert talks & bootcamps' },
+    { icon: '🚀', title: 'Empower', desc: 'Peer learning & mentorship' },
+    { icon: '🌐', title: 'Community', desc: 'Campus-wide tech network' },
   ],
 };
-// ---------- Statistics ----------
+
+export interface StatItem {
+  id: string;
+  value: number;
+  suffix: string;
+  label: string;
+}
 
 export const statistics: StatItem[] = [
-  { id: 'members', value: 500, suffix: '+', label: 'Active Members' },
-  { id: 'events', value: 50, suffix: '+', label: 'Events Hosted' },
-  { id: 'projects', value: 120, suffix: '+', label: 'Projects Shipped' },
-  { id: 'mentors', value: 30, suffix: '+', label: 'Mentors & Speakers' },
+  {
+    id: 'members',
+    value: 500,
+    suffix: '+',
+    label: 'Active Members',
+  },
+  {
+    id: 'events',
+    value: 50,
+    suffix: '+',
+    label: 'Events Hosted',
+  },
+  {
+    id: 'mentors',
+    value: 30,
+    suffix: '+',
+    label: 'Mentors & Speakers',
+  },
+  // Adding/removing stats here now automatically updates the layout smoothly
 ];
-
 // ---------- About ----------
 
 export const aboutContent = {
@@ -191,54 +223,13 @@ export const aboutContent = {
   ] as PillarItem[],
 };
 
-// ---------- Features ----------
-
-export const featureTabs: FeatureTabContent[] = [
-  {
-    id: 'core',
-    label: 'Core Programs',
-    icon: 'Zap',
-    cards: [
-      { title: 'DSA Sprints', description: 'Master Data Structures and Algorithms with guided sprints and daily challenges.' },
-      { title: 'Hackathons', description: 'Build innovative projects and compete with peers in exciting coding competitions.' },
-    ],
-  },
-  {
-    id: 'learning',
-    label: 'Learning Paths',
-    icon: 'BookOpen',
-    cards: [
-      { title: 'Beginner Track', description: 'Start from the fundamentals and build a strong foundation in programming.' },
-      { title: 'Advanced Track', description: 'Dive deep into advanced topics and prepare for technical interviews.' },
-    ],
-  },
-  {
-    id: 'community',
-    label: 'Community',
-    icon: 'Users',
-    cards: [
-      { title: 'Mentorship', description: 'Get guidance from experienced developers and industry professionals.' },
-      { title: 'Networking', description: 'Connect with like-minded developers and build lasting relationships.' },
-    ],
-  },
-  {
-    id: 'opensource',
-    label: 'Open Source',
-    icon: 'Code',
-    cards: [
-      { title: 'Contributions', description: 'Contribute to open-source projects and make a real impact.' },
-      { title: 'Projects', description: 'Build and maintain community-driven projects together.' },
-    ],
-  },
-];
-
-// ---------- Events ----------
+// ---------- Events (Actual Teammates' Data) ----------
 
 export const events: EventItem[] = [
   {
-    id: 'ev-engineers-got-talent',
+    id: 'ev-[engineers-got-talent]',
     title: "Engineer's Got Talent",
-    date: '8 September (year not specified)',
+    date: '8 September',
     status: 'past',
     category: 'Cultural Event',
     description: "A campus talent showcase celebrating the creativity and performances of Chandigarh University's engineering students.",
@@ -308,6 +299,7 @@ export const events: EventItem[] = [
     id: 'ev-tech-edge-bootcamp-2026',
     title: 'Tech Edge Bootcamp',
     date: '6 August 2026',
+    sortDate: '2026-08-06',
     status: 'past',
     category: 'Technical Workshop',
     description: 'Tech Edge Bootcamp is an industry-focused technical workshop featuring Abhisekh Dudeja, Founder & CEO of Orvo. The session provides practical insights into modern software development, AI infrastructure, and real-world engineering practices.',
@@ -321,6 +313,7 @@ export const events: EventItem[] = [
     id: 'ev-cyber-security-masterclass-2026',
     title: 'Cyber Security Masterclass',
     date: '7 August 2026',
+    sortDate: '2026-08-07',
     status: 'upcoming',
     category: 'Technical Workshop',
     description: 'Join us for an industry-focused cybersecurity workshop featuring Harkamal S. Learn about AI security, cloud security, cyber assurance, and real-world cybersecurity practices from an experienced industry leader.',
@@ -335,6 +328,7 @@ export const events: EventItem[] = [
     id: 'ev-bharat-buildathon-ideathon-2026',
     title: 'Bharat Buildathon – Ideathon',
     date: '12 August 2026',
+    sortDate: '2026-08-12',
     status: 'upcoming',
     category: 'Ideathon',
     description: 'An innovation-driven ideathon designed to inspire students to solve real-world challenges through creativity, collaboration, and technology. Build impactful ideas that contribute towards the vision of Viksit Bharat while working in teams and presenting innovative solutions.',
@@ -425,175 +419,176 @@ export const galleryImages: GalleryImage[] = [
   { id: 'g8', src: 'https://lh3.googleusercontent.com/pw/AP1GczPdVTMqvR7HTgAYeGoRIEBj6Q-0lgApF8xYYKmYuqgESzuvEWeh0ya42PWSobKZqvEwW2L2_y1PKCAiAnuBvBNdVorz6IvTPgQx9C3C770YcnoPqBw=w1200-h900', alt: 'Chapter event moment from stage', category: 'Talk' },
 ];
 
-// ---------- Testimonials ----------
+// ---------- Testimonials (Executive Board Leads) ----------
 
 export const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Leading the GFG CU Community has been an incredible journey. The community's passion for learning and growth is truly inspiring. Together, we're building the next generation of tech leaders.",
-    name: 'Shobhit Tomar',
-    designation: 'Community Lead & Founder',
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-    linkedin: 'https://www.linkedin.com/in/shobhit-tomar08/',
+      "Leading GFG CU Community has been an empowering experience. Our mission is to build a collaborative space where students transform coding curiosity into industry-ready software engineering skills through peer mentorship and hands-on workshops.",
+    name: 'Akshat Goyal',
+    designation: 'President',
+    src: 'https://media.licdn.com/dms/image/v2/D5635AQHb8JGU_pvgCg/profile-framedphoto-shrink_800_800/B56ZijKblaHkAg-/0/1755084077894?e=1786608000&v=beta&t=eQfNMm8nPspR4kVDAP11oZjcvynDwPrhWBKdjY8ucNI',
+    linkedin: 'https://www.linkedin.com/in/akshat-goyal10/?skipRedirect=true',
   },
   {
     quote:
-      'Our DSA programs have helped hundreds of students master data structures and algorithms. The mentorship and guidance from our team makes all the difference in their coding journey.',
-    name: 'Vaibhav Sharma',
-    designation: 'DSA Mentor & Technical Lead',
-    src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-    linkedin: 'https://www.linkedin.com/in/vaibhav-sharma-8a462a379',
+      "Our chapter brings structure to student-led technical learning. By bridging fundamental problem-solving with high-impact hackathons, we ensure every member gets real exposure, confidence, and guidance for their engineering journey.",
+    name: 'Anuradha Verma',
+    designation: 'Vice President',
+    src: 'https://media.licdn.com/dms/image/v2/D5603AQEMvMee7ugEOA/profile-displayphoto-crop_800_800/B56Z8KoAAzGcAM-/0/1782589686380?e=1787788800&v=beta&t=8_yEh9xr1zPwD7ka81cONEkzfwVH2atdsSExEWnP0Y4',
+    linkedin: 'https://www.linkedin.com/in/anuradhaverma13/',
   },
   {
     quote:
-      'Organizing hackathons and coding competitions is my passion. Seeing students collaborate, innovate, and build amazing projects is what drives me every day.',
-    name: 'Saloni Kathpal',
-    designation: 'Hackathon Coordinator',
-    src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
-    linkedin: 'https://www.linkedin.com/in/saloni-kathpal-a155b2329',
+      "Operational excellence is key to growing an active campus chapter. From seamless event logistics to managing inter-departmental collaborations, we aim to deliver valuable learning experiences for all tech enthusiasts.",
+    name: 'Rupeshwari Kumari',
+    designation: 'Vice President',
+    src: 'https://media.licdn.com/dms/image/v2/D5635AQHQHoIN2nBxkA/profile-framedphoto-shrink_800_800/B56Z5RwBrWIoAg-/0/1779488005277?e=1786608000&v=beta&t=lfp1tmtQw5HL2Oz--cOgcivIpqeo1f5j1-8xedwgC1M',
+    linkedin: 'https://www.linkedin.com/in/rupeshwari-kumari-a27422329/',
   },
   {
     quote:
-      "Open-source contributions are the backbone of innovation. I'm committed to helping students understand the importance of giving back to the community through open-source projects.",
-    name: 'Sukhwinder Singh',
-    designation: 'Open Source Lead',
-    src: 'https://images.unsplash.com/photo-1636041293178-808a6762ab39?w=400&h=400&fit=crop',
-    linkedin: 'https://www.linkedin.com/in/sukhwinder-singh-682a74349',
+      "Community management is about creating meaningful student connections. We foster a supportive environment where juniors debug without hesitation, share project ideas, and learn directly alongside experienced seniors.",
+    name: 'Kartik Karnwal',
+    designation: 'Community Manager',
+    src: '/team/Kartik Karnwal.jpg',
+    linkedin: 'https://www.linkedin.com/in/kartik-karnwal-59b94828b/',
   },
   {
     quote:
-      'Empowering students through mentorship and guidance is what the GFG community is all about. Every interaction, every discussion, every project helps someone grow.',
-    name: 'Husanpreet Kaur',
-    designation: 'Mentorship Coordinator',
-    src: 'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?w=400&h=400&fit=crop',
-    linkedin: 'https://www.linkedin.com/in/husanpreet-kaur-004337325',
+      "Ensuring active student engagement and smooth event execution drives our community forward. We work relentlessly to organize expert-led masterclasses, coding bootcamps, and competitive ideathons on campus.",
+    name: 'Dhruv Saini',
+    designation: 'Community Manager',
+    src: 'https://media.licdn.com/dms/image/v2/D5603AQG93QdWKQ9JnQ/profile-displayphoto-crop_800_800/B56Zv6S1_3IYAI-/0/1769430804816?e=1787788800&v=beta&t=rxCsHbVzwuBTgxIHeqnQ9iBa4UK6gvkz9o58Ku17jjk',
+    linkedin: 'https://www.linkedin.com/in/dhruvxdsaini/',
   },
 ];
 
 // ---------- Team ----------
 
 export const teamMembers: TeamMember[] = [
+  // ==========================
+  // EXECUTIVE BOARD (5)
+  // ==========================
   {
-    id: 'team-1',
-    name: 'Ayush Singh',
-    role: 'Core Team Member',
-    image: '/team/ayush-singh.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
+    id: "team-1",
+    name: "Akshat Goyal",
+    role: "President",
+    level: "executive",
+    image: "https://media.licdn.com/dms/image/v2/D5635AQHb8JGU_pvgCg/profile-framedphoto-shrink_800_800/B56ZijKblaHkAg-/0/1755084077894?e=1786608000&v=beta&t=eQfNMm8nPspR4kVDAP11oZjcvynDwPrhWBKdjY8ucNI",
+    bio: "Leading the chapter vision and operations.",
+    socials: { linkedin: "https://www.linkedin.com/in/akshat-goyal10/?skipRedirect=true" },
   },
   {
-    id: 'team-2',
-    name: 'Brahamjeet Singh',
-    role: 'Core Team Member',
-    image: '/team/brahamjeet-singh.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
+    id: "team-2",
+    name: "Anuradha Verma",
+    role: "Vice President",
+    level: "executive",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEMvMee7ugEOA/profile-displayphoto-crop_800_800/B56Z8KoAAzGcAM-/0/1782589686380?e=1787788800&v=beta&t=8_yEh9xr1zPwD7ka81cONEkzfwVH2atdsSExEWnP0Y4",
+    bio: "Supporting chapter growth and strategy.",
+    socials: { linkedin: "https://www.linkedin.com/in/anuradhaverma13/" },
   },
   {
-    id: 'team-3',
-    name: 'Dhrita',
-    role: 'Core Team Member',
-    image: '/team/dhrita.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
+    id: "team-3",
+    name: "Rupeshwari Kumari",
+    role: "Vice President",
+    level: "executive",
+    image: "https://media.licdn.com/dms/image/v2/D5635AQHQHoIN2nBxkA/profile-framedphoto-shrink_800_800/B56Z5RwBrWIoAg-/0/1779488005277?e=1786608000&v=beta&t=lfp1tmtQw5HL2Oz--cOgcivIpqeo1f5j1-8xedwgC1M",
+    bio: "Managing chapter administration.",
+    socials: { linkedin: "https://www.linkedin.com/in/rupeshwari-kumari-a27422329/" },
   },
   {
-    id: 'team-4',
-    name: 'Gagandeep Kaur',
-    role: 'Core Team Member',
-    image: '/team/gagandeep-kaur.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
+    id: "team-4",
+    name: "Kartik Karnwal",
+    role: "Community Manager",
+    level: "executive",
+    image: "/team/Kartik Karnwal.jpg",
+    bio: "Managing chapter finances.",
+    socials: { linkedin: "https://www.linkedin.com/in/kartik-karnwal-59b94828b/" },
   },
   {
-    id: 'team-5',
-    name: 'Husanpreet Kaur',
-    role: 'Core Team Member',
-    image: '/team/husanpreet-kaur.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
+    id: "team-5",
+    name: "Dhruv Saini",
+    role: "Community Manager",
+    level: "executive",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQG93QdWKQ9JnQ/profile-displayphoto-crop_800_800/B56Zv6S1_3IYAI-/0/1769430804816?e=1787788800&v=beta&t=rxCsHbVzwuBTgxIHeqnQ9iBa4UK6gvkz9o58Ku17jjk",
+    bio: "Ensuring smooth chapter execution.",
+    socials: { linkedin: "https://www.linkedin.com/in/dhruvxdsaini/" },
   },
-  {
-    id: 'team-6',
-    name: 'Kartik Karnwal',
-    role: 'Core Team Member',
-    image: '/team/kartik-karnwal.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-7',
-    name: 'Khushi Raheja',
-    role: 'Core Team Member',
-    image: '/team/khushi-raheja.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-8',
-    name: 'Manthan Garg',
-    role: 'Core Team Member',
-    image: '/team/manthan-garg.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-9',
-    name: 'Pratham Pathak',
-    role: 'Core Team Member',
-    image: '/team/pratham-pathak.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-10',
-    name: 'Ritik Sharma',
-    role: 'Core Team Member',
-    image: '/team/ritik-sharma.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-11',
-    name: 'Rohan Dhami',
-    role: 'Core Team Member',
-    image: '/team/rohan-dhami.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-12',
-    name: 'Saloni Kathpal',
-    role: 'Core Team Member',
-    image: '/team/saloni-kathpal.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-13',
-    name: 'Sukhwinder Singh',
-    role: 'Core Team Member',
-    image: '/team/sukhwinder-singh.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
-  {
-    id: 'team-14',
-    name: 'Vaibhav Sharma',
-    role: 'Core Team Member',
-    image: '/team/vaibhav-sharma.jpg',
-    bio: 'Active contributor in the GFG CU Community.',
-    socials: {},
-  },
+
+  // ==========================
+  // MANAGERS (8)
+  // ==========================
+  { id: "team-6", name: "Ayush Thakur", role: "Technical Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D4D03AQE3aEEseMrpzg/profile-displayphoto-scale_400_400/B4DZkZVAQxIEA0-/0/1757066563974?e=1787788800&v=beta&t=LuaTR891W03VUSgjd-lrsvceEiBrNp91CxkTw3PRRFI", bio: "Overseeing technical projects.", socials: {linkedin: "https://www.linkedin.com/in/ayush-thakur-4504b9373/"} },
+  { id: "team-7", name: "Aayushi Mishra", role: "Web Development Lead", level: "manager", image: "/team/Aayushi.jpeg", bio: "Planning and driving workshops.", socials: {linkedin: "https://www.linkedin.com/in/aayushi-mishra-6ab223297/"} },
+  { id: "team-8", name: "Atishay Jain", role: "Event Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D4E03AQF5FHYKVwrzvA/profile-displayphoto-crop_800_800/B4EZfMaD1BHwAM-/0/1751481073756?e=1787788800&v=beta&t=hXlz9Py-hhmjywL3g5s-TfHW-0RKGMRtR63pU7q9hxE", bio: "Leading social media & content.", socials: {linkedin: "https://www.linkedin.com/in/atishay-jain-0465aj/"} },
+  { id: "team-9", name: "Brahamjeet Singh", role: "Sponsorship & Online Event Lead", level: "manager", image: "/team/Brahamjeet Singh.jpg", bio: "UI/UX and visual assets.", socials: {linkedin: "https://www.linkedin.com/in/brahamjeet-singh-31395b270/"} },
+  { id: "team-10", name: "Divyanshi", role: "Graphic Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D5603AQFaFGjW6IXIhA/profile-displayphoto-scale_400_400/B56Z0rHrcaHkAg-/0/1774544929068?e=1787788800&v=beta&t=LBiuhkAfcD-_zjODOA9CQSFGGS1LYonm7xN4dm3e_1Q", bio: "Fostering member engagement.", socials: {linkedin: "https://www.linkedin.com/in/divyanshi-maheshwari-/"} },
+  { id: "team-11", name: "Jatin", role: "Content Lead", level: "manager", image: "/team/manager6.jpg", bio: "Handling public relations.", socials: {linkedin: ""} },
+  { id: "team-12", name: "Rashmika", role: "Media Lead", level: "manager", image: "/team/Rashmika_24BCY70097.jpg", bio: "Building campus partnerships.", socials: {linkedin: "https://www.linkedin.com/in/rashmika-389533342/"} },
+  { id: "team-13", name: "Saloni Kathpal", role: "Anchor Lead", level: "manager", image: "/team/Saloni_Kathpal-24BAI70351.jpeg", bio: "Managing event logistics.", socials: {linkedin: "https://www.linkedin.com/in/saloni-kathpal-a155b2329/"} },
+
+  // ==========================
+  // LEADS / WEB DEVELOPERS (7)
+  // ==========================
+  { id: "team-14", name: "Shobhit Tomer", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQEaz4vHMAKvWw/profile-displayphoto-scale_400_400/B56Z8xOA3QH4Ag-/0/1783237186980?e=1787788800&v=beta&t=braAyZbZYv-cacHHSJDvYnturJephSMQnX7UlUdrKos", bio: "Leading frontend & backend web.", socials: {linkedin: "https://www.linkedin.com/in/shobhit-tomar08/"} },
+  { id: "team-15", name: "Bhaskar Joshi", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQFmmbzx3VmTBw/profile-displayphoto-crop_800_800/B56Z_IWzLpHYAI-/0/1785772850635?e=1787788800&v=beta&t=FmGe9xCEFHri0oCaj3XKqkvT-z1-spzX5buRdGUl9Ck", bio: "Problem solving & contest prep.", socials: {linkedin: "https://www.linkedin.com/in/bhaskar-joshi-97ba3a313/"} },
+  { id: "team-16", name: "Manthan Garg", role: "", level: "lead", image: "/team/MANTHANGARG.jpg", bio: "Mobile application development.", socials: {linkedin: "https://www.linkedin.com/in/manthan-garg-a96609325/"} },
+  { id: "team-17", name: "Ritik Sharma", role: "", level: "lead", image: "/team/RitikSharma.jpg", bio: "Machine learning & data science.", socials: {linkedin: "https://www.linkedin.com/in/ritiksharma-tech/"} },
+  { id: "team-18", name: "Rohan Dhami", role: "", level: "lead", image: "/team/RohanDhami.jpeg", bio: "Community open source PRs.", socials: {linkedin: "https://www.linkedin.com/in/rohan-dhami-aa288a355/"} },
+  { id: "team-19", name: "Kanishk Kamboj", role: "", level: "lead", image: "/team/kanishkkamboj.jpeg", bio: "Security and CTF training.", socials: {linkedin: "https://www.linkedin.com/in/kanishk-kamboj-628962322/"} },
+  { id: "team-20", name: "Bhavishya Pal", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQGKyW-5RmZMmA/profile-displayphoto-crop_800_800/B56ZuTND1xJoAI-/0/1767701239487?e=1787788800&v=beta&t=rJSsnNEoBLct9WTuAz7saMPr8d3mkqajt3bEuw0Mx0I", bio: "Technical writing & blogs.", socials: {linkedin: "https://www.linkedin.com/in/bhavishyapal/"} },
+
+  // ==========================
+  // CORE MEMBERS
+  // ==========================
+  { id: "team-22", name: "Arunangshu Roy", role: "Anchor | 4th Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQGjg6KDRx8IvA/profile-displayphoto-crop_800_800/B56ZwVPK3sJoAI-/0/1769882825833?e=1787788800&v=beta&t=biDpCGROfCHadJqec2vlMYuUg3h6hWBfwBcQT0QkSyQ", bio: "", socials: {linkedin: "https://www.linkedin.com/in/arunangshuxroy/"} },
+  { id: "team-24", name: "Akshat Saini", role: "Graphics/Technical | 4th Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQGcEWFoOuB2Mw/profile-displayphoto-crop_800_800/B56Z8T_1QtKgAM-/0/1782746930284?e=1787788800&v=beta&t=orxSobNvAJMM3riBtighgmfPHWwy15mk0CpZSXl2Nio", bio: "", socials: {linkedin: "https://www.linkedin.com/in/akshatsni/"} },
+  { id: "team-25", name: "Aarna", role: "Anchor/Technical | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D4E03AQFeRxc6r8TIEA/profile-displayphoto-shrink_800_800/B4EZcRXeecGQAc-/0/1748343057401?e=1787788800&v=beta&t=GHOmV5-AItymTjQ2VSVOJp2H-LLeVJaOx9ybf0gp37I", bio: "", socials: {linkedin: "https://www.linkedin.com/in/aarnaagarg06/"} },
+  { id: "team-25-2", name: "Dhrita", role: "Content/Video Editor | 3rd Year", level: "core", image: "/team/Dhrita_24BCS12803.jpg", bio: "", socials: {linkedin: ""} },
+  { id: "team-26", name: "Eha Ahuja", role: "Anchor | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D4E03AQHAiIxRhAc8gw/profile-displayphoto-shrink_800_800/B4EZx8fR_pGsAg-/0/1771615103619?e=1787788800&v=beta&t=__K8Kys6s394CGZ8vsAoSBrhL3MsXgyHKzBpGDixqP8", bio: "", socials: {linkedin: "https://www.linkedin.com/in/eha-ahuja/"} },
+  { id: "team-27", name: "Husanpreet Kaur", role: "Graphics | 3rd Year", level: "core", image: "/team/HusanpreetKaur.png", bio: "", socials: {linkedin: "https://www.linkedin.com/in/husanpreet-kaur-004337325/"} },
+  { id: "team-28", name: "Pratham Pathak", role: "Graphics | 3rd Year", level: "core", image: "/team/PrathamPathak_24BCS11184.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/prathampathak17/"} },
+  { id: "team-29", name: "Sukhwinder Singh", role: "Management/Technical | 3rd Year", level: "core", image: "/team/SukhwinderSingh.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/sukhwinder-singh-682a74349/"} },
+  { id: "team-34-1", name: "GagandeepKaur", role: "Sponsorship/PR | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5635AQF5ikfXJolEfA/profile-framedphoto-shrink_400_400/B56Z4HuzxuIQAg-/0/1778246172265?e=1786629600&v=beta&t=S881-HYcVOZx-5MpSP8js0secHIv8UhVXwQqrjRhzDw", bio: "", socials: {linkedin: "https://www.linkedin.com/in/gagandeep-kaur-bb5b4b320/"} },
+  { id: "team-30", name: "Ayush Singh", role: "Anchor/Sponsorship | 2nd Year", level: "core", image: "/team/Ayush Singh_25BAI70131.jpg", bio: "", socials: {linkedin: ""} },
+  { id: "team-31", name: "Bhumika Upveja", role: "Management | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQF1gdIFSdGUtQ/profile-displayphoto-crop_800_800/B56Z76J1HoG4AI-/0/1782313342512?e=1787788800&v=beta&t=YzK0CfJTV9XbFZ3p0X4bz2S8vfLpYJam2ylQkaVbRZM", bio: "", socials: {linkedin: "https://www.linkedin.com/in/bhumikaupveja/"} },
+  { id: "team-32", name: "Gurnoor Kaur", role: "Management/Graphics | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQHyTCq5uCHiGw/profile-displayphoto-scale_400_400/B56ZzI96K1IsAg-/0/1772898199953?e=1787788800&v=beta&t=MczY8dbzzU0iD2xO-OaFc0kFfipUZAq-rlIjjhN0flQ", bio: "", socials: {linkedin: "https://www.linkedin.com/in/gurnoor-kaur14/?skipRedirect=true"} },
+  { id: "team-33", name: "Khushi Raheja", role: "Sponsorship/PR Team | 2nd Year", level: "core", image: "/team/KhushiRaheja.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/khushi-raheja-tech/"} },
+  { id: "team-34-2", name: "Vaibhav Sharma", role: "Videographer | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQG7qv1By86skw/profile-displayphoto-scale_400_400/B56ZuTKStpJIAg-/0/1767700510435?e=1787788800&v=beta&t=gEWf8809t-hIf40WJnRtFZzDwglZv8iDvcINbG4i7UE", bio: "", socials: {linkedin: "https://www.linkedin.com/in/vaibhav-sharma-8a462a379/"} },
 ];
 
-export const facultyCoordinator = {
-  name: 'Dr. Anjali Mehra',
-  role: 'Faculty Coordinator, GFG CU Community',
-  image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop',
-  bio: "Dr. Mehra has guided the chapter since its founding, championing student-led initiatives and bridging the gap between classroom theory and industry-ready skills. Her mentorship has shaped the chapter's culture of curiosity and collaboration.",
-  department: 'Department of Computer Science & Engineering',
-};
+// ---------- Faculty ----------
+
+export const facultyMembers: FacultyMember[] = [
+  {
+    id: "fac-1",
+    name: "Dr. Jasneet Kaur",
+    role: "Faculty Mentor",
+    designation: "Head of Department (HOD)",
+    department: "Department of Computer Science & Engineering",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQE_NDKt8jSL5g/profile-displayphoto-crop_800_800/B56Z5A5oyuHYAI-/0/1779205314844?e=1787788800&v=beta&t=PJNpRAgr0o1GOLjq8h-oazbvP3jymdT7S1tM21WC4OQ",
+    bio: "Providing strategic vision and academic guidance to empower student developers across the CSE department.",
+  },
+  {
+    id: "fac-2",
+    name: "Er. Anamika",
+    role: "Faculty Advisor",
+    designation: "Assistant Professor",
+    department: "Department of Computer Science & Engineering",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEC3DoXncVJjQ/profile-displayphoto-crop_800_800/B56ZxIcOXuIEAI-/0/1770741885166?e=1787788800&v=beta&t=rXbGNPH0a80U9rW_dF_-x6INi8vVx5_cBH3yZi0wu7o",
+    bio: "Guiding daily operations, student initiatives, and fostering technical excellence within the chapter.",
+  },
+  {
+    id: "fac-3",
+    name: "Co-Faculty Advisor Name",
+    role: "Co-Faculty Advisor",
+    designation: "Assistant Professor",
+    department: "Department of Computer Science & Engineering",
+    image: "/team/placeholder.jpg",
+    bio: "Supporting event execution, mentorship drives, and student chapter coordination.",
+  },
+];
 
 // ---------- FAQ ----------
 
@@ -643,7 +638,6 @@ export const footerLinks: Record<string, NavItem[]> = {
     { label: 'Contact', href: '#contact' },
   ],
   Explore: [
-    { label: 'Features', href: '#features' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Achievements', href: '#achievements' },
     { label: 'FAQ', href: '#faq' },
