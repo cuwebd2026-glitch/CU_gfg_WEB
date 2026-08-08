@@ -77,9 +77,9 @@ export default function EventCard({ event, index }: EventCardProps) {
         </div>
       </div>
 
-      {/* Registration CTA Footer */}
-      <div className="p-5 pt-0 mt-2">
-        {isRegistrationOpen ? (
+      {/* Registration CTA Footer - Only rendered for open registrations */}
+      {isRegistrationOpen && (
+        <div className="p-5 pt-0 mt-2">
           <a
             href={event.registrationLink || '/join'}
             target={event.registrationLink ? '_blank' : '_self'}
@@ -89,15 +89,8 @@ export default function EventCard({ event, index }: EventCardProps) {
             <span>Register Now</span>
             <ExternalLink size={16} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
           </a>
-        ) : (
-          <button
-            disabled
-            className="w-full py-2.5 px-4 bg-muted/40 text-muted-foreground text-xs font-semibold rounded-lg cursor-not-allowed border border-border/50 text-center"
-          >
-            Registration Closed
-          </button>
-        )}
-      </div>
+        </div>
+      )}
     </motion.article>
   );
 }
