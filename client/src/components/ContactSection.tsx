@@ -22,11 +22,9 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
     console.log('Form submitted:', formData);
     setSubmitted(true);
 
-    // Reset form after 2 seconds
     setTimeout(() => {
       setFormData({ name: '', email: '', message: '' });
       setSubmitted(false);
@@ -110,32 +108,16 @@ export default function ContactSection() {
 
                 {/* Message Textarea */}
                 <div className="relative">
-                  <label htmlFor="contact-message" className="sr-only">
-                    Your Message
-                  </label>
+                  <div className="absolute top-3.5 left-3.5 pointer-events-none text-muted-foreground z-10 flex items-center justify-center">
+                    <MessageSquare size={18} />
+                  </div>
                   <textarea
                     id="contact-message"
-                    placeholder=" "
+                    placeholder="Your Message"
                     value={formData.message}
                     onChange={(e) => handleChange('message', e.target.value)}
-                    className="peer w-full rounded-lg border border-border bg-secondary/50 px-3 py-3 text-sm text-foreground outline-none transition focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:border-muted-foreground/40 resize-none h-32"
+                    className="w-full rounded-lg border border-border bg-secondary/50 pl-11 pr-4 py-3 text-sm text-foreground outline-none transition focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:border-muted-foreground/40 resize-none h-32"
                   />
-                  <motion.span
-                    aria-hidden="true"
-                    animate={
-                      formData.message
-                        ? { y: -24, scale: 0.85, color: 'var(--gfg-green)' }
-                        : { y: 0, scale: 1, color: 'var(--muted-foreground)' }
-                    }
-                    transition={{ duration: 0.28 }}
-                    className="pointer-events-none absolute top-1/2 left-3 origin-left -translate-y-1/2 rounded-sm border border-transparent bg-secondary/50 px-1 transition-all"
-                    style={{ zIndex: 2 }}
-                  >
-                    <span className="flex items-center gap-2">
-                      <MessageSquare size={18} />
-                      <span>Your Message</span>
-                    </span>
-                  </motion.span>
                 </div>
 
                 {/* Submit Button */}

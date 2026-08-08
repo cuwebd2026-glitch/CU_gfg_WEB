@@ -13,7 +13,7 @@ const LABEL_TRANSITION = {
     EASE_IN_OUT_CUBIC_Y1,
     EASE_IN_OUT_CUBIC_X2,
     EASE_IN_OUT_CUBIC_Y2,
-  ] as [number, number, number, number], // cubic-bezier tuple
+  ] as [number, number, number, number],
 };
 
 export interface AnimatedInputProps {
@@ -29,17 +29,6 @@ export interface AnimatedInputProps {
   value?: string;
 }
 
-/**
- * AnimatedInput Component
- * 
- * Floating label input with smooth animations.
- * Features:
- * - Smooth floating label animation
- * - Icon support
- * - Controlled and uncontrolled modes
- * - Accessibility support (ARIA labels)
- * - Respects prefers-reduced-motion
- */
 export default function AnimatedInput({
   value,
   defaultValue = "",
@@ -70,8 +59,8 @@ export default function AnimatedInput({
       return {
         y: -24,
         scale: 0.85,
-        color: "#3ecf5f",
-        borderColor: "#3ecf5f",
+        color: "var(--gfg-green)",
+        borderColor: "var(--gfg-green)",
       };
     }
     return { y: 0, scale: 1, color: "var(--muted-foreground)" };
@@ -99,14 +88,16 @@ export default function AnimatedInput({
       {icon && (
         <span
           aria-hidden="true"
-          className="absolute top-1/2 left-3 -translate-y-1/2 text-muted-foreground"
+          className="absolute top-1/2 left-3.5 -translate-y-1/2 text-muted-foreground z-10 pointer-events-none flex items-center justify-center"
         >
           {icon}
         </span>
       )}
       <input
         aria-label={label}
-        className={`peer w-full rounded-lg border border-border bg-secondary/50 px-3 py-3 text-sm text-foreground outline-none transition focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:border-muted-foreground/40 ${icon ? "pl-10" : ""} ${inputClassName}`}
+        className={`peer w-full rounded-lg border border-border bg-secondary/50 py-3 pr-4 text-sm text-foreground outline-none transition focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:border-muted-foreground/40 ${
+          icon ? "pl-11" : "pl-3"
+        } ${inputClassName}`}
         disabled={disabled}
         id={inputId}
         onBlur={() => setIsFocused(false)}
@@ -124,7 +115,9 @@ export default function AnimatedInput({
       />
       <motion.label
         animate={getLabelAnimation()}
-        className={`pointer-events-none absolute top-1/2 left-3 origin-left -translate-y-1/2 rounded-sm border border-transparent bg-secondary/50 px-1 text-muted-foreground transition-all ${labelClassName}`}
+        className={`pointer-events-none absolute top-1/2 origin-left -translate-y-1/2 rounded-sm border border-transparent bg-secondary/50 px-1 text-muted-foreground transition-all ${
+          icon ? "left-10" : "left-3"
+        } ${labelClassName}`}
         htmlFor={inputId}
         style={{
           zIndex: 2,

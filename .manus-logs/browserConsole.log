@@ -2256,3 +2256,17 @@
 [2026-08-08T16:09:08.195Z] {"timestamp":1786205347858,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-08-08T16:09:08.195Z] {"timestamp":1786205347869,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-08-08T16:09:08.195Z] {"timestamp":1786205347910,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T16:25:53.507Z] {"timestamp":1786206351501,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T16:25:53.507Z] {"timestamp":1786206351506,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T16:25:53.507Z] {"timestamp":1786206351524,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T16:25:59.184Z] {"timestamp":1786206357182,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T16:25:59.184Z] {"timestamp":1786206357191,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T16:25:59.184Z] {"timestamp":1786206357237,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T16:30:14.902Z] {"timestamp":1786206597594,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-08T16:30:14.902Z] {"timestamp":1786206597595,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/AnimatedInput.tsx"],"stack":null}
+[2026-08-08T16:30:14.902Z] {"timestamp":1786206611249,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-08T16:30:14.902Z] {"timestamp":1786206611249,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/ContactSection.tsx"],"stack":null}
+[2026-08-08T16:30:35.397Z] {"timestamp":1786206597592,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-08T16:30:35.397Z] {"timestamp":1786206597598,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/AnimatedInput.tsx"],"stack":null}
+[2026-08-08T16:30:35.397Z] {"timestamp":1786206611246,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-08T16:30:35.397Z] {"timestamp":1786206611247,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/ContactSection.tsx"],"stack":null}
