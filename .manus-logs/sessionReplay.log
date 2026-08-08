@@ -2796,3 +2796,6 @@
 [2026-08-08T15:40:51.628Z] {"timestamp":1786203650289,"kind":"scroll","url":"http://localhost:3000/#team","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":9616.5,"documentHeight":15287,"viewportHeight":792}}
 [2026-08-08T15:40:51.628Z] {"timestamp":1786203650789,"kind":"scroll","url":"http://localhost:3000/#team","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":8867.5,"documentHeight":15287,"viewportHeight":792}}
 [2026-08-08T15:40:51.628Z] {"timestamp":1786203651289,"kind":"scroll","url":"http://localhost:3000/#team","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":9093.5,"documentHeight":15287,"viewportHeight":792}}
+[2026-08-08T15:48:11.928Z] {"timestamp":1786204090595,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":1,"documentHeight":15241,"viewportHeight":792}}
+[2026-08-08T15:48:11.928Z] {"timestamp":1786204091108,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":1011.5,"documentHeight":15233,"viewportHeight":792}}
+[2026-08-08T15:48:11.928Z] {"timestamp":1786204091608,"kind":"scroll","url":"http://localhost:3000/","viewport":{"width":1460,"height":792},"payload":{"scrollX":0,"scrollY":434.5,"documentHeight":15233,"viewportHeight":792}}
