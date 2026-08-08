@@ -28,16 +28,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <script>
-      // Apply saved/system theme before paint
-      (function () {
-        try {
-          var stored = localStorage.getItem("theme");
-          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          var theme = stored || (prefersDark ? "dark" : "light");
-          if (theme === "dark") document.documentElement.classList.add("dark");
-        } catch (e) {}
-      })();
-    </script>
+  // Force light mode before paint
+  (function () {
+    try {
+      localStorage.removeItem("theme");
+      document.documentElement.classList.remove("dark");
+    } catch (e) {}
+  })();
+</script>
   </head>
 
   <body>
