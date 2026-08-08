@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center shrink-0">
             {!cuLogoFailed ? (
               <img
-                src="/cu_logo.png"
+                src="/client/public/cu_logo.png"
                 alt="Chandigarh University logo"
                 loading="eager"
                 decoding="async"
