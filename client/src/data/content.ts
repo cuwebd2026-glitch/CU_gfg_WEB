@@ -160,13 +160,6 @@ export const heroContent = {
   ],
 };
 
-export interface StatItem {
-  id: string;
-  value: number;
-  suffix: string;
-  label: string;
-}
-
 export const statistics: StatItem[] = [
   {
     id: 'members',
@@ -186,8 +179,8 @@ export const statistics: StatItem[] = [
     suffix: '+',
     label: 'Mentors & Speakers',
   },
-  // Adding/removing stats here now automatically updates the layout smoothly
 ];
+
 // ---------- About ----------
 
 export const aboutContent = {
@@ -379,21 +372,21 @@ export const sponsors: LogoItem[] = [
   {
     id: 's1',
     name: 'Eventeye',
-    src: '/sponsors-drive/Asset%2010%20horizontal%20logo-white.png',
+    src: '/Asset%2010%20horizontal%20logo-white.png',
     alt: 'Eventeye logo',
     tier: 'platinum',
   },
   {
     id: 's2',
     name: 'Unclefab',
-    src: '/sponsors-drive/2.png',
+    src: '/2.png',
     alt: 'Unclefab logo',
     tier: 'gold',
   },
   {
     id: 's3',
     name: 'Tamboo Baba',
-    src: '/sponsors-drive/Copy%20of%20TAMBOOBABA-LOGOS.png',
+    src: '/Copy%20of%20TAMBOOBABA-LOGOS.png',
     alt: 'Tamboo Baba logo',
     tier: 'gold',
   },
@@ -451,7 +444,7 @@ export const testimonials: TestimonialItem[] = [
       "Community management is about creating meaningful student connections. We foster a supportive environment where juniors debug without hesitation, share project ideas, and learn directly alongside experienced seniors.",
     name: 'Kartik Karnwal',
     designation: 'Community Manager',
-    src: '/team/Kartik Karnwal.jpg',
+    src: 'https://media.licdn.com/dms/image/v2/D5603AQEZ4Nuq1Knztg/profile-displayphoto-crop_800_800/B56ZlQucMyI8AM-/0/1757995979089?e=1787788800&v=beta&t=aF6EhLr372IfrkOU1m2k5Q3lJW3y8hbNg7oYrZr_06Y',
     linkedin: 'https://www.linkedin.com/in/kartik-karnwal-59b94828b/',
   },
   {
@@ -502,7 +495,7 @@ export const teamMembers: TeamMember[] = [
     name: "Kartik Karnwal",
     role: "Community Manager",
     level: "executive",
-    image: "/team/Kartik Karnwal.jpg",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEZ4Nuq1Knztg/profile-displayphoto-crop_800_800/B56ZlQucMyI8AM-/0/1757995979089?e=1787788800&v=beta&t=aF6EhLr372IfrkOU1m2k5Q3lJW3y8hbNg7oYrZr_06Y",
     bio: "Managing chapter finances.",
     socials: { linkedin: "https://www.linkedin.com/in/kartik-karnwal-59b94828b/" },
   },
@@ -520,23 +513,23 @@ export const teamMembers: TeamMember[] = [
   // MANAGERS (8)
   // ==========================
   { id: "team-6", name: "Ayush Thakur", role: "Technical Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D4D03AQE3aEEseMrpzg/profile-displayphoto-scale_400_400/B4DZkZVAQxIEA0-/0/1757066563974?e=1787788800&v=beta&t=LuaTR891W03VUSgjd-lrsvceEiBrNp91CxkTw3PRRFI", bio: "Overseeing technical projects.", socials: {linkedin: "https://www.linkedin.com/in/ayush-thakur-4504b9373/"} },
-  { id: "team-7", name: "Aayushi Mishra", role: "Web Development Lead", level: "manager", image: "/team/Aayushi.jpeg", bio: "Planning and driving workshops.", socials: {linkedin: "https://www.linkedin.com/in/aayushi-mishra-6ab223297/"} },
+  { id: "team-7", name: "Aayushi Mishra", role: "Web Development Lead", level: "manager", image: "/Aayushi.jpeg", bio: "Planning and driving workshops.", socials: {linkedin: "https://www.linkedin.com/in/aayushi-mishra-6ab223297/"} },
   { id: "team-8", name: "Atishay Jain", role: "Event Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D4E03AQF5FHYKVwrzvA/profile-displayphoto-crop_800_800/B4EZfMaD1BHwAM-/0/1751481073756?e=1787788800&v=beta&t=hXlz9Py-hhmjywL3g5s-TfHW-0RKGMRtR63pU7q9hxE", bio: "Leading social media & content.", socials: {linkedin: "https://www.linkedin.com/in/atishay-jain-0465aj/"} },
-  { id: "team-9", name: "Brahamjeet Singh", role: "Sponsorship & Online Event Lead", level: "manager", image: "/team/Brahamjeet Singh.jpg", bio: "UI/UX and visual assets.", socials: {linkedin: "https://www.linkedin.com/in/brahamjeet-singh-31395b270/"} },
+  { id: "team-9", name: "Brahamjeet Singh", role: "Sponsorship & Online Event Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D5635AQEKaJJG6J8tKQ/profile-framedphoto-shrink_800_800/B56ZaC07v4HUAg-/0/1745951636842?e=1786809600&v=beta&t=VMvooYqiEQqz0cp8c7yL-sCGVYYLRpBNqFDClSnGgsA", bio: "UI/UX and visual assets.", socials: {linkedin: "https://www.linkedin.com/in/brahamjeet-singh-31395b270/"} },
   { id: "team-10", name: "Divyanshi", role: "Graphic Lead", level: "manager", image: "https://media.licdn.com/dms/image/v2/D5603AQFaFGjW6IXIhA/profile-displayphoto-scale_400_400/B56Z0rHrcaHkAg-/0/1774544929068?e=1787788800&v=beta&t=LBiuhkAfcD-_zjODOA9CQSFGGS1LYonm7xN4dm3e_1Q", bio: "Fostering member engagement.", socials: {linkedin: "https://www.linkedin.com/in/divyanshi-maheshwari-/"} },
-  { id: "team-11", name: "Jatin", role: "Content Lead", level: "manager", image: "/team/manager6.jpg", bio: "Handling public relations.", socials: {linkedin: ""} },
-  { id: "team-12", name: "Rashmika", role: "Media Lead", level: "manager", image: "/team/Rashmika_24BCY70097.jpg", bio: "Building campus partnerships.", socials: {linkedin: "https://www.linkedin.com/in/rashmika-389533342/"} },
-  { id: "team-13", name: "Saloni Kathpal", role: "Anchor Lead", level: "manager", image: "/team/Saloni_Kathpal-24BAI70351.jpeg", bio: "Managing event logistics.", socials: {linkedin: "https://www.linkedin.com/in/saloni-kathpal-a155b2329/"} },
+  // { id: "team-11", name: "Jatin", role: "Content Lead", level: "manager", image: "/manager6.jpg", bio: "Handling public relations.", socials: {linkedin: ""} },
+  { id: "team-12", name: "Rashmika", role: "Media Lead", level: "manager", image: "/Rashmika_24BCY70097.jpg", bio: "Building campus partnerships.", socials: {linkedin: "https://www.linkedin.com/in/rashmika-389533342/"} },
+  { id: "team-13", name: "Saloni Kathpal", role: "Anchor Lead", level: "manager", image: "/Saloni_Kathpal-24BAI70351.jpeg", bio: "Managing event logistics.", socials: {linkedin: "https://www.linkedin.com/in/saloni-kathpal-a155b2329/"} },
 
   // ==========================
   // LEADS / WEB DEVELOPERS (7)
   // ==========================
   { id: "team-14", name: "Shobhit Tomer", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQEaz4vHMAKvWw/profile-displayphoto-scale_400_400/B56Z8xOA3QH4Ag-/0/1783237186980?e=1787788800&v=beta&t=braAyZbZYv-cacHHSJDvYnturJephSMQnX7UlUdrKos", bio: "Leading frontend & backend web.", socials: {linkedin: "https://www.linkedin.com/in/shobhit-tomar08/"} },
   { id: "team-15", name: "Bhaskar Joshi", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQFmmbzx3VmTBw/profile-displayphoto-crop_800_800/B56Z_IWzLpHYAI-/0/1785772850635?e=1787788800&v=beta&t=FmGe9xCEFHri0oCaj3XKqkvT-z1-spzX5buRdGUl9Ck", bio: "Problem solving & contest prep.", socials: {linkedin: "https://www.linkedin.com/in/bhaskar-joshi-97ba3a313/"} },
-  { id: "team-16", name: "Manthan Garg", role: "", level: "lead", image: "/team/MANTHANGARG.jpg", bio: "Mobile application development.", socials: {linkedin: "https://www.linkedin.com/in/manthan-garg-a96609325/"} },
-  { id: "team-17", name: "Ritik Sharma", role: "", level: "lead", image: "/team/RitikSharma.jpg", bio: "Machine learning & data science.", socials: {linkedin: "https://www.linkedin.com/in/ritiksharma-tech/"} },
-  { id: "team-18", name: "Rohan Dhami", role: "", level: "lead", image: "/team/RohanDhami.jpeg", bio: "Community open source PRs.", socials: {linkedin: "https://www.linkedin.com/in/rohan-dhami-aa288a355/"} },
-  { id: "team-19", name: "Kanishk Kamboj", role: "", level: "lead", image: "/team/kanishkkamboj.jpeg", bio: "Security and CTF training.", socials: {linkedin: "https://www.linkedin.com/in/kanishk-kamboj-628962322/"} },
+  { id: "team-16", name: "Manthan Garg", role: "", level: "lead", image: "/MANTHANGARG.jpg", bio: "Mobile application development.", socials: {linkedin: "https://www.linkedin.com/in/manthan-garg-a96609325/"} },
+  { id: "team-17", name: "Ritik Sharma", role: "", level: "lead", image: "/RitikSharma.jpg", bio: "Machine learning & data science.", socials: {linkedin: "https://www.linkedin.com/in/ritiksharma-tech/"} },
+  { id: "team-18", name: "Rohan Dhami", role: "", level: "lead", image: "/RohanDhami.jpeg", bio: "Community open source PRs.", socials: {linkedin: "https://www.linkedin.com/in/rohan-dhami-aa288a355/"} },
+  { id: "team-19", name: "Kanishk Kamboj", role: "", level: "lead", image: "/kanishkkamboj.jpeg", bio: "Security and CTF training.", socials: {linkedin: "https://www.linkedin.com/in/kanishk-kamboj-628962322/"} },
   { id: "team-20", name: "Bhavishya Pal", role: "", level: "lead", image: "https://media.licdn.com/dms/image/v2/D5603AQGKyW-5RmZMmA/profile-displayphoto-crop_800_800/B56ZuTND1xJoAI-/0/1767701239487?e=1787788800&v=beta&t=rJSsnNEoBLct9WTuAz7saMPr8d3mkqajt3bEuw0Mx0I", bio: "Technical writing & blogs.", socials: {linkedin: "https://www.linkedin.com/in/bhavishyapal/"} },
 
   // ==========================
@@ -545,16 +538,16 @@ export const teamMembers: TeamMember[] = [
   { id: "team-22", name: "Arunangshu Roy", role: "Anchor | 4th Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQGjg6KDRx8IvA/profile-displayphoto-crop_800_800/B56ZwVPK3sJoAI-/0/1769882825833?e=1787788800&v=beta&t=biDpCGROfCHadJqec2vlMYuUg3h6hWBfwBcQT0QkSyQ", bio: "", socials: {linkedin: "https://www.linkedin.com/in/arunangshuxroy/"} },
   { id: "team-24", name: "Akshat Saini", role: "Graphics/Technical | 4th Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQGcEWFoOuB2Mw/profile-displayphoto-crop_800_800/B56Z8T_1QtKgAM-/0/1782746930284?e=1787788800&v=beta&t=orxSobNvAJMM3riBtighgmfPHWwy15mk0CpZSXl2Nio", bio: "", socials: {linkedin: "https://www.linkedin.com/in/akshatsni/"} },
   { id: "team-25", name: "Aarna", role: "Anchor/Technical | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D4E03AQFeRxc6r8TIEA/profile-displayphoto-shrink_800_800/B4EZcRXeecGQAc-/0/1748343057401?e=1787788800&v=beta&t=GHOmV5-AItymTjQ2VSVOJp2H-LLeVJaOx9ybf0gp37I", bio: "", socials: {linkedin: "https://www.linkedin.com/in/aarnaagarg06/"} },
-  { id: "team-25-2", name: "Dhrita", role: "Content/Video Editor | 3rd Year", level: "core", image: "/team/Dhrita_24BCS12803.jpg", bio: "", socials: {linkedin: ""} },
+  { id: "team-25-2", name: "Dhrita", role: "Content/Video Editor | 3rd Year", level: "core", image: "/Dhrita_24BCS12803.jpg", bio: "", socials: {linkedin: ""} },
   { id: "team-26", name: "Eha Ahuja", role: "Anchor | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D4E03AQHAiIxRhAc8gw/profile-displayphoto-shrink_800_800/B4EZx8fR_pGsAg-/0/1771615103619?e=1787788800&v=beta&t=__K8Kys6s394CGZ8vsAoSBrhL3MsXgyHKzBpGDixqP8", bio: "", socials: {linkedin: "https://www.linkedin.com/in/eha-ahuja/"} },
-  { id: "team-27", name: "Husanpreet Kaur", role: "Graphics | 3rd Year", level: "core", image: "/team/HusanpreetKaur.png", bio: "", socials: {linkedin: "https://www.linkedin.com/in/husanpreet-kaur-004337325/"} },
-  { id: "team-28", name: "Pratham Pathak", role: "Graphics | 3rd Year", level: "core", image: "/team/PrathamPathak_24BCS11184.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/prathampathak17/"} },
-  { id: "team-29", name: "Sukhwinder Singh", role: "Management/Technical | 3rd Year", level: "core", image: "/team/SukhwinderSingh.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/sukhwinder-singh-682a74349/"} },
+  { id: "team-27", name: "Husanpreet Kaur", role: "Graphics | 3rd Year", level: "core", image: "/HusanpreetKaur.png", bio: "", socials: {linkedin: "https://www.linkedin.com/in/husanpreet-kaur-004337325/"} },
+  { id: "team-28", name: "Pratham Pathak", role: "Graphics | 3rd Year", level: "core", image: "/PrathamPathak_24BCS11184.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/prathampathak17/"} },
+  { id: "team-29", name: "Sukhwinder Singh", role: "Management/Technical | 3rd Year", level: "core", image: "/SukhwinderSingh.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/sukhwinder-singh-682a74349/"} },
   { id: "team-34-1", name: "GagandeepKaur", role: "Sponsorship/PR | 3rd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5635AQF5ikfXJolEfA/profile-framedphoto-shrink_400_400/B56Z4HuzxuIQAg-/0/1778246172265?e=1786629600&v=beta&t=S881-HYcVOZx-5MpSP8js0secHIv8UhVXwQqrjRhzDw", bio: "", socials: {linkedin: "https://www.linkedin.com/in/gagandeep-kaur-bb5b4b320/"} },
-  { id: "team-30", name: "Ayush Singh", role: "Anchor/Sponsorship | 2nd Year", level: "core", image: "/team/Ayush Singh_25BAI70131.jpg", bio: "", socials: {linkedin: ""} },
+  // { id: "team-30", name: "Ayush Singh", role: "Anchor/Sponsorship | 2nd Year", level: "core", image: "/Ayush.png", bio: "", socials: {linkedin: ""} },
   { id: "team-31", name: "Bhumika Upveja", role: "Management | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQF1gdIFSdGUtQ/profile-displayphoto-crop_800_800/B56Z76J1HoG4AI-/0/1782313342512?e=1787788800&v=beta&t=YzK0CfJTV9XbFZ3p0X4bz2S8vfLpYJam2ylQkaVbRZM", bio: "", socials: {linkedin: "https://www.linkedin.com/in/bhumikaupveja/"} },
   { id: "team-32", name: "Gurnoor Kaur", role: "Management/Graphics | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQHyTCq5uCHiGw/profile-displayphoto-scale_400_400/B56ZzI96K1IsAg-/0/1772898199953?e=1787788800&v=beta&t=MczY8dbzzU0iD2xO-OaFc0kFfipUZAq-rlIjjhN0flQ", bio: "", socials: {linkedin: "https://www.linkedin.com/in/gurnoor-kaur14/?skipRedirect=true"} },
-  { id: "team-33", name: "Khushi Raheja", role: "Sponsorship/PR Team | 2nd Year", level: "core", image: "/team/KhushiRaheja.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/khushi-raheja-tech/"} },
+  { id: "team-33", name: "Khushi Raheja", role: "Sponsorship/PR Team | 2nd Year", level: "core", image: "/KhushiRaheja.jpg", bio: "", socials: {linkedin: "https://www.linkedin.com/in/khushi-raheja-tech/"} },
   { id: "team-34-2", name: "Vaibhav Sharma", role: "Videographer | 2nd Year", level: "core", image: "https://media.licdn.com/dms/image/v2/D5603AQG7qv1By86skw/profile-displayphoto-scale_400_400/B56ZuTKStpJIAg-/0/1767700510435?e=1787788800&v=beta&t=gEWf8809t-hIf40WJnRtFZzDwglZv8iDvcINbG4i7UE", bio: "", socials: {linkedin: "https://www.linkedin.com/in/vaibhav-sharma-8a462a379/"} },
 ];
 
@@ -585,7 +578,7 @@ export const facultyMembers: FacultyMember[] = [
     role: "Co-Faculty Advisor",
     designation: "Assistant Professor",
     department: "Department of Computer Science & Engineering",
-    image: "/team/placeholder.jpg",
+    image: "/placeholder.jpg",
     bio: "Supporting event execution, mentorship drives, and student chapter coordination.",
   },
 ];
