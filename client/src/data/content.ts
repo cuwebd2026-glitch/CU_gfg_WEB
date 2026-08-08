@@ -330,6 +330,7 @@ export const events: EventItem[] = [
     organizedBy: 'CSE Takshashila',
     time: '9:30 AM – 4:25 PM',
     teamSize: '3–4 Members',
+    registrationLink: 'https://bharat-buildathon-cu.vercel.app/',
   },
 ];
 
