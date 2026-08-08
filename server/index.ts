@@ -1,33 +1,33 @@
 import express from "express";
-import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function startServer() {
-  const app = express();
-  const server = createServer(app);
+const app = express();
 
-  // Serve static files from dist/public in production
-  const staticPath =
-    process.env.NODE_ENV === "production"
-      ? path.resolve(__dirname, "public")
-      : path.resolve(__dirname, "..", "dist", "public");
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-  app.use(express.static(staticPath));
+// Serve static files from public/dist directory
+const staticPath =
+  process.env.NODE_ENV === "production"
+    ? path.resolve(__dirname, "public")
+    : path.resolve(__dirname, "..", "dist", "public");
 
-  // Handle client-side routing - serve index.html for all routes
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
-  });
+app.use(express.static(staticPath));
 
-  const port = process.env.PORT || 3000;
+// API routes can be defined here before wildcard route
+app.get("/api/health", (_req, res) => {
+  res.json({ status: "ok", message: "Server running on Vercel" });
+});
 
-  server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
-  });
-}
+// Handle client-side routing - serve index.html for all SPA routes
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(staticPath, "index.html"));
+});
 
-startServer().catch(console.error);
+// Export default app for Vercel serverless runtime
+export default app;
