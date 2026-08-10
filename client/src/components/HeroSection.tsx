@@ -46,7 +46,7 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-8 md:pt-12"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-6 md:pt-8"
     >
       {/* Background layer */}
       <motion.div className="absolute inset-0 -z-10 bg-background" style={{ y: bgY }}>
@@ -76,7 +76,7 @@ export default function HeroSection() {
         </svg>
       </motion.div>
 
-      <motion.div className="container pt-6 md:pt-8 pb-12 md:pb-20" style={{ y: contentY, opacity: contentOpacity }}>
+      <motion.div className="container pt-4 md:pt-6 pb-12 md:pb-20" style={{ y: contentY, opacity: contentOpacity }}>
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Content */}
           <motion.div
@@ -86,19 +86,21 @@ export default function HeroSection() {
             className="flex flex-col justify-between h-full"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-[var(--gfg-green)]/30 bg-[var(--gfg-green)]/10 text-sm shadow-[var(--shadow-elevation-low)]">
+              {/* Reduced margin-bottom on top badges to shift content slightly higher */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-3 rounded-full border border-[var(--gfg-green)]/30 bg-[var(--gfg-green)]/10 text-sm shadow-[var(--shadow-elevation-low)]">
                 <Building2 size={16} className="text-[var(--gfg-green)]" />
                 <span className="font-medium text-foreground">{heroContent.affiliation}</span>
               </div>
 
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-4">
                 <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)] shadow-lg shadow-[var(--gfg-green)]/50" />
                 <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider font-semibold">
                   {heroContent.eyebrow}
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-[1.1] text-foreground min-h-[2.2em] md:min-h-[2.4em]">
+              {/* Fixed min-height to 3.6em / 3.8em so 3-line typing phrases fit perfectly without moving the layout */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-[1.1] text-foreground min-h-[3.6em] md:min-h-[3.8em] flex items-center">
                 <TypingText
                   phrases={heroContent.typingPhrases}
                   className="text-gradient-brand"

@@ -2270,3 +2270,58 @@
 [2026-08-08T16:30:35.397Z] {"timestamp":1786206597598,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/AnimatedInput.tsx"],"stack":null}
 [2026-08-08T16:30:35.397Z] {"timestamp":1786206611246,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
 [2026-08-08T16:30:35.397Z] {"timestamp":1786206611247,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/ContactSection.tsx"],"stack":null}
+[2026-08-08T16:52:09.326Z] {"timestamp":1786207929076,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T16:52:12.389Z] {"timestamp":1786207929596,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T16:52:12.389Z] {"timestamp":1786207929607,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T16:52:12.389Z] {"timestamp":1786207929671,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T17:13:24.687Z] {"timestamp":1786209204482,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T17:13:27.314Z] {"timestamp":1786209204835,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T17:13:27.314Z] {"timestamp":1786209204842,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T17:13:27.314Z] {"timestamp":1786209204920,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T17:27:00.967Z] {"timestamp":1786210020776,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T17:27:03.715Z] {"timestamp":1786210021154,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T17:27:03.715Z] {"timestamp":1786210021170,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T17:27:03.715Z] {"timestamp":1786210021235,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T17:41:54.074Z] {"timestamp":1786210913873,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T17:41:57.131Z] {"timestamp":1786210914197,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T17:41:57.131Z] {"timestamp":1786210914204,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T17:41:57.131Z] {"timestamp":1786210914267,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T17:51:42.960Z] {"timestamp":1786211502710,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T17:51:45.432Z] {"timestamp":1786211503101,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T17:51:45.432Z] {"timestamp":1786211503118,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T17:51:45.432Z] {"timestamp":1786211503173,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T18:07:50.559Z] {"timestamp":1786212470317,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T18:07:52.935Z] {"timestamp":1786212470727,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T18:07:52.935Z] {"timestamp":1786212470737,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T18:07:52.935Z] {"timestamp":1786212470825,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T18:28:15.864Z] {"timestamp":1786213695528,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T18:28:18.479Z] {"timestamp":1786213696103,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T18:28:18.479Z] {"timestamp":1786213696112,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T18:28:18.479Z] {"timestamp":1786213696246,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T18:30:27.466Z] {"timestamp":1786213827280,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T18:30:30.513Z] {"timestamp":1786213827649,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T18:30:30.513Z] {"timestamp":1786213827659,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T18:30:30.513Z] {"timestamp":1786213827747,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-08T18:42:21.746Z] {"timestamp":1786214541310,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-08T18:42:24.211Z] {"timestamp":1786214542010,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-08T18:42:24.211Z] {"timestamp":1786214542129,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-08T18:42:24.211Z] {"timestamp":1786214542596,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-09T09:16:20.891Z] {"timestamp":1786266980491,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-09T09:16:23.369Z] {"timestamp":1786266981113,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-09T09:16:23.369Z] {"timestamp":1786266981119,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-09T09:16:23.369Z] {"timestamp":1786266981188,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-10T15:13:50.226Z] {"timestamp":1786374828222,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-10T15:13:50.226Z] {"timestamp":1786374828253,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-10T15:13:50.226Z] {"timestamp":1786374828658,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-10T15:13:53.745Z] {"timestamp":1786374831740,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-10T15:13:53.745Z] {"timestamp":1786374831760,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-10T15:13:53.745Z] {"timestamp":1786374831798,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-10T15:14:03.909Z] {"timestamp":1786374842664,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-10T15:14:03.909Z] {"timestamp":1786374842665,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/Header.tsx"],"stack":null}
+[2026-08-10T15:14:13.614Z] {"timestamp":1786374851610,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-10T15:14:13.614Z] {"timestamp":1786374851622,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-10T15:14:13.614Z] {"timestamp":1786374851633,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-10T15:19:35.935Z] {"timestamp":1786375133873,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-10T15:19:35.935Z] {"timestamp":1786375133873,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/Header.tsx"],"stack":null}
+[2026-08-10T15:19:35.935Z] {"timestamp":1786375174599,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-10T15:19:35.935Z] {"timestamp":1786375174599,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/HeroSection.tsx"],"stack":null}
