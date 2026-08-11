@@ -6,10 +6,10 @@ import GalleryCard from './GalleryCard';
 
 interface EventCarouselProps {
   images: GalleryImage[];
-  onCardClick: (image: GalleryImage) => void;
+  onImageClick: (image: GalleryImage) => void;
 }
 
-const EventCarousel = memo(function EventCarousel({ images, onCardClick }: EventCarouselProps) {
+const EventCarousel = memo(function EventCarousel({ images, onImageClick }: EventCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Drag states
@@ -70,6 +70,9 @@ const EventCarousel = memo(function EventCarousel({ images, onCardClick }: Event
 
   // Pointer interaction for dragging on desktop
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    // Only drag with primary mouse button
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -78,8 +81,7 @@ const EventCarousel = memo(function EventCarousel({ images, onCardClick }: Event
     scrollLeftStart.current = container.scrollLeft;
     dragDistance.current = 0;
     
-    setActiveDrag(true);
-    container.setPointerCapture(e.pointerId);
+    // Defer setPointerCapture to handlePointerMove when drag movement is actually confirmed
   };
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -88,8 +90,21 @@ const EventCarousel = memo(function EventCarousel({ images, onCardClick }: Event
     if (!container) return;
 
     const dx = e.clientX - startX.current;
-    dragDistance.current = Math.abs(dx);
-    container.scrollLeft = scrollLeftStart.current - dx;
+    const distance = Math.abs(dx);
+    dragDistance.current = distance;
+
+    if (distance > 5) {
+      if (!activeDrag) {
+        setActiveDrag(true);
+        // Safely capture pointer only when active dragging starts
+        try {
+          container.setPointerCapture(e.pointerId);
+        } catch (err) {
+          // ignore
+        }
+      }
+      container.scrollLeft = scrollLeftStart.current - dx;
+    }
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -98,8 +113,12 @@ const EventCarousel = memo(function EventCarousel({ images, onCardClick }: Event
     setActiveDrag(false);
     
     const container = containerRef.current;
-    if (container) {
-      container.releasePointerCapture(e.pointerId);
+    if (container && container.hasPointerCapture(e.pointerId)) {
+      try {
+        container.releasePointerCapture(e.pointerId);
+      } catch (err) {
+        // ignore
+      }
     }
   };
 
@@ -169,7 +188,7 @@ const EventCarousel = memo(function EventCarousel({ images, onCardClick }: Event
           <GalleryCard
             key={img.id}
             image={img}
-            onClick={() => onCardClick(img)}
+            onImageClick={onImageClick}
           />
         ))}
       </div>

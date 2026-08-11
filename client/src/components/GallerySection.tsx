@@ -92,7 +92,7 @@ export default function GallerySection() {
                   Practical learning, technical drafting, and collaborative design workshops focused on CAD systems and spatial visualization.
                 </p>
               </div>
-              <EventCarousel images={egtImages} onCardClick={handleCardClick} />
+              <EventCarousel images={egtImages} onImageClick={handleCardClick} />
             </motion.div>
           )}
 
@@ -113,7 +113,7 @@ export default function GallerySection() {
                   High-energy competitions testing logical reasoning, algorithmic thinking, and rapid problem-solving where student teams race the clock.
                 </p>
               </div>
-              <EventCarousel images={quizImages} onCardClick={handleCardClick} />
+              <EventCarousel images={quizImages} onImageClick={handleCardClick} />
             </motion.div>
           )}
 
@@ -134,7 +134,7 @@ export default function GallerySection() {
                   Hands-on robotics assemblies, controller code tuning, and autonomous system demonstrations showcasing engineering innovation.
                 </p>
               </div>
-              <EventCarousel images={roboImages} onCardClick={handleCardClick} />
+              <EventCarousel images={roboImages} onImageClick={handleCardClick} />
             </motion.div>
           )}
 
