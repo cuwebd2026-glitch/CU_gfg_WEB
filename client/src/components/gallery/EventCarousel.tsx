@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { GalleryImage } from '@/data/content';
@@ -9,7 +9,7 @@ interface EventCarouselProps {
   onCardClick: (image: GalleryImage) => void;
 }
 
-export default function EventCarousel({ images, onCardClick }: EventCarouselProps) {
+const EventCarousel = memo(function EventCarousel({ images, onCardClick }: EventCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Drag states
@@ -28,10 +28,12 @@ export default function EventCarousel({ images, onCardClick }: EventCarouselProp
   const updateArrows = () => {
     const container = containerRef.current;
     if (container) {
-      setShowLeftArrow(container.scrollLeft > 10);
-      setShowRightArrow(
-        container.scrollLeft + container.clientWidth < container.scrollWidth - 10
-      );
+      const left = container.scrollLeft > 10;
+      const right =
+        container.scrollLeft + container.clientWidth < container.scrollWidth - 10;
+      
+      setShowLeftArrow((prev) => (prev !== left ? left : prev));
+      setShowRightArrow((prev) => (prev !== right ? right : prev));
     }
   };
 
@@ -47,12 +49,13 @@ export default function EventCarousel({ images, onCardClick }: EventCarouselProp
     const handleNativeWheel = (e: WheelEvent) => {
       if (e.deltaY !== 0) {
         const canScrollLeft = container.scrollLeft > 0 && e.deltaY < 0;
-        const canScrollRight = container.scrollLeft + container.clientWidth < container.scrollWidth && e.deltaY > 0;
+        const canScrollRight =
+          container.scrollLeft + container.clientWidth < container.scrollWidth && e.deltaY > 0;
         
         if (canScrollLeft || canScrollRight) {
           e.preventDefault();
           container.scrollLeft += e.deltaY * 0.8;
-          updateArrows();
+          // The native scroll event listener will trigger updateArrows() automatically
         }
       }
     };
@@ -87,7 +90,6 @@ export default function EventCarousel({ images, onCardClick }: EventCarouselProp
     const dx = e.clientX - startX.current;
     dragDistance.current = Math.abs(dx);
     container.scrollLeft = scrollLeftStart.current - dx;
-    updateArrows();
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -120,8 +122,6 @@ export default function EventCarousel({ images, onCardClick }: EventCarouselProp
       left: scrollAmount,
       behavior: 'smooth'
     });
-    
-    setTimeout(updateArrows, 400);
   };
 
   return (
@@ -191,4 +191,6 @@ export default function EventCarousel({ images, onCardClick }: EventCarouselProp
       </AnimatePresence>
     </div>
   );
-}
+});
+
+export default EventCarousel;

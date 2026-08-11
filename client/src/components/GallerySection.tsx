@@ -1,50 +1,57 @@
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { motion } from 'motion/react';
 import { galleryImages, GalleryImage } from '@/data/content';
 import EventCarousel from './gallery/EventCarousel';
 import GalleryLightbox from './gallery/GalleryLightbox';
 
+// Group images by category outside the component to maintain stable references and avoid re-filtering on every render
+const egtImages = galleryImages.filter(
+  (img) => img.category === 'Engineering Graphics & Technology'
+);
+const quizImages = galleryImages.filter(
+  (img) => img.category === 'Quiz Arena'
+);
+const roboImages = galleryImages.filter(
+  (img) => img.category === 'Roboverse'
+);
+
 export default function GallerySection() {
   // Lightbox selection states
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
-  // Group images by category
-  const egtImages = galleryImages.filter(
-    (img) => img.category === 'Engineering Graphics & Technology'
-  );
-  const quizImages = galleryImages.filter(
-    (img) => img.category === 'Quiz Arena'
-  );
-  const roboImages = galleryImages.filter(
-    (img) => img.category === 'Roboverse'
-  );
-
-  const handleCardClick = (image: GalleryImage) => {
+  // Stable callback for card click prevents child EventCarousels from re-rendering when lightbox opens/closes
+  const handleCardClick = useCallback((image: GalleryImage) => {
     setSelectedImage(image);
-  };
+  }, []);
 
-  const handleCloseLightbox = () => {
+  const handleCloseLightbox = useCallback(() => {
     setSelectedImage(null);
-  };
+  }, []);
 
-  // Find index and handle navigation over the complete galleryImages dataset
-  const currentIndex = selectedImage
-    ? galleryImages.findIndex((img) => img.id === selectedImage.id)
-    : -1;
+  // Filter lightbox images to the currently selected category to preserve correct ordering
+  const activeImages = useMemo(() => {
+    if (!selectedImage) return [];
+    return galleryImages.filter((img) => img.category === selectedImage.category);
+  }, [selectedImage]);
 
-  const handlePrev = () => {
-    if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-      setSelectedImage(galleryImages[prevIndex]);
+  const currentIndex = useMemo(() => {
+    if (!selectedImage) return -1;
+    return activeImages.findIndex((img) => img.id === selectedImage.id);
+  }, [selectedImage, activeImages]);
+
+  const handlePrev = useCallback(() => {
+    if (currentIndex !== -1 && activeImages.length > 0) {
+      const prevIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
+      setSelectedImage(activeImages[prevIndex]);
     }
-  };
+  }, [currentIndex, activeImages]);
 
-  const handleNext = () => {
-    if (currentIndex !== -1) {
-      const nextIndex = (currentIndex + 1) % galleryImages.length;
-      setSelectedImage(galleryImages[nextIndex]);
+  const handleNext = useCallback(() => {
+    if (currentIndex !== -1 && activeImages.length > 0) {
+      const nextIndex = (currentIndex + 1) % activeImages.length;
+      setSelectedImage(activeImages[nextIndex]);
     }
-  };
+  }, [currentIndex, activeImages]);
 
   return (
     <section id="gallery" className="py-20 md:py-32 bg-secondary/40 overflow-hidden">
@@ -144,7 +151,7 @@ export default function GallerySection() {
       {selectedImage && (
         <GalleryLightbox
           image={selectedImage}
-          images={galleryImages}
+          images={activeImages}
           currentIndex={currentIndex}
           onPrev={handlePrev}
           onNext={handleNext}

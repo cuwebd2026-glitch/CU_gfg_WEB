@@ -72,6 +72,7 @@ export interface LogoItem {
 export interface GalleryImage {
   id: string;
   src: string;
+  thumbnail?: string;
   title: string;
   description: string;
   category: "Engineering Graphics & Technology" | "Quiz Arena" | "Roboverse";
@@ -409,6 +410,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-01",
     src: "/gallery/egt-01.jpg",
+    thumbnail: "/gallery/thumbnails/egt-01.webp",
     category: "Engineering Graphics & Technology",
     title: "Engineering Graphics & Design Workshop",
     description: "Students actively participating in practical Engineering Graphics and Technology sessions organized by the GFG Chandigarh University Student Chapter, promoting technical learning and collaborative problem-solving.",
@@ -417,6 +419,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-02",
     src: "/gallery/egt-02.jpg",
+    thumbnail: "/gallery/thumbnails/egt-02.webp",
     category: "Engineering Graphics & Technology",
     title: "Computer-Aided Design and Drafting",
     description: "Chapter members learning to build complex 3D models and engineering graphics designs, bridging theoretical graphics principles with modern technical software tools.",
@@ -425,6 +428,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-03",
     src: "/gallery/egt-03.jpg",
+    thumbnail: "/gallery/thumbnails/egt-03.webp",
     category: "Engineering Graphics & Technology",
     title: "Engineering Visualization Masterclass",
     description: "Interactive training session focusing on 3D spatial visualization, geometric projections, and technical drafting to enhance design accuracy.",
@@ -433,6 +437,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-04",
     src: "/gallery/egt-04.jpg",
+    thumbnail: "/gallery/thumbnails/egt-04.webp",
     category: "Engineering Graphics & Technology",
     title: "Collaborative Engineering Lab Work",
     description: "Group of students discussing geometric modeling constraints and engineering design parameters during the hands-on lab workshop.",
@@ -441,6 +446,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-05",
     src: "/gallery/egt-05.jpg",
+    thumbnail: "/gallery/thumbnails/egt-05.webp",
     category: "Engineering Graphics & Technology",
     title: "Drafting Standards and Prototyping Session",
     description: "A specialized session teaching students international drafting standards, orthographic views, and technical layout design for physical prototyping.",
@@ -449,6 +455,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "egt-06",
     src: "/gallery/egt-06.jpg",
+    thumbnail: "/gallery/thumbnails/egt-06.webp",
     category: "Engineering Graphics & Technology",
     title: "Advanced CAD Modeling and Simulation",
     description: "An advanced session showcasing complex assembly designs, stress analysis simulations, and 3D printing preparation pipelines for student projects.",
@@ -459,6 +466,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "quiz-01",
     src: "/gallery/quiz-01.jpg",
+    thumbnail: "/gallery/thumbnails/quiz-01.webp",
     category: "Quiz Arena",
     title: "Technical Quiz Championship",
     description: "Participants competing in the Quiz Arena finals, showcasing quick thinking, technical knowledge, and mental agility under timed pressure.",
@@ -467,6 +475,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "quiz-02",
     src: "/gallery/quiz-02.jpg",
+    thumbnail: "/gallery/thumbnails/quiz-02.webp",
     category: "Quiz Arena",
     title: "Ideation and Problem Solving Round",
     description: "Teams analyzing technical problem statements and riddles to solve algorithmic puzzles, working collaboratively to reach the top of the leaderboard.",
@@ -477,6 +486,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-01",
     src: "/gallery/robo-01.jpg",
+    thumbnail: "/gallery/thumbnails/robo-01.webp",
     category: "Roboverse",
     title: "Roboverse Autonomous Demonstration",
     description: "Students presenting innovative robotics projects during the Roboverse competition, demonstrating autonomy, custom chassis designs, and smart controls.",
@@ -485,6 +495,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-02",
     src: "/gallery/robo-02.jpg",
+    thumbnail: "/gallery/thumbnails/robo-02.webp",
     category: "Roboverse",
     title: "Embedded Systems and Sensor Integration",
     description: "A close-up demonstration of integrating microcontrollers, ultrasonic sensors, and motor driver modules to build self-routing robotic units.",
@@ -493,6 +504,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-03",
     src: "/gallery/robo-03.jpg",
+    thumbnail: "/gallery/thumbnails/robo-03.webp",
     category: "Roboverse",
     title: "Line Follower and Obstacle Avoidance Run",
     description: "Students testing autonomous line-following algorithms and real-time obstacle avoidance routines on a custom-designed track.",
@@ -501,6 +513,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-04",
     src: "/gallery/robo-04.jpg",
+    thumbnail: "/gallery/thumbnails/robo-04.webp",
     category: "Roboverse",
     title: "Robotics Hardware Assembly Workshop",
     description: "Hands-on session where students assemble motor chassis, solder electrical components, and configure wireless transceivers under mentor guidance.",
@@ -509,6 +522,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-05",
     src: "/gallery/robo-05.jpg",
+    thumbnail: "/gallery/thumbnails/robo-05.webp",
     category: "Roboverse",
     title: "IoT and Robotic Connectivity Demonstration",
     description: "Showcasing internet-of-things (IoT) integrations with robotics, allowing remote telemetry monitoring and remote cloud-based navigation control.",
@@ -517,6 +531,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-06",
     src: "/gallery/robo-06.jpg",
+    thumbnail: "/gallery/thumbnails/robo-06.webp",
     category: "Roboverse",
     title: "Smart Automation and Robotic Arms Exhibition",
     description: "A demonstration of robotic arms and pick-and-place systems programmed to perform repetitive high-precision tasks with sub-millimeter accuracy.",
@@ -525,6 +540,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-07",
     src: "/gallery/robo-07.jpg",
+    thumbnail: "/gallery/thumbnails/robo-07.webp",
     category: "Roboverse",
     title: "Collaborative Robotics Project Review",
     description: "Chapter members and evaluators reviewing firmware code and mechanical configurations of robots designed to solve logistics problems.",
@@ -533,6 +549,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "robo-08",
     src: "/gallery/robo-08.jpg",
+    thumbnail: "/gallery/thumbnails/robo-08.webp",
     category: "Roboverse",
     title: "Robo-Soccer and Combat Challenge",
     description: "An exciting, high-energy competition testing the agility, control speed, and mechanical durability of student-built remote-controlled bots.",

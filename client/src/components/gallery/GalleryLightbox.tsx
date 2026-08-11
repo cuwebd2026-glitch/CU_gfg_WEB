@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ArrowLeft, ArrowRight } from 'lucide-react';
 import { GalleryImage } from '@/data/content';
 
 interface GalleryLightboxProps {
@@ -49,6 +49,10 @@ export default function GalleryLightbox({
     }
   };
 
+  // Identify adjacent images for preloading
+  const prevImage = images.length > 1 ? images[(currentIndex - 1 + images.length) % images.length] : null;
+  const nextImage = images.length > 1 ? images[(currentIndex + 1) % images.length] : null;
+
   return (
     <AnimatePresence>
       <div
@@ -56,9 +60,15 @@ export default function GalleryLightbox({
         aria-modal="true"
         aria-label="Event image lightbox"
         onClick={handleBackdropClick}
-        className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col justify-between items-center p-4 md:p-8 select-none"
+        className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-center items-center p-4 md:p-6 select-none"
       >
-        {/* Close Button */}
+        {/* Hidden preloader for adjacent images */}
+        <div style={{ display: 'none' }} aria-hidden="true">
+          {prevImage && <img src={prevImage.src} alt="" />}
+          {nextImage && <img src={nextImage.src} alt="" />}
+        </div>
+
+        {/* Close Button - × */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-50 w-11 h-11 rounded-full bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 backdrop-blur-md flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] cursor-pointer"
@@ -67,95 +77,74 @@ export default function GalleryLightbox({
           <X className="w-6 h-6" />
         </button>
 
-        {/* Navigation / Image / Metadata Row */}
-        <div className="flex-1 w-full max-w-6xl flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 my-auto pt-12 md:pt-4 pb-4">
+        {/* Lightbox Content Container */}
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-5 mt-8 md:mt-4">
           
-          {/* Previous Button (Desktop) */}
-          <button
-            onClick={onPrev}
-            className="hidden md:flex w-12 h-12 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 backdrop-blur-md items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] cursor-pointer"
-            aria-label="Previous image"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
           {/* Centered Image Showcase */}
           <motion.div
             key={image.id}
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative flex-1 max-h-[50vh] md:max-h-[75vh] w-full flex items-center justify-center"
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="relative flex items-center justify-center max-h-[50vh] md:max-h-[60vh] w-full"
           >
             <img
               src={image.src}
               alt={image.alt}
-              className="max-w-full max-h-full object-contain rounded-xl border border-white/10 shadow-2xl shadow-black/80 pointer-events-none"
+              className="max-w-full max-h-[50vh] md:max-h-[60vh] object-contain rounded-xl border border-white/10 shadow-2xl shadow-black/80 pointer-events-none"
             />
           </motion.div>
 
-          {/* Metadata Card */}
+          {/* Text Metadata Panel */}
           <motion.div
             key={`meta-${image.id}`}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            className="w-full md:w-[360px] bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-between text-left shadow-xl"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25, delay: 0.05 }}
+            className="w-full max-w-2xl text-center px-4"
           >
-            <div>
-              {/* Category Badge */}
-              <div className="mb-3">
-                <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold font-mono tracking-wider uppercase bg-[var(--gfg-green)]/15 border border-[var(--gfg-green)]/35 text-[var(--gfg-green)]">
-                  {image.category}
-                </span>
-              </div>
+            {/* Category */}
+            <span className="block text-[10px] md:text-xs font-mono font-semibold tracking-widest uppercase text-[var(--gfg-green)] mb-1">
+              {image.category}
+            </span>
 
-              {/* Title */}
-              <h2 className="text-white text-lg md:text-xl font-display font-semibold leading-snug mb-3">
-                {image.title}
-              </h2>
+            {/* Title */}
+            <h2 className="text-white text-base md:text-xl font-display font-semibold leading-snug mb-2">
+              {image.title}
+            </h2>
 
-              {/* Description */}
-              <p className="text-white/70 text-xs md:text-sm font-sans leading-relaxed mb-6 max-h-[160px] overflow-y-auto pr-2 scrollbar-none">
-                {image.description}
-              </p>
-            </div>
-
-            {/* Navigation Strip for Mobile/Small views + Counter */}
-            <div className="flex items-center justify-between pt-4 border-t border-white/10">
-              <div className="flex md:hidden gap-3">
-                <button
-                  onClick={onPrev}
-                  className="w-9 h-9 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 flex items-center justify-center transition-colors focus:outline-none cursor-pointer"
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={onNext}
-                  className="w-9 h-9 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 flex items-center justify-center transition-colors focus:outline-none cursor-pointer"
-                  aria-label="Next image"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Counter */}
-              <span className="text-white/40 text-xs font-mono tracking-wide ml-auto">
-                {currentIndex + 1} / {images.length}
-              </span>
-            </div>
+            {/* Description */}
+            <p className="text-white/70 text-xs md:text-sm font-sans leading-relaxed max-h-[100px] overflow-y-auto pr-1 scrollbar-none">
+              {image.description}
+            </p>
           </motion.div>
 
-          {/* Next Button (Desktop) */}
-          <button
-            onClick={onNext}
-            className="hidden md:flex w-12 h-12 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 backdrop-blur-md items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] cursor-pointer"
-            aria-label="Next image"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+          {/* Controls Strip (← / → Navigation & Index Count) */}
+          <div className="flex flex-col items-center gap-2 mt-2">
+            <div className="flex items-center gap-8">
+              <button
+                onClick={onPrev}
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] cursor-pointer"
+                aria-label="Previous image"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={onNext}
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[var(--gfg-green)] text-white hover:text-black border border-white/10 flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gfg-green)] cursor-pointer"
+                aria-label="Next image"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Counter */}
+            <span className="text-white/40 text-xs font-mono tracking-wide mt-1">
+              {currentIndex + 1} / {images.length}
+            </span>
+          </div>
+
         </div>
       </div>
     </AnimatePresence>
