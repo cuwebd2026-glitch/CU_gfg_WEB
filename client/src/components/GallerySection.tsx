@@ -28,30 +28,24 @@ export default function GallerySection() {
     setSelectedImage(null);
   }, []);
 
-  // Filter lightbox images to the currently selected category to preserve correct ordering
-  const activeImages = useMemo(() => {
-    if (!selectedImage) return [];
-    return galleryImages.filter((img) => img.category === selectedImage.category);
-  }, [selectedImage]);
-
   const currentIndex = useMemo(() => {
     if (!selectedImage) return -1;
-    return activeImages.findIndex((img) => img.id === selectedImage.id);
-  }, [selectedImage, activeImages]);
+    return galleryImages.findIndex((img) => img.id === selectedImage.id);
+  }, [selectedImage]);
 
   const handlePrev = useCallback(() => {
-    if (currentIndex !== -1 && activeImages.length > 0) {
-      const prevIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
-      setSelectedImage(activeImages[prevIndex]);
+    if (currentIndex !== -1) {
+      const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      setSelectedImage(galleryImages[prevIndex]);
     }
-  }, [currentIndex, activeImages]);
+  }, [currentIndex]);
 
   const handleNext = useCallback(() => {
-    if (currentIndex !== -1 && activeImages.length > 0) {
-      const nextIndex = (currentIndex + 1) % activeImages.length;
-      setSelectedImage(activeImages[nextIndex]);
+    if (currentIndex !== -1) {
+      const nextIndex = (currentIndex + 1) % galleryImages.length;
+      setSelectedImage(galleryImages[nextIndex]);
     }
-  }, [currentIndex, activeImages]);
+  }, [currentIndex]);
 
   return (
     <section id="gallery" className="py-20 md:py-32 bg-secondary/40 overflow-hidden">
@@ -151,7 +145,7 @@ export default function GallerySection() {
       {selectedImage && (
         <GalleryLightbox
           image={selectedImage}
-          images={activeImages}
+          images={galleryImages}
           currentIndex={currentIndex}
           onPrev={handlePrev}
           onNext={handleNext}
