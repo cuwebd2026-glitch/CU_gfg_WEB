@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import StatisticsSection from '@/components/StatisticsSection';
@@ -25,6 +26,18 @@ import { motion } from 'motion/react';
  * All section content is data-driven from `@/data/content.ts`.
  */
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />

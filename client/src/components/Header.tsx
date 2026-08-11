@@ -1,25 +1,19 @@
 import { useEffect, useState } from 'react';
-
 import { motion, AnimatePresence } from 'motion/react';
-
 import { Menu, X, Sun, Moon } from 'lucide-react';
-
+import { useLocation } from 'wouter';
 import { useTheme } from '@/contexts/ThemeContext';
-
 import AnimatedToggle from './AnimatedToggle';
-
 import { navItems } from '@/data/content';
 
 
 
 export default function Header() {
-
+  const [location] = useLocation();
+  const isHome = location === '/';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [isScrolled, setIsScrolled] = useState(false);
-
   const [cuLogoFailed, setCuLogoFailed] = useState(false);
-
   const { theme, toggleTheme } = useTheme();
 
 
@@ -60,7 +54,7 @@ export default function Header() {
 
         <motion.a
 
-          href="#top"
+          href={isHome ? '#top' : '/'}
 
           initial={{ opacity: 0, x: -20 }}
 
@@ -160,7 +154,7 @@ export default function Header() {
 
               key={item.label}
 
-              href={item.href}
+              href={isHome ? item.href : `/${item.href}`}
 
               className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
 
@@ -298,7 +292,7 @@ export default function Header() {
 
                   key={item.label}
 
-                  href={item.href}
+                  href={isHome ? item.href : `/${item.href}`}
 
                   onClick={() => setIsMenuOpen(false)}
 

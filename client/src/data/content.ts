@@ -72,8 +72,10 @@ export interface LogoItem {
 export interface GalleryImage {
   id: string;
   src: string;
+  title: string;
+  description: string;
+  category: "Engineering Graphics & Technology" | "Quiz Arena" | "Roboverse";
   alt: string;
-  category: string;
 }
 
 export interface TestimonialItem {
@@ -403,14 +405,139 @@ export const partners: LogoItem[] = [
 // ---------- Gallery ----------
 
 export const galleryImages: GalleryImage[] = [
-  { id: 'g1', src: 'https://lh3.googleusercontent.com/pw/AP1GczMVlg_V8ZbQcIT9eO2I5GTk-Ybv_zECCgIKZM3MfRl9wXYfrGLqfOnvv7fxS0e6rZFs8sBTlqVvg2wukzD-765OyaER8Fa18Gv15oDf6QV8MZOU7Zna=w1200-h900', alt: 'Students collaborating at a chapter hackathon', category: 'Hackathon' },
-  { id: 'g2', src: 'https://lh3.googleusercontent.com/pw/AP1GczNHCqr9R2tvNA1NIiSTJMKWRsk0lJ0uTCc5cEUWUoyly0989BCRHQwVYoqQ8rXnmi5poZFVMlWr5JcRkHrEeOgiMVxBsG6efTMfhZ_cGMzJ6-dsaIVu=w1200-h900', alt: 'Workshop session with chapter students', category: 'Workshop' },
-  { id: 'g3', src: 'https://lh3.googleusercontent.com/pw/AP1GczO8OapC9JpDCdvhOiXVTeZE8RfQjiwmXX0cLqPUwOQuRVZDkZ3Ep07Xcb2hn295-iCb1J9GqhJ_gih3FrhGxJkjQYnq3HkIn9am52PiLlyc2-pQ8FDJ=w1200-h900', alt: 'Speaker and audience moment from chapter event', category: 'Talk' },
-  { id: 'g4', src: 'https://lh3.googleusercontent.com/pw/AP1GczMNPzgOn-yqptjJGBShUYdcrKmoZfY8yP34e3OTo2QUeZGLZqEVBfqrlGlDjdiAKlfY-rZvVqBL2PaW4P0uCgRo-2LyPKdy5n--StcHRmUKyKZ9jnoR=w1200-h900', alt: 'Community meetup snapshot', category: 'Community' },
-  { id: 'g5', src: 'https://lh3.googleusercontent.com/pw/AP1GczOE-30LZhndFPsF3vuH-i9eloXQkCHvEYz3gfcd77SvfduXG1bgz1fzeMknDXBFqwVRH4E2RU3qV05VGOaqafbCRyo9V-IJYDUrMDNqPvpkh7pArGe7=w1200-h900', alt: 'Hands-on learning activity in chapter session', category: 'Workshop' },
-  { id: 'g6', src: 'https://lh3.googleusercontent.com/pw/AP1GczPyhvHDaaRDG7zUIQVt990RKSvnQuIKwKgwVMZdeVNfi5fyEglPQ45EBLwm5CnOd61alUTEBYGmHCxGokZa-6XvcBkALLVBpVOlPDgDqzUalbkon60=w1200-h900', alt: 'Group photo of chapter members', category: 'Community' },
-  { id: 'g7', src: 'https://lh3.googleusercontent.com/pw/AP1GczMc4k0V5dGE0OGVY6nD3kfrGDMOYZhKQEZmiQ4q4jTq3puJyEzbylMACvs24CN1A1gqGfOufV47k8vQsL5wX_EwJ99vfY6OO93UYMhrQoetz15LCko=w1200-h900', alt: 'Team working during a coding activity', category: 'Hackathon' },
-  { id: 'g8', src: 'https://lh3.googleusercontent.com/pw/AP1GczPdVTMqvR7HTgAYeGoRIEBj6Q-0lgApF8xYYKmYuqgESzuvEWeh0ya42PWSobKZqvEwW2L2_y1PKCAiAnuBvBNdVorz6IvTPgQx9C3C770YcnoPqBw=w1200-h900', alt: 'Chapter event moment from stage', category: 'Talk' },
+  // Engineering Graphics & Technology (6 images)
+  {
+    id: "egt-01",
+    src: "/gallery/egt-01.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Engineering Graphics & Design Workshop",
+    description: "Students actively participating in practical Engineering Graphics and Technology sessions organized by the GFG Chandigarh University Student Chapter, promoting technical learning and collaborative problem-solving.",
+    alt: "Students participating in an Engineering Graphics and Technology workshop"
+  },
+  {
+    id: "egt-02",
+    src: "/gallery/egt-02.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Computer-Aided Design and Drafting",
+    description: "Chapter members learning to build complex 3D models and engineering graphics designs, bridging theoretical graphics principles with modern technical software tools.",
+    alt: "Students drafting mechanical components in a CAD software session"
+  },
+  {
+    id: "egt-03",
+    src: "/gallery/egt-03.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Engineering Visualization Masterclass",
+    description: "Interactive training session focusing on 3D spatial visualization, geometric projections, and technical drafting to enhance design accuracy.",
+    alt: "An instructor demonstrating 3D projections on a projection screen during an engineering graphics class"
+  },
+  {
+    id: "egt-04",
+    src: "/gallery/egt-04.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Collaborative Engineering Lab Work",
+    description: "Group of students discussing geometric modeling constraints and engineering design parameters during the hands-on lab workshop.",
+    alt: "Students discussing geometric modeling constraints in groups"
+  },
+  {
+    id: "egt-05",
+    src: "/gallery/egt-05.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Drafting Standards and Prototyping Session",
+    description: "A specialized session teaching students international drafting standards, orthographic views, and technical layout design for physical prototyping.",
+    alt: "Students practicing technical drafting standards on computer systems"
+  },
+  {
+    id: "egt-06",
+    src: "/gallery/egt-06.jpg",
+    category: "Engineering Graphics & Technology",
+    title: "Advanced CAD Modeling and Simulation",
+    description: "An advanced session showcasing complex assembly designs, stress analysis simulations, and 3D printing preparation pipelines for student projects.",
+    alt: "Advanced CAD modeling project showcasing complex mechanical assemblies on a screen"
+  },
+
+  // Quiz Arena (2 images)
+  {
+    id: "quiz-01",
+    src: "/gallery/quiz-01.jpg",
+    category: "Quiz Arena",
+    title: "Technical Quiz Championship",
+    description: "Participants competing in the Quiz Arena finals, showcasing quick thinking, technical knowledge, and mental agility under timed pressure.",
+    alt: "Students competing during the Technical Quiz Championship"
+  },
+  {
+    id: "quiz-02",
+    src: "/gallery/quiz-02.jpg",
+    category: "Quiz Arena",
+    title: "Ideation and Problem Solving Round",
+    description: "Teams analyzing technical problem statements and riddles to solve algorithmic puzzles, working collaboratively to reach the top of the leaderboard.",
+    alt: "A team of students consulting each other during the Quiz Arena rounds"
+  },
+
+  // Roboverse (8 images)
+  {
+    id: "robo-01",
+    src: "/gallery/robo-01.jpg",
+    category: "Roboverse",
+    title: "Roboverse Autonomous Demonstration",
+    description: "Students presenting innovative robotics projects during the Roboverse competition, demonstrating autonomy, custom chassis designs, and smart controls.",
+    alt: "Students demonstrating an autonomous robotics project during Roboverse"
+  },
+  {
+    id: "robo-02",
+    src: "/gallery/robo-02.jpg",
+    category: "Roboverse",
+    title: "Embedded Systems and Sensor Integration",
+    description: "A close-up demonstration of integrating microcontrollers, ultrasonic sensors, and motor driver modules to build self-routing robotic units.",
+    alt: "Students tuning microcontroller parameters on a mobile robotic platform"
+  },
+  {
+    id: "robo-03",
+    src: "/gallery/robo-03.jpg",
+    category: "Roboverse",
+    title: "Line Follower and Obstacle Avoidance Run",
+    description: "Students testing autonomous line-following algorithms and real-time obstacle avoidance routines on a custom-designed track.",
+    alt: "An autonomous robot navigating a test track while students monitor its performance"
+  },
+  {
+    id: "robo-04",
+    src: "/gallery/robo-04.jpg",
+    category: "Roboverse",
+    title: "Robotics Hardware Assembly Workshop",
+    description: "Hands-on session where students assemble motor chassis, solder electrical components, and configure wireless transceivers under mentor guidance.",
+    alt: "Students assembling robotics chassis and soldering sensors in the lab"
+  },
+  {
+    id: "robo-05",
+    src: "/gallery/robo-05.jpg",
+    category: "Roboverse",
+    title: "IoT and Robotic Connectivity Demonstration",
+    description: "Showcasing internet-of-things (IoT) integrations with robotics, allowing remote telemetry monitoring and remote cloud-based navigation control.",
+    alt: "Students checking real-time robotics telemetry on a display screen"
+  },
+  {
+    id: "robo-06",
+    src: "/gallery/robo-06.jpg",
+    category: "Roboverse",
+    title: "Smart Automation and Robotic Arms Exhibition",
+    description: "A demonstration of robotic arms and pick-and-place systems programmed to perform repetitive high-precision tasks with sub-millimeter accuracy.",
+    alt: "A programmable robotic arm executing a pick-and-place task"
+  },
+  {
+    id: "robo-07",
+    src: "/gallery/robo-07.jpg",
+    category: "Roboverse",
+    title: "Collaborative Robotics Project Review",
+    description: "Chapter members and evaluators reviewing firmware code and mechanical configurations of robots designed to solve logistics problems.",
+    alt: "Evaluators reviewing firmware configurations of a custom logistics robot"
+  },
+  {
+    id: "robo-08",
+    src: "/gallery/robo-08.jpg",
+    category: "Roboverse",
+    title: "Robo-Soccer and Combat Challenge",
+    description: "An exciting, high-energy competition testing the agility, control speed, and mechanical durability of student-built remote-controlled bots.",
+    alt: "Remote-controlled robots competing in a soccer arena match"
+  }
 ];
 
 // ---------- Testimonials (Executive Board Leads) ----------

@@ -21,8 +21,16 @@ export function ThemeProvider({
   defaultTheme = "light",
   switchable = true, // Default switchable to true so toggle works
 }: ThemeProviderProps) {
-  // Always initialize directly with defaultTheme ("light")
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  // Read initial theme from localStorage if available
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("theme");
+      if (stored === "light" || stored === "dark") {
+        return stored;
+      }
+    }
+    return defaultTheme;
+  });
 
   useEffect(() => {
     const root = document.documentElement;
@@ -30,6 +38,9 @@ export function ThemeProvider({
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
+    }
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
     }
   }, [theme]);
 
