@@ -2509,3 +2509,42 @@
 [2026-08-11T17:24:26.248Z] {"timestamp":1786468958682,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
 [2026-08-11T17:24:26.248Z] {"timestamp":1786468958682,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryLightbox.tsx"],"stack":null}
 [2026-08-11T17:27:29.180Z] {"timestamp":1786469220274,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-11T17:29:07.796Z] {"timestamp":1786469344544,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-11T17:29:07.796Z] {"timestamp":1786469344592,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-11T17:29:14.561Z] {"timestamp":1786469352946,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-11T17:29:14.561Z] {"timestamp":1786469353141,"level":"WARN","args":["You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"],"stack":null}
+[2026-08-11T17:30:32.554Z] {"timestamp":1786469431261,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:30:32.554Z] {"timestamp":1786469431262,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/GallerySection.tsx"],"stack":null}
+[2026-08-11T17:30:32.554Z] {"timestamp":1786469431277,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:30:32.554Z] {"timestamp":1786469431277,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/GallerySection.tsx"],"stack":null}
+[2026-08-11T17:32:20.082Z] {"timestamp":1786469538074,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-11T17:32:20.083Z] {"timestamp":1786469538174,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-11T17:32:20.083Z] {"timestamp":1786469538219,"level":"WARN","args":["You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"],"stack":null}
+[2026-08-11T17:37:26.208Z] {"timestamp":1786469826726,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:37:26.208Z] {"timestamp":1786469826727,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryCard.tsx"],"stack":null}
+[2026-08-11T17:37:26.208Z] {"timestamp":1786469832559,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:37:26.208Z] {"timestamp":1786469832559,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryLightbox.tsx"],"stack":null}
+[2026-08-11T17:37:26.212Z] {"timestamp":1786469826728,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:37:26.212Z] {"timestamp":1786469826729,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryCard.tsx"],"stack":null}
+[2026-08-11T17:37:26.212Z] {"timestamp":1786469832559,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:37:26.212Z] {"timestamp":1786469832560,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryLightbox.tsx"],"stack":null}
+[2026-08-11T17:39:10.803Z] {"timestamp":1786469948788,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-11T17:39:10.803Z] {"timestamp":1786469948801,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-11T17:39:10.803Z] {"timestamp":1786469948868,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-11T17:39:10.803Z] {"timestamp":1786469948937,"level":"WARN","args":["You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"],"stack":null}
+[2026-08-11T17:40:44.792Z] {"timestamp":1786470044523,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:40:44.792Z] {"timestamp":1786470044524,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/GallerySection.tsx"],"stack":null}
+[2026-08-11T17:40:50.804Z] {"timestamp":1786470050100,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:40:50.804Z] {"timestamp":1786470050100,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryCard.tsx"],"stack":null}
+[2026-08-11T17:40:56.793Z] {"timestamp":1786470056683,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:40:56.793Z] {"timestamp":1786470056683,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/EventCarousel.tsx"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470044486,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470044487,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/GallerySection.tsx"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470049966,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470049967,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/GalleryCard.tsx"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470056679,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-11T17:41:26.211Z] {"timestamp":1786470056680,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/gallery/EventCarousel.tsx"],"stack":null}
+[2026-08-11T17:43:05.070Z] {"timestamp":1786470183065,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-11T17:43:05.070Z] {"timestamp":1786470183072,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-11T17:43:05.070Z] {"timestamp":1786470183125,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-11T17:43:05.070Z] {"timestamp":1786470183156,"level":"WARN","args":["You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"],"stack":null}
