@@ -24,26 +24,12 @@ const GalleryCard = memo(function GalleryCard({ image, onClick }: GalleryCardPro
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
 
-      {/* Subtle bottom gradient and glassmorphism overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-90 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6 [transform:translate3d(0,0,0)]">
-        <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 ease-out">
-          {/* Category Badge */}
-          <div className="mb-2">
-            <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold font-mono tracking-wider uppercase bg-[var(--gfg-green)]/15 border border-[var(--gfg-green)]/35 text-[var(--gfg-green)]">
-              {image.category}
-            </span>
-          </div>
-
-          {/* Title */}
-          <h3 className="text-white text-base md:text-lg font-display font-semibold leading-snug mb-1 text-shadow-sm">
-            {image.title}
-          </h3>
-
-          {/* Description - expanding with height/opacity transition */}
-          <p className="text-white/70 text-xs md:text-sm font-sans line-clamp-2 md:line-clamp-3 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out max-h-0 group-hover:max-h-24 overflow-hidden mt-1">
-            {image.description}
-          </p>
-        </div>
+      {/* Subtle bottom gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-5 md:p-6">
+        {/* Title */}
+        <h3 className="text-white text-base md:text-lg font-display font-semibold leading-snug text-shadow-sm">
+          {image.title}
+        </h3>
       </div>
     </motion.div>
   );

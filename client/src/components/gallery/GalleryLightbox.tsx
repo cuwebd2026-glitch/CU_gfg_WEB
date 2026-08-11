@@ -102,22 +102,37 @@ export default function GalleryLightbox({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: 0.05 }}
-            className="w-full max-w-2xl text-center px-4"
+            className="w-full max-w-2xl text-center px-4 flex flex-col gap-4"
           >
             {/* Category */}
-            <span className="block text-[10px] md:text-xs font-mono font-semibold tracking-widest uppercase text-[var(--gfg-green)] mb-1">
-              {image.category}
-            </span>
+            <div>
+              <span className="block text-[10px] md:text-xs font-mono font-bold tracking-widest uppercase text-[var(--gfg-green)] opacity-75">
+                CATEGORY
+              </span>
+              <span className="block text-white text-sm md:text-base font-semibold mt-0.5">
+                {image.category}
+              </span>
+            </div>
 
             {/* Title */}
-            <h2 className="text-white text-base md:text-xl font-display font-semibold leading-snug mb-2">
-              {image.title}
-            </h2>
+            <div>
+              <span className="block text-[10px] md:text-xs font-mono font-bold tracking-widest uppercase text-[var(--gfg-green)] opacity-75">
+                TITLE
+              </span>
+              <h2 className="text-white text-base md:text-xl font-display font-bold leading-snug mt-0.5">
+                {image.title}
+              </h2>
+            </div>
 
             {/* Description */}
-            <p className="text-white/70 text-xs md:text-sm font-sans leading-relaxed max-h-[100px] overflow-y-auto pr-1 scrollbar-none">
-              {image.description}
-            </p>
+            <div>
+              <span className="block text-[10px] md:text-xs font-mono font-bold tracking-widest uppercase text-[var(--gfg-green)] opacity-75">
+                DESCRIPTION
+              </span>
+              <p className="text-white/70 text-xs md:text-sm font-sans leading-relaxed max-h-[120px] overflow-y-auto pr-1 scrollbar-none mt-1">
+                {image.description}
+              </p>
+            </div>
           </motion.div>
 
           {/* Controls Strip (← / → Navigation & Index Count) */}
