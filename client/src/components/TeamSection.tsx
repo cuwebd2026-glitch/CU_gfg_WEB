@@ -1,10 +1,10 @@
-import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 import { Github, Linkedin, Twitter } from 'lucide-react';
-import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { teamMembers, TeamMember } from '@/data/content';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { fadeUpOnScroll } from '@/lib/animations';
 
 function formatImageUrl(url: string): string {
   if (!url) return '/team/placeholder.jpg';
@@ -29,16 +29,21 @@ export default function TeamSection() {
   const president = executives[0];
   const executiveOfficers = executives.slice(1);
 
+  useEffect(() => {
+    let ctxHeader = fadeUpOnScroll('.team-header', 0.15, '#team');
+    let ctxCards = fadeUpOnScroll('.team-anim', 0);
+    return () => {
+      if (ctxHeader) ctxHeader.revert();
+      if (ctxCards) ctxCards.revert();
+    };
+  }, []);
+
   return (
     <section id="team" className="py-20 md:py-32 bg-secondary/40">
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20 text-center md:text-left"
+        <div
+          className="mb-20 text-center md:text-left team-header opacity-0"
         >
           <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
             <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
@@ -52,13 +57,13 @@ export default function TeamSection() {
           <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
             The driving force behind GeeksforGeeks Student Chapter — Chandigarh University.
           </p>
-        </motion.div>
+        </div>
 
         <div className="space-y-28">
           {/* LEVEL 1: EXECUTIVE BOARD */}
           {executives.length > 0 && (
             <div className="space-y-12">
-              <div className="border-b border-border/80 pb-4 text-center">
+              <div className="border-b border-border/80 pb-4 text-center team-anim opacity-0">
                 <h3 className="text-3xl font-display font-bold text-foreground">
                   Chapter Leadership
                 </h3>
@@ -66,7 +71,7 @@ export default function TeamSection() {
 
               {/* President Spotlight Card */}
               {president && (
-                <div className="flex justify-center mb-8">
+                <div className="flex justify-center mb-8 team-anim opacity-0">
                   <div className="w-full max-w-md">
                     <CardContainer className="w-full">
                       <CardBody className="bg-card border-2 border-[var(--gfg-green)]/40 hover:border-[var(--gfg-green)] shadow-xl hover:shadow-2xl hover:shadow-[var(--gfg-green)]/20 rounded-2xl p-6">
@@ -106,7 +111,8 @@ export default function TeamSection() {
               {/* Other Officers Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {executiveOfficers.map((member) => (
-                  <CardContainer key={member.id} className="w-full">
+                  <div key={member.id} className="w-full team-anim opacity-0">
+                  <CardContainer className="w-full">
                     <CardBody className="bg-card border-border hover:border-[var(--gfg-green)]/60 rounded-xl p-5 w-full">
                       <CardItem translateZ={0} className="w-full mb-4">
                         <button
@@ -132,6 +138,7 @@ export default function TeamSection() {
                       <SocialsRow socials={member.socials} name={member.name} />
                     </CardBody>
                   </CardContainer>
+                  </div>
                 ))}
               </div>
             </div>
@@ -140,14 +147,15 @@ export default function TeamSection() {
           {/* LEVEL 2: MANAGERS */}
           {managers.length > 0 && (
             <div className="space-y-8">
-              <div className="border-b border-border/60 pb-4">
+              <div className="border-b border-border/60 pb-4 team-anim opacity-0">
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                   Leads
                 </h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {managers.map((member) => (
-                  <CardContainer key={member.id} className="w-full">
+                  <div key={member.id} className="w-full team-anim opacity-0">
+                  <CardContainer className="w-full">
                     <CardBody className="bg-card border-border rounded-xl p-4 w-full">
                       <CardItem translateZ={0} className="w-full mb-3">
                         <button
@@ -173,6 +181,7 @@ export default function TeamSection() {
                       <SocialsRow socials={member.socials} name={member.name} />
                     </CardBody>
                   </CardContainer>
+                  </div>
                 ))}
               </div>
             </div>
@@ -181,7 +190,7 @@ export default function TeamSection() {
           {/* LEVEL 3: WEB DEVELOPERS */}
           {leads.length > 0 && (
             <div className="space-y-8">
-              <div className="border-b border-border/60 pb-4">
+              <div className="border-b border-border/60 pb-4 team-anim opacity-0">
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                   Web Developers
                 </h3>
@@ -190,7 +199,7 @@ export default function TeamSection() {
                 {leads.map((member) => (
                   <div
                     key={member.id}
-                    className="bg-card border border-border/80 hover:border-[var(--gfg-green)]/60 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition-all group"
+                    className="bg-card border border-border/80 hover:border-[var(--gfg-green)]/60 rounded-xl p-4 flex flex-col justify-between hover:shadow-lg transition-all group team-anim opacity-0"
                   >
                     <div>
                       <button
@@ -220,7 +229,7 @@ export default function TeamSection() {
           {/* LEVEL 4: CORE MEMBERS */}
           {coreMembers.length > 0 && (
             <div className="space-y-8">
-              <div className="border-b border-border/60 pb-4">
+              <div className="border-b border-border/60 pb-4 team-anim opacity-0">
                 <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                   Core Team Members
                 </h3>
@@ -229,7 +238,7 @@ export default function TeamSection() {
                 {coreMembers.map((member) => (
                   <div
                     key={member.id}
-                    className="bg-card border border-border/60 hover:border-[var(--gfg-green)]/50 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-all group"
+                    className="bg-card border border-border/60 hover:border-[var(--gfg-green)]/50 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-all group team-anim opacity-0"
                   >
                     <div>
                       <button

@@ -1,37 +1,45 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView, useMotionValue, useSpring } from 'motion/react';
 import { statistics } from '@/data/content';
 import type { StatItem } from '@/data/content';
+import { TextReveal } from '@/components/ui/text-reveal';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-function Counter({ stat }: { stat: StatItem }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const [displayValue, setDisplayValue] = useState(0);
+gsap.registerPlugin(ScrollTrigger);
 
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { damping: 30, stiffness: 60 });
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(stat.value);
-    }
-  }, [isInView, motionValue, stat.value]);
+function Counter({ stat, index }: { stat: StatItem; index: number }) {
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const unsubscribe = springValue.on('change', (v) => {
-      setDisplayValue(Math.round(v));
+    if (!wrapRef.current) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
+
+    gsap.set(wrapRef.current, { opacity: 0, y: 30 });
+    gsap.to(wrapRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.65,
+      delay: index * 0.12,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: wrapRef.current,
+        start: 'top 88%',
+        once: true,
+      },
     });
-    return unsubscribe;
-  }, [springValue]);
+    return () => { ScrollTrigger.getAll().forEach(t => t.kill()); };
+  }, [index]);
 
   return (
-    <div
-      ref={ref}
-      className="flex-1 min-w-[140px] max-w-[220px] text-center"
-    >
+    <div ref={wrapRef} className="flex-1 min-w-[140px] max-w-[220px] text-center">
       <div className="text-4xl md:text-5xl font-display font-bold text-[var(--gfg-green)]">
-        {displayValue}
-        {stat.suffix}
+        <TextReveal
+          text={stat.value + (stat.suffix || '')}
+          direction="up"
+          stagger={0.1}
+          delay={index * 0.1}
+        />
       </div>
       <div className="text-sm md:text-base text-muted-foreground mt-2 font-medium">
         {stat.label}
@@ -44,17 +52,11 @@ export default function StatisticsSection() {
   return (
     <section aria-label="Chapter statistics" className="py-16 md:py-20 border-y border-border bg-secondary/30">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
-        >
-          {statistics.map((stat) => (
-            <Counter key={stat.id} stat={stat} />
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+          {statistics.map((stat, i) => (
+            <Counter key={stat.id} stat={stat} index={i} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

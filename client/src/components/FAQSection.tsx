@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { useEffect } from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -6,19 +6,21 @@ import {
   AccordionContent,
 } from './ui/accordion';
 import { faqs } from '@/data/content';
+import { fadeUpOnScroll } from '@/lib/animations';
 
 export default function FAQSection() {
+  useEffect(() => {
+    let ctx = fadeUpOnScroll('.faq-anim', 0.15, '#faq');
+    return () => {
+      if (ctx) ctx.revert();
+    };
+  }, []);
+
   return (
     <section id="faq" className="py-20 md:py-32 bg-secondary/40">
       <div className="container">
         <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center faq-anim opacity-0">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
               <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider">
@@ -31,15 +33,9 @@ export default function FAQSection() {
             <p className="text-muted-foreground">
               Everything you need to know before joining the chapter.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="surface-card px-6"
-          >
+          <div className="surface-card px-6 faq-anim opacity-0">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq) => (
                 <AccordionItem key={faq.id} value={faq.id}>
@@ -52,7 +48,7 @@ export default function FAQSection() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

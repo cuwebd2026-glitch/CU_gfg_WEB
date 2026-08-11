@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
 import { useTheme } from '@/contexts/ThemeContext';
@@ -54,9 +54,7 @@ export default function Header() {
 
           href="#top"
 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="flex items-center group -ml-1 md:-ml-2 cursor-pointer"
+          className="flex items-center group -ml-1 md:-ml-2 animate-in fade-in slide-in-from-left-4 duration-500 cursor-pointer"
         >
           {/* 1. GFG Logo & Brand */}
           <div className="flex items-center gap-2">
@@ -101,7 +99,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <motion.a
+            <a
               key={item.label}
 
               href={item.href}
@@ -112,7 +110,7 @@ export default function Header() {
             >
               {item.label}
               <span className="absolute left-3 right-3 -bottom-0.5 h-px bg-[var(--gfg-green)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200" />
-            </motion.a>
+            </a>
           ))}
         </nav>
 
@@ -138,25 +136,22 @@ export default function Header() {
           />
 
           {/* CTA Button */}
-          <motion.a
+          <a
             href="/join"
-            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] text-sm font-semibold rounded-lg transition-colors shadow-sm"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.96 }}
+            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] hover:scale-[1.03] text-[#04150a] text-sm font-semibold rounded-lg transition-all duration-200 shadow-sm"
           >
             Join Now
-          </motion.a>
+          </a>
 
           {/* Mobile Menu Button */}
-          <motion.button
+          <button
             onClick={() => setIsMenuOpen((v) => !v)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
-            className="md:hidden p-2 text-foreground rounded-md hover:bg-secondary transition-colors"
-            whileTap={{ scale: 0.9 }}
+            className="md:hidden p-2 text-foreground rounded-md hover:bg-secondary active:scale-95 transition-all duration-200"
           >
             {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-          </motion.button>
+          </button>
         </div>
       </div>
 

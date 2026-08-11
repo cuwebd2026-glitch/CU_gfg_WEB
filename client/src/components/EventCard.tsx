@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 import type { EventItem } from '@/data/content';
 
@@ -11,13 +10,8 @@ export default function EventCard({ event, index }: EventCardProps) {
   const isRegistrationOpen = event.status === 'upcoming' || event.status === 'ongoing';
 
   return (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.97 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="surface-card overflow-hidden group hover:border-[var(--gfg-green)]/50 w-full rounded-xl border border-border flex flex-col justify-between"
+    <article
+      className="surface-card overflow-hidden group hover:border-[var(--gfg-green)]/50 w-full rounded-xl border border-border flex flex-col justify-between event-card-anim opacity-0"
     >
       <div>
         {/* Card Image Banner */}
@@ -91,7 +85,7 @@ export default function EventCard({ event, index }: EventCardProps) {
           </a>
         </div>
       )}
-    </motion.article>
+    </article>
   );
 }
 

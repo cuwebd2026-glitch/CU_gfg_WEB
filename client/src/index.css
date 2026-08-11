@@ -213,10 +213,11 @@
   .surface-card {
     @apply bg-card border border-border rounded-xl;
     box-shadow: var(--shadow-elevation-low);
-    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   }
   .surface-card:hover {
     box-shadow: var(--shadow-elevation-medium);
+    transform: translateY(-4px);
   }
   .glow-ring {
     box-shadow: 0 0 0 1px var(--gfg-green-glow), 0 0 32px 0 var(--gfg-green-glow);

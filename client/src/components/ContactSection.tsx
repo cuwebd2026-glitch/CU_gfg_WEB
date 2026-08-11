@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { motion } from 'motion/react';
+import { useState, useEffect } from 'react';
 import AnimatedInput from './AnimatedInput';
 import { Mail, Send, User, MessageSquare } from 'lucide-react';
 import { contactInfoCards } from '@/data/content';
 import { getIcon } from '@/lib/icon-map';
+import { fadeUpOnScroll } from '@/lib/animations';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -31,18 +31,19 @@ export default function ContactSection() {
     }, 2000);
   };
 
+  useEffect(() => {
+    let ctx = fadeUpOnScroll('.contact-anim', 0.15, '#contact');
+    return () => {
+      if (ctx) ctx.revert();
+    };
+  }, []);
+
   return (
     <section id="contact" className="py-20 md:py-32">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center contact-anim opacity-0">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
               <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider">
@@ -55,23 +56,12 @@ export default function ContactSection() {
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Reach out about the chapter, upcoming events, or how to get involved — we usually respond fastest on Instagram.
             </p>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="surface-card p-8 md:p-12"
-          >
+          <div className="surface-card p-8 md:p-12 contact-anim opacity-0">
             {submitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
-                role="status"
-              >
+              <div className="text-center py-12" role="status">
                 <div className="w-16 h-16 bg-[var(--gfg-green)]/15 border border-[var(--gfg-green)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Send className="text-[var(--gfg-green)]" size={32} />
                 </div>
@@ -79,7 +69,7 @@ export default function ContactSection() {
                 <p className="text-muted-foreground">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
@@ -121,15 +111,13 @@ export default function ContactSection() {
                 </div>
 
                 {/* Submit Button */}
-                <motion.button
+                <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all flex items-center justify-center gap-2 group"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="w-full px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group"
                 >
                   Send Message
                   <Send size={20} className="group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                </button>
 
                 {/* Form Note */}
                 <p className="text-xs text-muted-foreground text-center">
@@ -137,22 +125,16 @@ export default function ContactSection() {
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
 
           {/* Contact Info Cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6 mt-12"
-          >
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
             {contactInfoCards.map((card) => {
               const Icon = getIcon(card.icon);
               return (
                 <div
                   key={card.id}
-                  className="surface-card p-6 text-center hover:border-[var(--gfg-green)]/50"
+                  className="surface-card p-6 text-center hover:border-[var(--gfg-green)]/50 contact-anim opacity-0"
                 >
                   <div className="w-12 h-12 bg-[var(--gfg-green)]/15 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon className="text-[var(--gfg-green)]" size={24} />
@@ -162,9 +144,9 @@ export default function ContactSection() {
                 </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+}

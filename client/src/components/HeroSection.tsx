@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'framer-motion';
+import { animateHero } from '@/lib/animations';
 import { ArrowRight, Building2, Sparkles, Zap, Calendar, MapPin, Sparkle } from 'lucide-react';
 import { heroContent, events, EventItem } from '@/data/content';
 import { filterEvents } from '@/lib/events';
@@ -8,13 +9,12 @@ import TypingText from './TypingText';
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end start'],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.2]);
+  useEffect(() => {
+    let ctx = animateHero();
+    return () => {
+      if (ctx) ctx.revert();
+    };
+  }, []);
 
   // Extract ONLY ongoing and upcoming events
   const ongoing = filterEvents(events, 'ongoing');
@@ -49,7 +49,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-6 md:pt-8"
     >
       {/* Background layer */}
-      <motion.div className="absolute inset-0 -z-10 bg-background" style={{ y: bgY }}>
+      <div className="absolute inset-0 -z-10 bg-background">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--gfg-green)]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--gfg-green)]/5 rounded-full blur-3xl" />
         <div
@@ -74,17 +74,12 @@ export default function HeroSection() {
           </filter>
           <rect width="100%" height="100%" filter="url(#hero-noise)" />
         </svg>
-      </motion.div>
+      </div>
 
-      <motion.div className="container pt-4 md:pt-6 pb-12 md:pb-20" style={{ y: contentY, opacity: contentOpacity }}>
+      <motion.div className="container pt-4 md:pt-6 pb-12 md:pb-20">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col justify-between h-full"
-          >
+          <div className="flex flex-col justify-between h-full hero-anim opacity-0">
             <div>
               {/* Reduced margin-bottom on top badges to shift content slightly higher */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-3 rounded-full border border-[var(--gfg-green)]/30 bg-[var(--gfg-green)]/10 text-sm shadow-[var(--shadow-elevation-low)]">
@@ -133,15 +128,10 @@ export default function HeroSection() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-between h-full space-y-5"
-          >
+          <div className="flex flex-col justify-between h-full space-y-5 hero-anim opacity-0">
             {/* Event Terminal Window */}
             <div className="bg-[#0c0e12] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
               {/* Terminal Header Bar */}
@@ -257,27 +247,23 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border/40 mt-auto">
-              <motion.a
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border/40 mt-auto hero-anim opacity-0">
+              <a
                 href="/join"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="flex-1 px-6 py-3.5 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-colors flex items-center justify-center gap-2 group shadow-[var(--shadow-elevation-medium)] text-sm md:text-base"
+                className="flex-1 px-6 py-3.5 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all hover:scale-105 flex items-center justify-center gap-2 group shadow-[var(--shadow-elevation-medium)] text-sm md:text-base"
               >
                 Join Chapter
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="#events"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="flex-1 px-6 py-3.5 border border-border text-foreground font-bold rounded-lg hover:border-[var(--gfg-green)] hover:text-[var(--gfg-green)] transition-colors flex items-center justify-center gap-2 text-sm md:text-base"
+                className="flex-1 px-6 py-3.5 border border-border text-foreground font-bold rounded-lg hover:border-[var(--gfg-green)] hover:text-[var(--gfg-green)] transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm md:text-base"
               >
                 <Zap size={18} />
                 Explore Events
-              </motion.a>
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </motion.div>
     </section>

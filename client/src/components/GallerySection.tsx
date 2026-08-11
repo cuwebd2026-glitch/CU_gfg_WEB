@@ -1,6 +1,8 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useCallback, useMemo } from 'react';
-import { motion } from 'motion/react';
+import { useEffect } from 'react';
 import { galleryImages, GalleryImage } from '@/data/content';
+import { fadeUpOnScroll } from '@/lib/animations';
 import EventCarousel from './gallery/EventCarousel';
 import GalleryLightbox from './gallery/GalleryLightbox';
 
@@ -16,6 +18,15 @@ const roboImages = galleryImages.filter(
 );
 
 export default function GallerySection() {
+  useEffect(() => {
+    let ctxHeader = fadeUpOnScroll('.gallery-header', 0.15, '#gallery');
+    let ctxItems = fadeUpOnScroll('.gallery-item', 0.06, '#gallery');
+    return () => {
+      if (ctxHeader) ctxHeader.revert();
+      if (ctxItems) ctxItems.revert();
+    };
+  }, []);
+
   // Lightbox selection states
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
@@ -50,13 +61,8 @@ export default function GallerySection() {
   return (
     <section id="gallery" className="py-20 md:py-32 bg-secondary/40 overflow-hidden">
       <div className="container">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center max-w-2xl mx-auto"
+        <div
+          className="mb-12 text-center max-w-2xl mx-auto gallery-header opacity-0"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-2 h-2 rounded-full bg-[var(--gfg-green)]" />
@@ -70,7 +76,7 @@ export default function GallerySection() {
           <p className="text-muted-foreground">
             Snapshots and highlights from our workshops, hackathons, and technical bootcamps.
           </p>
-        </motion.div>
+        </div>
 
         {/* Categories Rows */}
         <div className="space-y-16 md:space-y-24">

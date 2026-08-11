@@ -1,8 +1,8 @@
-import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 import { GraduationCap } from 'lucide-react';
-import { useState } from 'react';
 import { facultyMembers, FacultyMember } from '@/data/content';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { fadeUpOnScroll } from '@/lib/animations';
 
 function formatImageUrl(url: string): string {
   if (!url) return '/team/placeholder.jpg';
@@ -18,17 +18,20 @@ function formatImageUrl(url: string): string {
 export default function FacultySection() {
   const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
 
+  useEffect(() => {
+    let ctxHeader = fadeUpOnScroll('.faculty-header', 0.15, '#faculty');
+    let ctxCards = fadeUpOnScroll('.faculty-card', 0.1, '#faculty');
+    return () => {
+      if (ctxHeader) ctxHeader.revert();
+      if (ctxCards) ctxCards.revert();
+    };
+  }, []);
+
   return (
     <section id="faculty" className="py-20 md:py-32 bg-secondary/30">
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center md:text-left"
-        >
+        <div className="mb-16 text-center md:text-left faculty-header opacity-0">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
             <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
             <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest">
@@ -43,18 +46,14 @@ export default function FacultySection() {
           <p className="text-muted-foreground max-w-2xl text-base">
             Distinguished faculty members driving our vision, bridging academics with practical engineering, and mentoring students to lead and innovate.
           </p>
-        </motion.div>
+        </div>
 
         {/* 3 Large Featured Faculty Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {facultyMembers.map((member, index) => (
-            <motion.div
+          {facultyMembers.map((member) => (
+            <div
               key={member.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-card border-2 border-border/80 hover:border-[var(--gfg-green)]/60 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all group"
+              className="bg-card border-2 border-border/80 hover:border-[var(--gfg-green)]/60 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-200 group faculty-card opacity-0"
             >
               <div>
                 {/* Faculty Photo */}
@@ -102,7 +101,7 @@ export default function FacultySection() {
                   {member.bio}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -130,4 +129,4 @@ export default function FacultySection() {
       </div>
     </section>
   );
-}
+}
