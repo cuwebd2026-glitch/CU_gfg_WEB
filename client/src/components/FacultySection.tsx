@@ -29,7 +29,7 @@ export default function FacultySection() {
 
   return (
     <section id="faculty" className="py-20 md:py-32 bg-secondary/30">
-      <div className="container px-4 mx-auto max-w-7xl">
+      <div className="container px-4 mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="mb-16 text-center md:text-left faculty-header opacity-0">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
@@ -48,8 +48,8 @@ export default function FacultySection() {
           </p>
         </div>
 
-        {/* 3 Large Featured Faculty Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Dynamic 2-column Grid (Automatically wraps every 2 cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {facultyMembers.map((member) => (
             <div
               key={member.id}
@@ -68,7 +68,7 @@ export default function FacultySection() {
                       src={formatImageUrl(member.image)}
                       alt={member.name}
                       loading="lazy"
-                      className="h-full w-full object-contain object-center group-hover/img:scale-105 transition-transform duration-300"
+                      className="h-full w-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </button>
@@ -129,4 +129,4 @@ export default function FacultySection() {
       </div>
     </section>
   );
-}
+}

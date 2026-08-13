@@ -11,7 +11,7 @@ export default function EventCard({ event, index }: EventCardProps) {
 
   return (
     <article
-      className="surface-card overflow-hidden group hover:border-[var(--gfg-green)]/50 w-full rounded-xl border border-border flex flex-col justify-between event-card-anim opacity-0"
+      className="surface-card overflow-hidden group hover:border-[var(--gfg-green)]/50 w-full rounded-xl border border-border flex flex-col justify-between event-card-anim"
     >
       <div>
         {/* Card Image Banner */}

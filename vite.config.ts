@@ -195,6 +195,9 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
+
+  publicDir: path.resolve(import.meta.dirname, "client", "public"),
+
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -202,12 +205,16 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+
   envDir: path.resolve(import.meta.dirname),
+
   root: import.meta.dirname,
+
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
+
   server: {
     port: 3000,
     strictPort: false,
@@ -215,6 +222,7 @@ export default defineConfig({
     allowedHosts: [
       ".manuspre.computer",
       ".manus.computer",
+      ".manus-asia.computer",
       ".manus-asia.computer",
       ".manuscomputer.ai",
       ".manusvm.computer",

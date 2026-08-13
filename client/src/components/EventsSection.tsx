@@ -22,9 +22,7 @@ export default function EventsSection() {
     <section id="events" className="py-20 md:py-32">
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Section Header */}
-        <div
-          className="mb-12 events-header opacity-0"
-        >
+        <div className="mb-12 events-header opacity-0">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
             <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-wider font-semibold">
@@ -60,7 +58,7 @@ export default function EventsSection() {
         <div className="flex justify-center mt-12">
           <a
             href="/events"
-            className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all transform hover:scale-105 inline-flex items-center gap-2 group shadow-lg"
+            className="px-8 py-4 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all transform hover:scale-105 inline-flex items-center gap-2 group shadow-lg cursor-pointer"
           >
             Explore All Events
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

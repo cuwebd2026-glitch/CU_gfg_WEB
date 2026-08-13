@@ -7,7 +7,6 @@ import AnimatedToggle from './AnimatedToggle';
 import { navItems } from '@/data/content';
 
 export default function Header() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [cuLogoFailed, setCuLogoFailed] = useState(false);
@@ -20,23 +19,27 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Smooth scroll handler for anchor links
+  // Universal Navigation Handler (Handles Homepage Scroll + Inner Pages Redirection)
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsMenuOpen(false);
+
     if (href.startsWith('#')) {
       e.preventDefault();
-      setIsMenuOpen(false);
-
       const targetId = href.replace('#', '');
-      const element = targetId === 'top' ? document.body : document.getElementById(targetId);
+      const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
 
-      if (element) {
-        // Small delay lets the mobile menu collapse start before scrolling triggers
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+      if (isHomePage) {
+        // We are on the main page: scroll to section
+        const element = targetId === 'top' ? document.body : document.getElementById(targetId);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      } else {
+        // We are on another page (e.g. /events): redirect back to home with anchor hash
+        window.location.href = targetId === 'top' ? '/' : `/${href}`;
       }
-    } else {
-      setIsMenuOpen(false);
     }
   };
 
@@ -50,10 +53,9 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-6">
         {/* Left Side Branding */}
-        <motion.a
-
-          href="#top"
-
+        <a
+          href="/"
+          onClick={(e) => handleNavClick(e, '#top')}
           className="flex items-center group -ml-1 md:-ml-2 animate-in fade-in slide-in-from-left-4 duration-500 cursor-pointer"
         >
           {/* 1. GFG Logo & Brand */}
@@ -94,19 +96,16 @@ export default function Header() {
               <span className="text-foreground font-display font-bold text-base">CU</span>
             )}
           </div>
-        </motion.a>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <a
               key={item.label}
-
               href={item.href}
-
-              className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
-
-              whileTap={{ scale: 0.96 }}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
             >
               {item.label}
               <span className="absolute left-3 right-3 -bottom-0.5 h-px bg-[var(--gfg-green)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200" />
@@ -170,26 +169,20 @@ export default function Header() {
               {navItems.map((item) => (
                 <motion.a
                   key={item.label}
-
                   href={item.href}
-
-                  onClick={() => setIsMenuOpen(false)}
-
-                  className="px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
-
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors cursor-pointer"
                   whileHover={{ x: 4 }}
                 >
                   {item.label}
                 </motion.a>
               ))}
-              <motion.a
+              <a
                 href="/join"
-                onClick={(e) => handleNavClick(e, '/join')}
                 className="mt-2 w-full text-center px-4 py-2.5 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] font-semibold rounded-lg transition-colors block cursor-pointer"
-                whileTap={{ scale: 0.98 }}
               >
                 Join Now
-              </motion.a>
+              </a>
             </nav>
           </motion.div>
         )}

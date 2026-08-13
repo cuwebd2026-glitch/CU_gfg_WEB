@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -10,6 +10,7 @@ export default function EventsPage() {
   const ongoingEvents = filterEvents(events, 'ongoing');
   const upcomingEvents = filterEvents(events, 'upcoming');
   const pastEvents = filterEvents(events, 'past');
+  
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
