@@ -2265,3 +2265,15 @@
 [2026-08-14T20:33:03.642Z] {"timestamp":1786739581652,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-08-14T20:33:03.643Z] {"timestamp":1786739581667,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
 [2026-08-14T20:33:03.643Z] {"timestamp":1786739581898,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T08:34:46.052Z] {"timestamp":1786782884021,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T08:34:46.052Z] {"timestamp":1786782884036,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T08:34:46.052Z] {"timestamp":1786782884354,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T08:34:46.052Z] {"timestamp":1786782885032,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T08:35:56.015Z] {"timestamp":1786782954006,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T08:35:56.015Z] {"timestamp":1786782954074,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T08:35:56.015Z] {"timestamp":1786782954328,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T08:35:56.015Z] {"timestamp":1786782955013,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T08:47:29.053Z] {"timestamp":1786783647042,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T08:47:29.053Z] {"timestamp":1786783647056,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T08:47:29.053Z] {"timestamp":1786783647286,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T08:47:29.053Z] {"timestamp":1786783648242,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}

@@ -11,9 +11,9 @@ interface TypingTextProps {
 
 export default function TypingText({
   phrases,
-  typingSpeedMs = 45,
-  deletingSpeedMs = 25,
-  pauseMs = 1800,
+  typingSpeedMs = 120,
+  deletingSpeedMs = 60,
+  pauseMs = 2800,
   className = '',
   onComplete,
 }: TypingTextProps) {

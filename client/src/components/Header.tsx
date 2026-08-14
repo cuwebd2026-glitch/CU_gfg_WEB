@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
 import { useTheme } from '@/contexts/ThemeContext';
+import { useLocation } from 'wouter';
 import AnimatedToggle from './AnimatedToggle';
 import { navItems } from '@/data/content';
 
 export default function Header() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
@@ -18,43 +20,42 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Universal Navigation Handler (Handles Homepage Scroll + Inner Pages Redirection)
+  const [location, setLocation] = useLocation();
+
+  // Smooth scroll handler for anchor links
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
     setIsMenuOpen(false);
 
     if (href.startsWith('#') || href.startsWith('/#')) {
-      e.preventDefault();
       const targetId = href.replace('/#', '').replace('#', '');
-      const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
-
-      if (isHomePage) {
-        // We are on the main page: scroll to section
+      
+      if (location !== '/') {
+        window.location.href = '/#' + targetId;
+      } else {
         const element = targetId === 'top' ? document.body : document.getElementById(targetId);
         if (element) {
           setTimeout(() => {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 100);
         }
-      } else {
-        // We are on another page (e.g. /events): redirect back to home with anchor hash
-        window.location.href = targetId === 'top' ? '/' : `/#${targetId}`;
       }
+    } else {
+      setLocation(href);
     }
   };
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${
-        isScrolled
+      className={`sticky top-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${isScrolled
           ? 'bg-background/90 border-border shadow-[var(--shadow-elevation-low)] py-2'
           : 'bg-background/60 border-transparent py-3'
-      }`}
+        }`}
     >
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-6">
-        {/* Left Side Branding (Team's Transformed Logos & Layout) */}
+        {/* Left Side Branding */}
         <motion.a
-          href="/"
-          onClick={(e) => handleNavClick(e, '#top')}
+          href="#top"
           className="flex items-center gap-3 md:gap-4 group -ml-1 md:-ml-2 animate-in fade-in slide-in-from-left-4 duration-500 cursor-pointer"
         >
           {/* 1. CU Transformed Logo */}
@@ -68,8 +69,7 @@ export default function Header() {
           {/* Thin Vertical Divider */}
           <div className="h-8 w-px bg-border/60 shrink-0" aria-hidden="true" />
 
-          {/* 2. Dynamic GFG CU Theme Logo */}
-          <div className="relative h-32 md:h-48 w-auto overflow-hidden -mt-3 md:-mt-4 -ml-2 md:-ml-4 flex items-center">
+          <div className="relative h-32 md:h-48 w-auto overflow-hidden -mt-3 md:-mt-4 -ml-2 md:-ml-4">
             <img
               key={theme}
               src={theme === 'dark' ? '/gfgcu_light.png' : '/gfgcu_dark.png'}
@@ -86,7 +86,7 @@ export default function Header() {
           {navItems.map((item) => (
             <motion.a
               key={item.label}
-              href={item.href}
+              href={item.href.startsWith('#') ? `/${item.href}` : item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
               whileTap={{ scale: 0.96 }}
@@ -123,7 +123,6 @@ export default function Header() {
             href="/join"
             onClick={(e) => handleNavClick(e, '/join')}
             className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] hover:scale-[1.03] text-[#04150a] text-sm font-semibold rounded-lg transition-all duration-200 shadow-sm cursor-pointer"
-            whileTap={{ scale: 0.96 }}
           >
             Join Now
           </motion.a>
@@ -155,7 +154,7 @@ export default function Header() {
               {navItems.map((item) => (
                 <motion.a
                   key={item.label}
-                  href={item.href}
+                  href={item.href.startsWith('#') ? `/${item.href}` : item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className="px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors cursor-pointer"
                   whileHover={{ x: 4 }}

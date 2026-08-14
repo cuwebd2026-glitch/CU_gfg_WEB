@@ -47,10 +47,12 @@ export default function TeamSection() {
     <section id="team" className="py-20 md:py-32 bg-secondary/40">
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-20 text-center md:text-left team-header opacity-0">
+        <div
+          className="mb-20 text-center md:text-left team-header opacity-0"
+        >
           <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
             <div className="w-2.5 h-2.5 rounded-full bg-[var(--gfg-green)]" />
-            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest font-semibold">
+            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest">
               Leadership & Structure
             </span>
           </div>
@@ -116,33 +118,33 @@ export default function TeamSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {executiveOfficers.map((member) => (
                   <div key={member.id} className="w-full team-anim opacity-0">
-                    <CardContainer className="w-full">
-                      <CardBody className="bg-card border-border hover:border-[var(--gfg-green)]/60 rounded-xl p-5 w-full">
-                        <CardItem translateZ={0} className="w-full mb-4">
-                          <button
-                            type="button"
-                            onClick={() => setSelectedMember(member)}
-                            className="w-full cursor-zoom-in"
-                          >
-                            <div className="h-64 md:h-72 w-full rounded-lg overflow-hidden bg-secondary/50">
-                              <img
-                                src={formatImageUrl(member.image)}
-                                alt={member.name}
-                                className="h-full w-full object-contain object-center"
-                                onError={(e) => handleImageError(e, member.name)}
-                              />
-                            </div>
-                          </button>
-                        </CardItem>
-                        <CardItem translateZ={30} className="text-lg font-bold text-foreground">
-                          {member.name}
-                        </CardItem>
-                        <CardItem translateZ={20} className="text-xs font-semibold text-[var(--gfg-green)] mb-2">
-                          {member.role}
-                        </CardItem>
-                        <SocialsRow socials={member.socials} name={member.name} />
-                      </CardBody>
-                    </CardContainer>
+                  <CardContainer className="w-full">
+                    <CardBody className="bg-card border-border hover:border-[var(--gfg-green)]/60 rounded-xl p-5 w-full">
+                      <CardItem translateZ={0} className="w-full mb-4">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMember(member)}
+                          className="w-full cursor-zoom-in"
+                        >
+                          <div className="h-64 md:h-72 w-full rounded-lg overflow-hidden bg-secondary/50">
+                            <img
+                              src={formatImageUrl(member.image)}
+                              alt={member.name}
+                              className="h-full w-full object-contain object-center"
+                              onError={(e) => handleImageError(e, member.name)}
+                            />
+                          </div>
+                        </button>
+                      </CardItem>
+                      <CardItem translateZ={30} className="text-lg font-bold text-foreground">
+                        {member.name}
+                      </CardItem>
+                      <CardItem translateZ={20} className="text-xs font-semibold text-[var(--gfg-green)] mb-2">
+                        {member.role}
+                      </CardItem>
+                      <SocialsRow socials={member.socials} name={member.name} />
+                    </CardBody>
+                  </CardContainer>
                   </div>
                 ))}
               </div>
@@ -160,33 +162,33 @@ export default function TeamSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {managers.map((member) => (
                   <div key={member.id} className="w-full team-anim opacity-0">
-                    <CardContainer className="w-full">
-                      <CardBody className="bg-card border-border rounded-xl p-4 w-full">
-                        <CardItem translateZ={0} className="w-full mb-3">
-                          <button
-                            type="button"
-                            onClick={() => setSelectedMember(member)}
-                            className="w-full cursor-zoom-in"
-                          >
-                            <div className="h-56 w-full rounded-lg overflow-hidden bg-secondary/50">
-                              <img
-                                src={formatImageUrl(member.image)}
-                                alt={member.name}
-                                className="h-full w-full object-contain object-center"
-                                onError={(e) => handleImageError(e, member.name)}
-                              />
-                            </div>
-                          </button>
-                        </CardItem>
-                        <CardItem translateZ={20} className="text-base font-bold text-foreground">
-                          {member.name}
-                        </CardItem>
-                        <CardItem translateZ={10} className="text-xs font-medium text-[var(--gfg-green)] mb-2">
-                          {member.role}
-                        </CardItem>
-                        <SocialsRow socials={member.socials} name={member.name} />
-                      </CardBody>
-                    </CardContainer>
+                  <CardContainer className="w-full">
+                    <CardBody className="bg-card border-border rounded-xl p-4 w-full">
+                      <CardItem translateZ={0} className="w-full mb-3">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMember(member)}
+                          className="w-full cursor-zoom-in"
+                        >
+                          <div className="h-56 w-full rounded-lg overflow-hidden bg-secondary/50">
+                            <img
+                              src={formatImageUrl(member.image)}
+                              alt={member.name}
+                              className="h-full w-full object-contain object-center"
+                              onError={(e) => handleImageError(e, member.name)}
+                            />
+                          </div>
+                        </button>
+                      </CardItem>
+                      <CardItem translateZ={20} className="text-base font-bold text-foreground">
+                        {member.name}
+                      </CardItem>
+                      <CardItem translateZ={10} className="text-xs font-medium text-[var(--gfg-green)] mb-2">
+                        {member.role}
+                      </CardItem>
+                      <SocialsRow socials={member.socials} name={member.name} />
+                    </CardBody>
+                  </CardContainer>
                   </div>
                 ))}
               </div>
