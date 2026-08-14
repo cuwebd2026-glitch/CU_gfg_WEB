@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+import apiApp from "./api/index.js"; // Loads your Express app from api/index.ts
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -191,7 +192,30 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+// Custom plugin to mount Express app to Vite dev server
+function viteExpressPlugin(): Plugin {
+  return {
+    name: "vite-express-server",
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url && req.url.startsWith("/api")) {
+          return apiApp(req as any, res as any, next);
+        }
+        next();
+      });
+    },
+  };
+}
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  vitePluginManusRuntime(),
+  vitePluginManusDebugCollector(),
+  vitePluginStorageProxy(),
+  viteExpressPlugin(),
+];
 
 export default defineConfig({
   plugins,
