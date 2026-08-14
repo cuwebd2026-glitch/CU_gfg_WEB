@@ -5,12 +5,13 @@ import { ArrowRight, Building2, Sparkles, Zap, Calendar, MapPin, Sparkle } from 
 import { heroContent, events, EventItem } from '@/data/content';
 import { filterEvents } from '@/lib/events';
 import TypingText from './TypingText';
+import MatrixRain from './MatrixRain';
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    let ctx = animateHero();
+    const ctx = animateHero();
     return () => {
       if (ctx) ctx.revert();
     };
@@ -46,9 +47,9 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-6 md:pt-8"
+      className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden pt-3 md:pt-4 pb-8"
     >
-      {/* Background layer */}
+      {/* ── Background Layer ────────────────────────────────────── */}
       <div className="absolute inset-0 -z-10 bg-background">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--gfg-green)]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--gfg-green)]/5 rounded-full blur-3xl" />
@@ -76,12 +77,24 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <motion.div className="container pt-4 md:pt-6 pb-12 md:pb-20">
+      {/* ── Full-Width Matrix Rain Canvas Layer ───────────────────── */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <MatrixRain className="absolute inset-0 w-full h-full" />
+        {/* Soft vignette overlay to keep text crisp */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse at center, transparent 30%, var(--background) 95%)',
+          }}
+        />
+      </div>
+
+      <motion.div className="container relative z-10 py-2 md:py-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Content */}
           <div className="flex flex-col justify-between h-full hero-anim opacity-0">
             <div>
-              {/* Reduced margin-bottom on top badges to shift content slightly higher */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-3 rounded-full border border-[var(--gfg-green)]/30 bg-[var(--gfg-green)]/10 text-sm shadow-[var(--shadow-elevation-low)]">
                 <Building2 size={16} className="text-[var(--gfg-green)]" />
                 <span className="font-medium text-foreground">{heroContent.affiliation}</span>
@@ -94,7 +107,6 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Fixed min-height to 3.6em / 3.8em so 3-line typing phrases fit perfectly without moving the layout */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-[1.1] text-foreground min-h-[3.6em] md:min-h-[3.8em] flex items-center">
                 <TypingText
                   phrases={heroContent.typingPhrases}
@@ -106,7 +118,8 @@ export default function HeroSection() {
                 {heroContent.description}
               </p>
 
-              <div className="max-w-2xl mb-8 surface-card p-4 sm:p-5 flex items-start gap-3">
+              {/* Tagline Card aligned with CTA buttons on the right */}
+              <div className="max-w-2xl surface-card p-4 sm:p-5 flex items-start gap-3 mt-auto">
                 <div className="w-10 h-10 rounded-xl bg-[var(--gfg-green)]/15 text-[var(--gfg-green)] flex items-center justify-center shrink-0">
                   <Sparkles size={18} />
                 </div>
@@ -118,22 +131,12 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-
-            {/* Stats Block */}
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border/40 mt-auto">
-              {heroContent.stats.map(([value, label]) => (
-                <div key={label}>
-                  <div className="text-2xl md:text-3xl font-display font-bold text-[var(--gfg-green)]">{value}</div>
-                  <div className="text-xs md:text-sm text-muted-foreground mt-0.5">{label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Content */}
           <div className="flex flex-col justify-between h-full space-y-5 hero-anim opacity-0">
             {/* Event Terminal Window */}
-            <div className="bg-[#0c0e12] border border-white/10 rounded-xl overflow-hidden shadow-2xl">
+            <div className="bg-[#0c0e12] border border-white/10 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm">
               {/* Terminal Header Bar */}
               <div className="bg-[#15181e] px-4 py-3 flex items-center justify-between border-b border-white/10">
                 <div className="flex items-center gap-2">
@@ -213,14 +216,12 @@ export default function HeroSection() {
                       )}
                     </div>
                   ) : (
-                    /* Blank transition state between events */
                     <div className="text-gray-600 text-xs italic font-mono flex items-center justify-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-gray-500 animate-pulse" />
                       Fetching next event...
                     </div>
                   )
                 ) : (
-                  /* Fallback if no upcoming events */
                   <div className="text-center py-6 text-gray-500">
                     <p className="text-xs uppercase tracking-widest text-gray-400">Status</p>
                     <p className="text-sm font-sans mt-1 text-gray-300">No upcoming events scheduled.</p>
@@ -231,7 +232,7 @@ export default function HeroSection() {
             </div>
 
             {/* Feature Badges Grid */}
-            <div className="grid grid-cols-2 gap-4 my-auto py-2">
+            <div className="grid grid-cols-2 gap-4 mt-2 md:mt-3 mb-2 translate-y-2 md:translate-y-3">
               {heroContent.badges.map((b) => (
                 <div
                   key={b.title}
@@ -246,22 +247,26 @@ export default function HeroSection() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border/40 mt-auto hero-anim opacity-0">
-              <a
+            {/* CTA Buttons — shifted up slightly using translate-y */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-auto pt-2 -translate-y-2 md:-translate-y-3">
+              <motion.a
                 href="/join"
-                className="flex-1 px-6 py-3.5 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all hover:scale-105 flex items-center justify-center gap-2 group shadow-[var(--shadow-elevation-medium)] text-sm md:text-base"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex-1 px-6 py-3.5 bg-[var(--gfg-green)] text-[#04150a] font-bold rounded-lg hover:bg-[var(--gfg-green-bright)] transition-all flex items-center justify-center gap-2 group shadow-[var(--shadow-elevation-medium)] text-sm md:text-base cursor-pointer"
               >
                 Join Chapter
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#events"
-                className="flex-1 px-6 py-3.5 border border-border text-foreground font-bold rounded-lg hover:border-[var(--gfg-green)] hover:text-[var(--gfg-green)] transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm md:text-base"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex-1 px-6 py-3.5 border border-border text-foreground font-bold rounded-lg hover:border-[var(--gfg-green)] hover:text-[var(--gfg-green)] transition-all flex items-center justify-center gap-2 text-sm md:text-base cursor-pointer"
               >
                 <Zap size={18} />
                 Explore Events
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>

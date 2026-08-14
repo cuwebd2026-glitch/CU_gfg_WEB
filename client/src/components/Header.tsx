@@ -9,7 +9,6 @@ import { navItems } from '@/data/content';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [cuLogoFailed, setCuLogoFailed] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -23,9 +22,9 @@ export default function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMenuOpen(false);
 
-    if (href.startsWith('#')) {
+    if (href.startsWith('#') || href.startsWith('/#')) {
       e.preventDefault();
-      const targetId = href.replace('#', '');
+      const targetId = href.replace('/#', '').replace('#', '');
       const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
 
       if (isHomePage) {
@@ -38,7 +37,7 @@ export default function Header() {
         }
       } else {
         // We are on another page (e.g. /events): redirect back to home with anchor hash
-        window.location.href = targetId === 'top' ? '/' : `/${href}`;
+        window.location.href = targetId === 'top' ? '/' : `/#${targetId}`;
       }
     }
   };
@@ -52,64 +51,49 @@ export default function Header() {
       }`}
     >
       <div className="container flex items-center justify-between h-14 md:h-16 px-4 md:px-6">
-        {/* Left Side Branding */}
-        <a
+        {/* Left Side Branding (Team's Transformed Logos & Layout) */}
+        <motion.a
           href="/"
           onClick={(e) => handleNavClick(e, '#top')}
-          className="flex items-center group -ml-1 md:-ml-2 animate-in fade-in slide-in-from-left-4 duration-500 cursor-pointer"
+          className="flex items-center gap-3 md:gap-4 group -ml-1 md:-ml-2 animate-in fade-in slide-in-from-left-4 duration-500 cursor-pointer"
         >
-          {/* 1. GFG Logo & Brand */}
-          <div className="flex items-center gap-2">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjKYM-_45mBmWgs2JFiZmCSLsfvnjkr407f0Sp35KQWAMyyuE9MYIdB0&s=10"
-              alt="GeeksforGeeks logo"
-              referrerPolicy="no-referrer"
-              loading="eager"
-              decoding="async"
-              className="w-8 h-8 md:w-9 md:h-9 object-contain shrink-0 transition-transform group-hover:scale-105"
-            />
-            <div className="leading-none">
-              <span className="font-display font-bold text-base md:text-lg text-foreground tracking-tight block">
-                GeeksforGeeks
-              </span>
-              <span className="text-[10px] uppercase font-mono tracking-wider text-[var(--gfg-green)] font-semibold block mt-0.5">
-                Student Chapter
-              </span>
-            </div>
-          </div>
+          {/* 1. CU Transformed Logo */}
+          <img
+            src="/cu-transformed.png?v=2"
+            alt="Chandigarh University"
+            loading="eager"
+            className="h-8 md:h-10 w-auto object-contain shrink-0"
+          />
 
           {/* Thin Vertical Divider */}
-          <div className="h-7 w-px bg-border/60 mx-3 md:mx-4 shrink-0" aria-hidden="true" />
+          <div className="h-8 w-px bg-border/60 shrink-0" aria-hidden="true" />
 
-          {/* 2. Clean Cropped Local CU Logo */}
-          <div className="flex items-center shrink-0">
-            {!cuLogoFailed ? (
-              <img
-                src="/cu_logo.png"
-                alt="Chandigarh University logo"
-                loading="eager"
-                decoding="async"
-                className="h-7 md:h-8 w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
-                onError={() => setCuLogoFailed(true)}
-              />
-            ) : (
-              <span className="text-foreground font-display font-bold text-base">CU</span>
-            )}
+          {/* 2. Dynamic GFG CU Theme Logo */}
+          <div className="relative h-32 md:h-48 w-auto overflow-hidden -mt-3 md:-mt-4 -ml-2 md:-ml-4 flex items-center">
+            <img
+              key={theme}
+              src={theme === 'dark' ? '/gfgcu_light.png' : '/gfgcu_dark.png'}
+              alt="GFG CU — GeeksforGeeks Student Chapter"
+              loading="eager"
+              decoding="async"
+              className="h-32 md:h-48 w-auto object-contain"
+            />
           </div>
-        </a>
+        </motion.a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <a
+            <motion.a
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group cursor-pointer"
+              whileTap={{ scale: 0.96 }}
             >
               {item.label}
               <span className="absolute left-3 right-3 -bottom-0.5 h-px bg-[var(--gfg-green)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200" />
-            </a>
+            </motion.a>
           ))}
         </nav>
 
@@ -135,12 +119,14 @@ export default function Header() {
           />
 
           {/* CTA Button */}
-          <a
+          <motion.a
             href="/join"
-            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] hover:scale-[1.03] text-[#04150a] text-sm font-semibold rounded-lg transition-all duration-200 shadow-sm"
+            onClick={(e) => handleNavClick(e, '/join')}
+            className="hidden sm:inline-flex px-4 py-2 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] hover:scale-[1.03] text-[#04150a] text-sm font-semibold rounded-lg transition-all duration-200 shadow-sm cursor-pointer"
+            whileTap={{ scale: 0.96 }}
           >
             Join Now
-          </a>
+          </motion.a>
 
           {/* Mobile Menu Button */}
           <button
@@ -177,12 +163,14 @@ export default function Header() {
                   {item.label}
                 </motion.a>
               ))}
-              <a
+              <motion.a
                 href="/join"
+                onClick={(e) => handleNavClick(e, '/join')}
                 className="mt-2 w-full text-center px-4 py-2.5 bg-[var(--gfg-green)] hover:bg-[var(--gfg-green-bright)] text-[#04150a] font-semibold rounded-lg transition-colors block cursor-pointer"
+                whileTap={{ scale: 0.98 }}
               >
                 Join Now
-              </a>
+              </motion.a>
             </nav>
           </motion.div>
         )}

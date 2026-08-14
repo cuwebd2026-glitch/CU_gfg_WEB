@@ -69,36 +69,36 @@
   /* Radius */
   --radius: 0.65rem;
 
-  /* Light Theme (default :root) */
-  --background: oklch(0.99 0.003 95);
-  --foreground: oklch(0.22 0.01 285);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.01 285);
+  /* Light Theme — crisp white, sharp contrast, teal-accent inspired by Alexa Devs reference */
+  --background: oklch(1 0 0);            /* pure white */
+  --foreground: oklch(0.13 0.015 260);   /* near-black with slight cool tint */
+  --card: oklch(0.98 0 0);
+  --card-foreground: oklch(0.13 0.015 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.01 285);
-  --secondary: oklch(0.96 0.004 285);
-  --secondary-foreground: oklch(0.3 0.01 285);
-  --muted: oklch(0.96 0.004 285);
-  --muted-foreground: oklch(0.48 0.012 285);
-  --accent: oklch(0.94 0.05 150);
-  --accent-foreground: #124423;
+  --popover-foreground: oklch(0.13 0.015 260);
+  --secondary: oklch(0.95 0.008 220);
+  --secondary-foreground: oklch(0.28 0.02 240);
+  --muted: oklch(0.95 0.005 220);
+  --muted-foreground: oklch(0.52 0.018 240);
+  --accent: oklch(0.92 0.06 190);        /* teal-cyan tint */
+  --accent-foreground: oklch(0.22 0.08 200);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.9 0.006 285);
-  --input: oklch(0.9 0.006 285);
+  --border: oklch(0.88 0.008 240);
+  --input: oklch(0.88 0.008 240);
   --ring: #2fa84f;
-  --sidebar: oklch(0.98 0.003 95);
-  --sidebar-foreground: oklch(0.22 0.01 285);
+  --sidebar: oklch(0.97 0.004 220);
+  --sidebar-foreground: oklch(0.13 0.015 260);
   --sidebar-accent: #2fa84f;
   --sidebar-accent-foreground: #04150a;
-  --sidebar-border: oklch(0.9 0.006 285);
+  --sidebar-border: oklch(0.88 0.008 240);
   --sidebar-ring: #2fa84f;
 
-  /* Elevation shadow tuned per-theme so cards read as "lifted" not just outlined */
-  --shadow-color: 220 20% 40%;
-  --shadow-elevation-low: 0 1px 2px hsl(var(--shadow-color) / 0.06);
-  --shadow-elevation-medium: 0 4px 16px hsl(var(--shadow-color) / 0.08);
-  --shadow-elevation-high: 0 16px 48px hsl(var(--shadow-color) / 0.12);
+  /* Shadows tuned for white background */
+  --shadow-color: 215 40% 35%;
+  --shadow-elevation-low: 0 1px 3px hsl(var(--shadow-color) / 0.07);
+  --shadow-elevation-medium: 0 4px 18px hsl(var(--shadow-color) / 0.10);
+  --shadow-elevation-high: 0 16px 48px hsl(var(--shadow-color) / 0.14);
 }
 
 .dark {
@@ -148,7 +148,6 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    transition: background-color 0.35s ease, color 0.35s ease;
     font-feature-settings: "cv11", "ss01";
   }
   h1, h2, h3, h4, h5, h6 {
@@ -158,14 +157,7 @@
   code, pre, kbd, samp {
     @apply font-mono;
   }
-  /* Theme-change fade: applied briefly via ThemeContext to avoid jarring flips */
-  body,
-  header,
-  section,
-  footer,
-  .themed-surface {
-    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
-  }
+  /* No global transition on * — that causes lag on theme switch */
   ::selection {
     background: var(--gfg-green-bright);
     color: #04150a;

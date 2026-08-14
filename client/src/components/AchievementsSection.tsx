@@ -15,8 +15,7 @@ const PALETTE = [
 ];
 
 export default function AchievementsSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const pinRef     = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const trackRef   = useRef<HTMLDivElement>(null);
   const lineRef    = useRef<SVGPathElement>(null);
   const dotRefs    = useRef<(HTMLDivElement | null)[]>([]);
@@ -65,18 +64,18 @@ export default function AchievementsSection() {
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const pin   = pinRef.current;
+    const section = sectionRef.current;
     const track = trackRef.current;
     const line  = lineRef.current;
-    if (!pin || !track || !line) return;
+    if (!section || !track || !line) return;
 
     let ctx = gsap.context(() => {
       // Header reveal
-      const hdrs = sectionRef.current?.querySelectorAll('.ach-hdr') ?? [];
+      const hdrs = section.querySelectorAll('.ach-hdr');
       gsap.set(hdrs, { opacity: 0, y: 20 });
       gsap.to(hdrs, {
         opacity: 1, y: 0, duration: 0.7, stagger: 0.13, ease: 'power3.out',
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', once: true },
+        scrollTrigger: { trigger: section, start: 'top 80%', once: true },
       });
 
       const len = line.getTotalLength();
@@ -95,7 +94,7 @@ export default function AchievementsSection() {
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: pin,
+          trigger: section,
           pin: true,
           pinSpacing: true,
           start: 'top top',
@@ -103,6 +102,7 @@ export default function AchievementsSection() {
           scrub: 1.2,
           anticipatePin: 1,
           invalidateOnRefresh: true,
+          refreshPriority: -1,
         },
       });
 
@@ -118,15 +118,12 @@ export default function AchievementsSection() {
 
       // Reveal dots and cards
       PTS.forEach((pt, i) => {
-        // absolute pixel position of the point within the track
         const ptPixelX = (pt.x / SVG_W) * track.scrollWidth;
-        
-        // Calculate when this point enters the center of the viewport
         let triggerProgress = (ptPixelX - viewportW / 2) / scrollDistance;
         
         let t = triggerProgress * 4;
-        if (t < 0.1) t = 0.1; // If already on screen, show right away
-        if (t > 3.8) t = 3.8; // Cap at end
+        if (t < 0.1) t = 0.1;
+        if (t > 3.8) t = 3.8;
         
         const dot  = dotRefs.current[i];
         const card = cardRefs.current[i];
@@ -138,142 +135,139 @@ export default function AchievementsSection() {
           tl.to(card, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, t);
         }
       });
-    });
+
+      ScrollTrigger.refresh();
+    }, section);
 
     return () => ctx.revert();
-  }, [SVG_W, SVG_H, AMP, CP, viewportW]); // Re-run GSAP when geometry changes
+  }, [SVG_W, SVG_H, AMP, CP, viewportW]);
 
   return (
-    <section id="achievements" ref={sectionRef} className="bg-secondary/40">
-      <div
-        ref={pinRef}
-        className="relative overflow-hidden"
-        style={{ height: '100dvh', minHeight: isMobile ? '550px' : '650px' }}
-      >
-        <div className="absolute inset-0 flex flex-col">
-          {/* Header */}
-          <div className="shrink-0 pt-10 md:pt-12 pb-2 md:pb-4 text-center px-6 z-10 relative">
-            <div className="ach-hdr flex items-center justify-center gap-2 mb-2">
-              <span className="block w-8 h-px bg-[var(--gfg-green)]/50" />
-              <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest">Milestones</span>
-              <span className="block w-8 h-px bg-[var(--gfg-green)]/50" />
-            </div>
-            <h2 className="ach-hdr text-3xl md:text-5xl font-display font-extrabold text-foreground tracking-tight">
-              Our Journey <span className="text-[var(--gfg-green)]">So Far</span>
-            </h2>
-            <p className="ach-hdr text-xs md:text-sm text-muted-foreground mt-2">
-              Scroll to explore each milestone →
-            </p>
+    <section 
+      id="achievements" 
+      ref={sectionRef} 
+      className="relative w-full h-[100dvh] overflow-hidden bg-secondary/40"
+      style={{ minHeight: isMobile ? '550px' : '650px' }}
+    >
+      <div className="relative w-full h-full flex flex-col">
+        {/* Header */}
+        <div className="shrink-0 pt-10 md:pt-12 pb-2 md:pb-4 text-center px-6 z-10 relative">
+          <div className="ach-hdr flex items-center justify-center gap-2 mb-2">
+            <span className="block w-8 h-px bg-[var(--gfg-green)]/50" />
+            <span className="text-xs font-mono text-[var(--gfg-green)] uppercase tracking-widest">Milestones</span>
+            <span className="block w-8 h-px bg-[var(--gfg-green)]/50" />
           </div>
+          <h2 className="ach-hdr text-3xl md:text-5xl font-display font-extrabold text-foreground tracking-tight">
+            Our Journey <span className="text-[var(--gfg-green)]">So Far</span>
+          </h2>
+          <p className="ach-hdr text-xs md:text-sm text-muted-foreground mt-2">
+            Scroll to explore each milestone →
+          </p>
+        </div>
 
-          {/* Track */}
-          <div className="flex-1 relative">
-            <div
-              ref={trackRef}
-              className="absolute top-0 left-0 bottom-0"
-              style={{ width: isMobile ? '250vw' : '200vw' }}
+        {/* Track */}
+        <div className="flex-1 relative">
+          <div
+            ref={trackRef}
+            className="absolute top-0 left-0 bottom-0"
+            style={{ width: isMobile ? '250vw' : '200vw' }}
+          >
+            {/* Wave SVG */}
+            <svg
+              viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+              preserveAspectRatio="none"
+              className="absolute inset-0 w-full h-full"
             >
-              {/* Wave SVG - Only contains the line now */}
-              <svg
-                viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-                preserveAspectRatio="none"
-                className="absolute inset-0 w-full h-full"
-              >
-                <path d={wavePath} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="4" />
-                <path
-                  ref={lineRef}
-                  d={wavePath}
-                  fill="none"
-                  stroke="var(--gfg-green)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  opacity="0.7"
-                />
-              </svg>
-
-              {/* HTML Dots and Cards - perfectly aligned */}
-              {PTS.map((pt, i) => {
-                const isTop = TOP[i];
-                const leftPct = (pt.x / SVG_W) * 100;
-                const topPct  = (pt.y / SVG_H) * 100;
-                
-                // Adjust offsets for mobile so cards don't clip
-                const yOffset = isMobile 
-                  ? (isTop ? 220 : -10) // smaller offset on mobile
-                  : (isTop ? 260 : -30); // desktop offset
-                  
-                const connHeight = isMobile ? 35 : 55;
-
-                return (
-                  <div key={i}>
-                    {/* HTML Dot - unaffected by SVG preserveAspectRatio distortion */}
-                    <div
-                      ref={el => { dotRefs.current[i] = el; }}
-                      className="absolute flex items-center justify-center pointer-events-none"
-                      style={{
-                        left: `${leftPct}%`,
-                        top: `${topPct}%`,
-                        transform: 'translate(-50%, -50%)',
-                        width: isMobile ? '36px' : '48px',
-                        height: isMobile ? '36px' : '48px',
-                      }}
-                    >
-                      {/* Outer pulse */}
-                      <div className="absolute inset-0 rounded-full" style={{ background: PALETTE[i].color, opacity: 0.1 }} />
-                      {/* Mid ring */}
-                      <div className="absolute rounded-full" style={{ width: '50%', height: '50%', background: PALETTE[i].color, opacity: 0.2 }} />
-                      {/* Inner glowing dot */}
-                      <div 
-                        className="absolute rounded-full" 
-                        style={{ 
-                          width: '30%', height: '30%', 
-                          background: PALETTE[i].color,
-                          boxShadow: `0 0 10px ${PALETTE[i].color}`
-                        }} 
-                      />
-                    </div>
-
-                    {/* Terminal Card */}
-                    <div
-                      ref={el => { cardRefs.current[i] = el; }}
-                      className="absolute"
-                      style={{
-                        left: `${leftPct}%`,
-                        transform: 'translateX(-50%)',
-                        top: isTop
-                          ? `calc(${topPct}% - ${yOffset}px)`
-                          : `calc(${topPct}% - ${yOffset}px)`,
-                        width: isMobile ? '240px' : '260px',
-                      }}
-                    >
-                      <TerminalCard item={ITEMS[i]} palette={PALETTE[i]} isMobile={isMobile} />
-
-                      {/* Connector Line */}
-                      <div
-                        className="absolute left-1/2 -translate-x-px w-px"
-                        style={{
-                          height: `${connHeight}px`,
-                          background: `linear-gradient(${isTop ? '180deg' : '0deg'}, ${PALETTE[i].color}55, transparent)`,
-                          ...(isTop ? { bottom: `-${connHeight}px` } : { top: `-${connHeight}px` }),
-                        }}
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Hint dots */}
-          <div className="shrink-0 pb-6 md:pb-8 flex justify-center gap-2 z-10 relative">
-            {PTS.map((_, i) => (
-              <div
-                key={i}
-                className="w-1.5 h-1.5 rounded-full transition-all duration-300"
-                style={{ background: PALETTE[i].color, opacity: 0.4 }}
+              <path d={wavePath} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="4" />
+              <path
+                ref={lineRef}
+                d={wavePath}
+                fill="none"
+                stroke="var(--gfg-green)"
+                strokeWidth="3"
+                strokeLinecap="round"
+                opacity="0.7"
               />
-            ))}
+            </svg>
+
+            {/* HTML Dots and Cards */}
+            {PTS.map((pt, i) => {
+              const isTop = TOP[i];
+              const leftPct = (pt.x / SVG_W) * 100;
+              const topPct  = (pt.y / SVG_H) * 100;
+              
+              const yOffset = isMobile 
+                ? (isTop ? 220 : -10)
+                : (isTop ? 260 : -30);
+                
+              const connHeight = isMobile ? 35 : 55;
+
+              return (
+                <div key={i}>
+                  {/* HTML Dot */}
+                  <div
+                    ref={el => { dotRefs.current[i] = el; }}
+                    className="absolute flex items-center justify-center pointer-events-none"
+                    style={{
+                      left: `${leftPct}%`,
+                      top: `${topPct}%`,
+                      transform: 'translate(-50%, -50%)',
+                      width: isMobile ? '36px' : '48px',
+                      height: isMobile ? '36px' : '48px',
+                    }}
+                  >
+                    <div className="absolute inset-0 rounded-full" style={{ background: PALETTE[i].color, opacity: 0.1 }} />
+                    <div className="absolute rounded-full" style={{ width: '50%', height: '50%', background: PALETTE[i].color, opacity: 0.2 }} />
+                    <div 
+                      className="absolute rounded-full" 
+                      style={{ 
+                        width: '30%', height: '30%', 
+                        background: PALETTE[i].color,
+                        boxShadow: `0 0 10px ${PALETTE[i].color}`
+                      }} 
+                    />
+                  </div>
+
+                  {/* Terminal Card */}
+                  <div
+                    ref={el => { cardRefs.current[i] = el; }}
+                    className="absolute"
+                    style={{
+                      left: `${leftPct}%`,
+                      transform: 'translateX(-50%)',
+                      top: isTop
+                        ? `calc(${topPct}% - ${yOffset}px)`
+                        : `calc(${topPct}% - ${yOffset}px)`,
+                      width: isMobile ? '240px' : '260px',
+                    }}
+                  >
+                    <TerminalCard item={ITEMS[i]} palette={PALETTE[i]} isMobile={isMobile} />
+
+                    {/* Connector Line */}
+                    <div
+                      className="absolute left-1/2 -translate-x-px w-px"
+                      style={{
+                        height: `${connHeight}px`,
+                        background: `linear-gradient(${isTop ? '180deg' : '0deg'}, ${PALETTE[i].color}55, transparent)`,
+                        ...(isTop ? { bottom: `-${connHeight}px` } : { top: `-${connHeight}px` }),
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
+        </div>
+
+        {/* Hint dots */}
+        <div className="shrink-0 pb-6 md:pb-8 flex justify-center gap-2 z-10 relative">
+          {PTS.map((_, i) => (
+            <div
+              key={i}
+              className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+              style={{ background: PALETTE[i].color, opacity: 0.4 }}
+            />
+          ))}
         </div>
       </div>
     </section>

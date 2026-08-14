@@ -28,7 +28,9 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4 max-w-xs">
-              Geeks on Fleek. Code → Connect → Conquer. Built by Chandigarh University students with the GFG spirit.
+              Geeks on Fleek. <br/>
+              Innovate → Engage → Empower. <br/>
+              Built by Chandigarh University students with the GFG spirit.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => {
@@ -77,13 +79,15 @@ export default function Footer() {
               © {currentYear} Chandigarh University x GFG. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors">
-                Status
+              <a 
+                href="https://www.google.com/maps/place/University+Institute+of+Engineering+(Block-6+CU)/@30.7669221,76.5764093,19.92z/data=!4m14!1m7!3m6!1s0x390ffbf5491a0497:0x6f015c5b1264cfbf!2sKakkar+Mobile+Store!8m2!3d30.7666488!4d76.5761863!16s%2Fg%2F11vlcq8wg0!3m5!1s0x390ffba832919dcf:0xb3aa3619b63078ca!8m2!3d30.7671049!4d76.5761769!16s%2Fg%2F11h51j3p9l?authuser=0&entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors"
+              >
+              Sitemap
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors">
-                Sitemap
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors">
+              <a href="#contact" className="text-sm text-muted-foreground hover:text-[var(--gfg-green)] transition-colors">
                 Feedback
               </a>
             </div>

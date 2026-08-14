@@ -4,6 +4,7 @@ import EventCard from '@/components/EventCard';
 import { events } from '@/data/content';
 import { getHomepageEvents } from '@/lib/events';
 import { fadeUpOnScroll } from '@/lib/animations';
+import LogoChaseBackground from '@/components/LogoChaseBackground';
 
 export default function EventsSection() {
   const previewEvents = getHomepageEvents(events);
@@ -19,8 +20,11 @@ export default function EventsSection() {
   }, []);
 
   return (
-    <section id="events" className="py-20 md:py-32">
-      <div className="container px-4 mx-auto max-w-7xl">
+    <section id="events" className="relative py-20 md:py-32 overflow-hidden">
+      {/* Team's Background Animation Component */}
+      <LogoChaseBackground />
+
+      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 events-header opacity-0">
           <div className="flex items-center gap-2 mb-4">

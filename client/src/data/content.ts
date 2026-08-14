@@ -188,36 +188,31 @@ export const statistics: StatItem[] = [
 
 export const aboutContent = {
   eyebrow: 'Who We Are',
-  title: 'A Chapter Built on Code, Connection, and Conquering Goals',
+  title: 'A Chapter Built to Innovate, Engage, and Empower',
   description:
-    "GFG CU Community exists for one reason: to make Chandigarh University a place where learning to code doesn't feel like a solo grind. We bring together students who want to get better at problem-solving, build things that work, and support each other while doing it — whether that's untangling a recursion bug at 1am or prepping for a placement interview together.",
+    "GFG CU Community exists to turn ideas into action across Chandigarh University. We organize high-impact hackathons, competitive ideathons, and expert bootcamps that bring campus builders together — creating a collaborative launchpad where students connect with industry leaders, build innovative projects, and grow together.",
   pillars: [
     {
-      id: 'code',
-      icon: 'BookOpen',
-      title: 'Code',
-      description: 'Practice-first learning. DSA, problem-solving, and real programming skill built through consistent practice, not just theory.',
+      id: 'innovate',
+      icon: 'Lightbulb',
+      title: 'Innovate',
+      description: 'Push boundaries through competitive ideathons, hands-on hackathons, and real-world project building designed to sharpen practical engineering instincts.',
     },
     {
-      id: 'connect',
+      id: 'engage',
       icon: 'Users',
-      title: 'Connect',
-      description: 'A community over a crowd. Peers, seniors, and mentors who actually answer your doubts instead of just adding you to a group.',
+      title: 'Engage',
+      description: 'Connect with industry leaders, alumni, and peers through expert speaker sessions, masterclasses, and interactive tech bootcamps across campus.',
     },
     {
-      id: 'conquer',
+      id: 'empower',
       icon: 'Rocket',
-      title: 'Conquer',
-      description: 'Compete, ship, and win. From contests to hackathons to placement prep — we show up to conquer the goal, together.',
-    },
-    {
-      id: 'contribute',
-      icon: 'Code2',
-      title: 'Contribute',
-      description: 'Give back what you learn. Whether it is helping a junior debug or writing your first open-source PR, growth here goes both ways.',
+      title: 'Empower',
+      description: 'Level up together through dedicated DSA tracks, collaborative peer learning, and placement-driven mentorship where no developer builds alone.',
     },
   ] as PillarItem[],
 };
+
 
 // ---------- Events (Actual Teammates' Data) ----------
 
@@ -724,13 +719,13 @@ export const faqs: FAQItem[] = [
   },
   {
     id: 'faq-4',
-    question: 'How do I actually join?',
-    answer: "Follow @gfg.cu on Instagram or check the chapter's LinkedIn page for the latest recruitment drive and event announcements, or reach out directly at gfg.cu@cumail.in.",
+    question: 'How do I join the chapter team?',
+    answer: "Click the 'Join Now' button in the navigation bar or Hero section, fill out the recruitment application form with your details and domains of interest, and our core team will review your application and reach out to you.",
   },
   {
     id: 'faq-5',
-    question: 'Do you help with placement prep?',
-    answer: 'DSA practice, problem-solving, and coding consistency are core to what the chapter is about — all things that directly help with technical interviews.',
+    question: 'Can beginners with no event or technical experience participate?',
+    answer: 'Absolutely. All our hackathons, ideathons, workshops, and speaker sessions are open to students across all skill levels and departments. We provide mentorship, hands-on guidance, and resources to help you get started.',
   },
 ];
 
@@ -756,15 +751,10 @@ export const footerLinks: Record<string, NavItem[]> = {
     { label: 'Achievements', href: '#achievements' },
     { label: 'FAQ', href: '#faq' },
   ],
-  Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Code of Conduct', href: '#' },
-  ],
 };
 
 export const socialLinks = [
   { icon: 'Instagram', href: 'https://www.instagram.com/gfg.cu/', label: 'Instagram' },
-  { icon: 'Linkedin', href: '#', label: 'LinkedIn' },
+  { icon: 'Linkedin', href: 'https://www.linkedin.com/company/geeksforgeeks-campus-body-cu/posts/', label: 'LinkedIn' },
   { icon: 'Mail', href: 'mailto:gfg.cu@cumail.in', label: 'Email' },
 ];
