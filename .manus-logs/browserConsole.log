@@ -2277,3 +2277,39 @@
 [2026-08-15T08:47:29.053Z] {"timestamp":1786783647056,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-08-15T08:47:29.053Z] {"timestamp":1786783647286,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
 [2026-08-15T08:47:29.053Z] {"timestamp":1786783648242,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T09:01:00.794Z] {"timestamp":1786784458296,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T09:01:00.794Z] {"timestamp":1786784458348,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T09:01:05.737Z] {"timestamp":1786784461856,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T09:01:12.302Z] {"timestamp":1786784471103,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T10:26:14.096Z] {"timestamp":1786785745054,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-15T10:28:49.613Z] {"timestamp":1786789726878,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T10:28:49.613Z] {"timestamp":1786789727234,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T10:29:43.963Z] {"timestamp":1786789730410,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T10:29:48.415Z] {"timestamp":1786789783971,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-15T10:29:55.784Z] {"timestamp":1786789792894,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T10:29:55.784Z] {"timestamp":1786789793482,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T10:30:16.358Z] {"timestamp":1786789799018,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T12:11:24.969Z] {"timestamp":1786791902697,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-08-15T12:11:30.919Z] {"timestamp":1786795885430,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T12:11:30.919Z] {"timestamp":1786795885437,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T12:11:36.743Z] {"timestamp":1786795891137,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T12:20:27.441Z] {"timestamp":1786796426574,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T12:20:31.303Z] {"timestamp":1786796429296,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T12:20:31.303Z] {"timestamp":1786796429305,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T12:20:31.303Z] {"timestamp":1786796429565,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T12:20:31.303Z] {"timestamp":1786796430271,"level":"WARN","args":["THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."],"stack":null}
+[2026-08-15T12:21:09.763Z] {"timestamp":1786796469277,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-15T12:21:09.763Z] {"timestamp":1786796469278,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/EventsSection.tsx"],"stack":null}
+[2026-08-15T12:21:11.779Z] {"timestamp":1786796470700,"level":"LOG","args":["THREE.WebGLRenderer: Context Lost."],"stack":null}
+[2026-08-15T12:29:14.695Z] {"timestamp":1786796952692,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T12:29:14.695Z] {"timestamp":1786796952705,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T12:29:14.695Z] {"timestamp":1786796952814,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T12:47:10.415Z] {"timestamp":1786798027445,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-08-15T12:47:10.415Z] {"timestamp":1786798027607,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-08-15T12:47:12.769Z] {"timestamp":1786798030844,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-08-15T12:49:22.468Z] {"timestamp":1786798160737,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-15T12:49:22.468Z] {"timestamp":1786798160738,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/HeroSection.tsx"],"stack":null}
+[2026-08-15T12:49:22.468Z] {"timestamp":1786798160870,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-15T12:49:22.468Z] {"timestamp":1786798160870,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/HeroSection.tsx"],"stack":null}
+[2026-08-15T12:49:58.197Z] {"timestamp":1786798197387,"level":"DEBUG","args":["[vite]","hot updated: /client/src/index.css"],"stack":null}
+[2026-08-15T12:49:58.197Z] {"timestamp":1786798197388,"level":"DEBUG","args":["[vite]","hot updated: /client/src/components/HeroSection.tsx"],"stack":null}

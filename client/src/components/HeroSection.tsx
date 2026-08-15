@@ -39,7 +39,7 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20 md:pt-0"
     >
       {/* ── Background layer: page colour ──────────────── */}
       <div className="absolute inset-0 -z-10 bg-background" />
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
       {/* ── Content ─────────────────────────────────────── */}
       <motion.div className="container relative z-10 py-4">
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center -mt-24">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center mt-4 md:-mt-24">
 
           {/* LEFT — copy + CTAs */}
           <div className="flex flex-col items-center text-center hero-anim opacity-0">
