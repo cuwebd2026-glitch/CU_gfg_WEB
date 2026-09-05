@@ -683,7 +683,7 @@ export const facultyMembers: FacultyMember[] = [
     role: "Faculty Mentor",
     designation: "Head of Department (HOD)",
     department: "Department of Computer Science & Engineering",
-    image : "/JasneetKaurMam.jpeg",
+    image : "/JasneetKaurMam.png",
     bio: "Providing strategic vision and academic guidance to empower student developers across the CSE department.",
   },
   {
